@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+    <!-- Static pages -->
+    <url>
+        <loc>https://tiemcuaban.com/</loc>
+        <lastmod>2026-01-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://tiemcuaban.com/san-pham</loc>
+        <lastmod>2026-01-28</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://tiemcuaban.com/thu-vien</loc>
+        <lastmod>2026-01-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://tiemcuaban.com/ve-chung-minh</loc>
+        <lastmod>2026-01-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://tiemcuaban.com/lien-he</loc>
+        <lastmod>2026-01-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://tiemcuaban.com/chinh-sach</loc>
+        <lastmod>2026-01-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- Product pages -->
+    <url>
+        <loc>https://tiemcuaban.com/san-pham/mang-kho-tay-bac</loc>
+        <lastmod>2026-01-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://tiemcuaban.com/products/mang-kho.jpg</image:loc>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://tiemcuaban.com/san-pham/thit-lon-say</loc>
+        <lastmod>2026-01-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://tiemcuaban.com/products/lon-say.jpg</image:loc>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://tiemcuaban.com/san-pham/lap-xuong-tay-bac</loc>
+        <lastmod>2026-01-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://tiemcuaban.com/products/lap-xuong.jpg</image:loc>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://tiemcuaban.com/san-pham/ngo-nep-tay-bac</loc>
+        <lastmod>2026-01-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://tiemcuaban.com/products/ngo.jpg</image:loc>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://tiemcuaban.com/san-pham/thit-trau-gac-bep</loc>
+        <lastmod>2026-01-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://tiemcuaban.com/products/trau-say.jpg</image:loc>
+        </image:image>
+    </url>
+</urlset>

@@ -1,0 +1,21 @@
+﻿{
+  "name": "Tiệm Của Bản - Đặc sản Tây Bắc Điện Biên",
+  "short_name": "Tiệm Của Bản",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#b91c1c",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/",
+  "lang": "vi-VN"
+}

@@ -1,0 +1,21 @@
+﻿# Robots.txt for Tiệm Của Bản
+# https://tiemcuaban.com
+
+User-agent: *
+Allow: /
+
+# Disallow admin and private paths
+Disallow: /api/
+Disallow: /admin/
+Disallow: /quan-ly/
+Disallow: /*.json$
+
+# Allow important resources
+Allow: /products/
+Allow: /*.jpg$
+Allow: /*.png$
+Allow: /*.css$
+Allow: /*.js$
+
+# Sitemap location
+Sitemap: https://tiemcuaban.com/sitemap.xml
