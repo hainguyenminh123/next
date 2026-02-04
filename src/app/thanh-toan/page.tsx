@@ -23,7 +23,6 @@ import {formatPrice} from '@/hooks/useProducts';
 import {toast} from 'sonner';
 import {supabase} from '@/integrations/supabase/client';
 import {TrongDongBadge, TrongDongWatermark} from '@/components/TrongDongPattern';
-import LoadingSpinner from '@/components/LoadingSpinner';
 
 export default function CheckoutPage() {
 	const router = useRouter();
@@ -320,7 +319,7 @@ export default function CheckoutPage() {
 										<button type="submit" className="w-full mt-8 bg-premium-red text-white py-5 rounded-2xl font-bold transition-all duration-300 hover:shadow-[0_10px_30px_-5px_rgba(185,28,28,0.4)] hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 group overflow-hidden relative shadow-lg shadow-premium-red/20" disabled={isSubmitting}>
 											<div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"/>
 											{isSubmitting ? (
-												<span className="flex items-center justify-center gap-2"><LoadingSpinner size="sm"/>ĐANG XỬ LÝ...</span>
+												<span className="flex items-center justify-center gap-2">ĐANG XỬ LÝ...</span>
 											) : (
 												<><CreditCard className="w-5 h-5 group-hover:rotate-12 transition-transform"/>ĐẶT HÀNG NGAY</>
 											)}

@@ -48,51 +48,68 @@ export default function ContactMaps() {
     <>
       <div className="grid md:grid-cols-2 gap-8">
         {MAP_CARDS.map((card, index) => (
-          <motion.div
+          <motion.button
             key={card.key}
-            initial={{ opacity: 0, y: 20 }}
+            type="button"
+            onClick={() => setOpenMapKey(card.key)}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.1 * index }}
-            className="group cursor-pointer"
-            onClick={() => setOpenMapKey(card.key)}
+            transition={{ delay: index * 0.1, duration: 0.6 }}
+            className="card-premium overflow-hidden group text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-premium-red/50 rounded-[2rem] border-border/60 hover:border-festive-gold/30 shadow-[0_10px_30px_-5px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_50px_-12px_rgba(212,175,55,0.25)] bg-white"
+            aria-label={`Open map popup - ${card.title}`}
           >
-            <div className="relative aspect-[16/10] rounded-3xl overflow-hidden shadow-xl mb-6">
+            <div className="relative aspect-[16/10] md:aspect-[16/9] w-full">
               <Image
                 src={card.imageSrc}
-                alt={card.title}
+                alt={`Map preview - ${card.title}`}
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-110"
+                className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+              <iframe
+                title={`Mini map hover - ${card.title}`}
+                src={card.embedSrc}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="pointer-events-none absolute inset-0 w-full h-full opacity-0 transition-opacity duration-300 group-hover:opacity-100 border-0"
+              />
+              
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent pointer-events-none"/>
               <div className="absolute top-4 left-4">
-                <span className="px-3 py-1 bg-premium-red text-white text-[10px] font-bold uppercase tracking-widest rounded-full">
+                <span className="inline-flex items-center rounded-full border border-premium-red/20 bg-background/90 backdrop-blur-md px-4 py-1.5 text-xs font-bold text-premium-red shadow-sm uppercase tracking-widest">
                   {card.badge}
                 </span>
               </div>
-              <div className="absolute bottom-6 left-6 right-6">
-                <h3 className="text-2xl font-bold text-white mb-1">{card.title}</h3>
-                <p className="text-white/70 text-sm">{card.subtitle}</p>
+              <div className="absolute top-4 right-4 inline-flex items-center gap-2 rounded-full border border-festive-gold/30 bg-background/90 backdrop-blur-md px-4 py-1.5 text-xs font-bold text-foreground transition-all group-hover:bg-festive-gold group-hover:text-premium-red shadow-sm">
+                <ExternalLink className="w-4 h-4 text-premium-red"/>
+                Mở Maps
               </div>
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 scale-75 group-hover:scale-100 border border-white/30">
-                <MapPin className="text-white w-8 h-8" />
-              </div>
-            </div>
-            <div className="flex items-start gap-4 p-2">
-              <div className="w-10 h-10 rounded-xl bg-premium-red/5 flex items-center justify-center text-premium-red flex-shrink-0 group-hover:bg-premium-red group-hover:text-white transition-all duration-300">
-                <MapPin size={20} />
-              </div>
-              <div>
-                <p className="text-sm font-medium text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors">
-                  {card.address}
-                </p>
-                <div className="mt-2 flex items-center gap-4">
-                  <span className="text-xs font-bold text-premium-red uppercase tracking-wider">Xem bản đồ</span>
+              
+              <div className="absolute bottom-0 left-0 right-0 p-5 md:p-8">
+                <div className="flex items-start justify-between gap-4">
+                  <div className="drop-shadow-sm">
+                    <div className="flex items-center gap-2 mb-1">
+                      <div className="w-1.5 h-1.5 rounded-full bg-festive-gold animate-pulse shrink-0" />
+                      <h3 className="text-xl sm:text-2xl md:text-3xl font-heading font-bold text-foreground leading-tight sm:leading-snug">
+                        {card.title}
+                      </h3>
+                    </div>
+                    <p className="text-md font-bold text-premium-red/80 uppercase tracking-widest text-[9px] sm:text-[10px] mb-2">{card.subtitle}</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground line-clamp-2">{card.address}</p>
+                  </div>
+                </div>
+                
+                <div className="mt-6 h-px w-full bg-gradient-to-r from-premium-red/20 via-festive-gold/20 to-transparent"/>
+                <div className="mt-4 flex items-center justify-between text-xs">
+                  <span className="text-muted-foreground font-medium italic">Click để phóng to bản đồ</span>
+                  <span className="text-premium-red font-bold group-hover:underline underline-offset-4 flex items-center gap-1">
+                    Xem chi tiết <ExternalLink size={14} />
+                  </span>
                 </div>
               </div>
             </div>
-          </motion.div>
+          </motion.button>
         ))}
       </div>
 

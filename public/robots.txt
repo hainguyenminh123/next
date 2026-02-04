@@ -4,10 +4,8 @@
 User-agent: *
 Allow: /
 
-# Disallow admin and private paths
+# Disallow private paths
 Disallow: /api/
-Disallow: /admin/
-Disallow: /quan-ly/
 Disallow: /*.json$
 
 # Allow important resources
@@ -18,4 +16,4 @@ Allow: /*.css$
 Allow: /*.js$
 
 # Sitemap location
-Sitemap: https://tiemcuaban.com/sitemap.xml
+Sitemap: https://tiemcuaban.vn/sitemap.xml

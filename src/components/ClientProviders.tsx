@@ -1,10 +1,10 @@
 "use client";
 
 import {TooltipProvider} from "@/components/ui/tooltip";
-import {Toaster} from "@/components/ui/toaster";
 import {Toaster as Sonner} from "@/components/ui/sonner";
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 import {useEffect, useState} from "react";
+import NextTopLoader from "nextjs-toploader";
 
 export default function ClientProviders({children}: { children: React.ReactNode }) {
 	const [queryClient] = useState(() => new QueryClient());
@@ -22,7 +22,12 @@ export default function ClientProviders({children}: { children: React.ReactNode 
 	return (
 			<QueryClientProvider client={queryClient}>
 				<TooltipProvider>
-					<Toaster/>
+					<NextTopLoader
+							color="hsl(var(--premium-red))"
+							shadow="0 0 12px hsl(var(--premium-red) / 0.6), 0 0 8px hsl(var(--premium-red) / 0.4)"
+							showSpinner={false}
+							height={4}
+					/>
 					<Sonner/>
 					{children}
 				</TooltipProvider>

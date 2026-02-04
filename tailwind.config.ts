@@ -94,9 +94,9 @@ export default {
 				"3xl": "1.5rem",
 			},
 			boxShadow: {
-				soft: "0 2px 8px -2px hsl(30 20% 20% / 0.08)",
-				medium: "0 4px 16px -4px hsl(30 20% 20% / 0.12)",
-				lift: "0 8px 24px -8px hsl(30 20% 20% / 0.15)",
+				soft: "0 4px 12px -2px hsl(30 20% 20% / 0.12)",
+				medium: "0 8px 24px -4px hsl(30 20% 20% / 0.18)",
+				lift: "0 16px 48px -12px hsl(30 20% 20% / 0.25)",
 			},
 			keyframes: {
 				"accordion-down": {
@@ -119,6 +119,10 @@ export default {
 					from: {opacity: "0", transform: "translateY(-10px)"},
 					to: {opacity: "1", transform: "translateY(0)"},
 				},
+				"bounce-slow": {
+					"0%, 100%": {transform: "translateY(-5%)", "animation-timing-function": "cubic-bezier(0.8, 0, 1, 1)"},
+					"50%": {transform: "translateY(0)", "animation-timing-function": "cubic-bezier(0, 0, 0.2, 1)"},
+				},
 			},
 			animation: {
 				"accordion-down": "accordion-down 0.2s ease-out",
@@ -126,6 +130,7 @@ export default {
 				"fade-in": "fade-in 0.5s ease-out forwards",
 				"slide-up": "slide-up 0.6s ease-out forwards",
 				"slide-down": "slide-down 0.3s ease-out forwards",
+				"bounce-slow": "bounce-slow 3s infinite",
 			},
 			spacing: {
 				"18": "4.5rem",

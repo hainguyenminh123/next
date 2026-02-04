@@ -72,8 +72,6 @@ export default function Navbar() {
 										: 'bg-transparent py-3'
 						}`}
 				>
-					<div
-							className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-premium-red via-festive-gold to-premium-red opacity-80"/>
 					
 					{!isScrolled && (
 							<div

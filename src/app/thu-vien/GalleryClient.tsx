@@ -122,7 +122,7 @@ export default function GalleryClient({items}: GalleryClientProps) {
 										className="h-full"
 								>
 									<GalleryCard
-											className="group cursor-pointer aspect-[4/3] relative rounded-[2rem] overflow-hidden shadow-[0_10px_30px_-15px_rgba(0,0,0,0.1)] hover:shadow-[0_20px_40px_-20px_rgba(185,28,28,0.2)] transition-all duration-500 border border-premium-red/5"
+											className="group cursor-pointer aspect-[4/3] relative rounded-[2rem] overflow-hidden shadow-[0_15px_40px_-10px_rgba(0,0,0,0.15)] hover:shadow-[0_25px_60px_-15px_rgba(185,28,28,0.25)] transition-all duration-500 border border-premium-red/5"
 											onClick={() => setSelectedItem(item)}
 									>
 										<div
@@ -133,10 +133,12 @@ export default function GalleryClient({items}: GalleryClientProps) {
 										</div>
 										
 										<div className="relative w-full h-full">
-											<img
+											<Image
 													src={item.thumbnail || item.src}
 													alt={item.title}
-													className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+													fill
+													sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+													className="object-cover transition-transform duration-1000 group-hover:scale-110"
 											/>
 											
 											<div
@@ -205,11 +207,15 @@ export default function GalleryClient({items}: GalleryClientProps) {
 								>
 									<div className="w-full flex-1 flex items-center justify-center overflow-hidden bg-black relative">
 										{selectedItem.type === 'image' ? (
-												<img
-														src={selectedItem.src}
-														alt={selectedItem.title}
-														className="max-w-full max-h-full object-contain"
-												/>
+												<div className="relative w-full h-full">
+													<Image
+															src={selectedItem.src}
+															alt={selectedItem.title}
+															fill
+															sizes="100vw"
+															className="object-contain"
+													/>
+												</div>
 										) : (
 												<div className="aspect-video w-full flex items-center justify-center bg-black">
 													{selectedItem.src.includes('youtube.com') || selectedItem.src.includes('vimeo.com') ? (

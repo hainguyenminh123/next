@@ -6,10 +6,15 @@ import Reveal from '@/components/Reveal';
 import type {Metadata} from "next";
 
 export const metadata: Metadata = {
-	title: "Về Tiệm Của Bản | Câu chuyện đặc sản Tây Bắc Điện Biên",
-	description: "Câu chuyện Tiệm Của Bản: kết nối hộ dân vùng cao Điện Biên, Sơn La, Lào Cai; đặc sản chuẩn vị; giao hàng toàn quốc.",
-	keywords: "Tiệm Của Bản, đặc sản Tây Bắc, đặc sản Điện Biên, câu chuyện thương hiệu, nguồn gốc vùng cao",
+	title: "Về Tiệm Của Bản | Câu chuyện đặc sản vùng cao Điện Biên",
+	description: "Tìm hiểu về Tiệm Của Bản - Nơi kết nối những giá trị văn hóa ẩm thực Tây Bắc nguyên bản từ bà con dân tộc vùng cao Điện Biên, Sơn La đến bàn ăn gia đình Việt.",
+	keywords: ["giới thiệu Tiệm Của Bản", "câu chuyện thương hiệu", "đặc sản Tây Bắc", "nông sản vùng cao"],
 	alternates: {canonical: "/gioi-thieu"},
+	openGraph: {
+		title: "Về Tiệm Của Bản | Câu chuyện đặc sản vùng cao",
+		description: "Kết nối hương vị Tây Bắc với mọi nhà. Câu chuyện về sự tận tâm và bản sắc.",
+		url: 'https://tiemcuaban.vn/gioi-thieu',
+	}
 };
 
 const values = [
@@ -50,25 +55,19 @@ export default function AboutPage() {
 	];
 	
 	return (
-			<Layout
-					breadcrumbs={breadcrumbs}
-			>
+			<Layout>
 				{/* Hero */}
 				<section className="relative overflow-hidden bg-premium-red text-white">
 					<div className="absolute inset-0">
 						<div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,215,0,0.25),transparent_55%)]"/>
-						<div
-								className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(255,255,255,0.08),transparent_60%)]"/>
-						<div
-								className="absolute inset-0 opacity-40 [background:repeating-linear-gradient(120deg,rgba(255,255,255,0.08)_0,rgba(255,255,255,0.08)_1px,transparent_1px,transparent_16px)]"/>
+						<div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(255,255,255,0.08),transparent_60%)]"/>
+						<div className="absolute inset-0 opacity-40 [background:repeating-linear-gradient(120deg,rgba(255,255,255,0.08)_0,rgba(255,255,255,0.08)_1px,transparent_1px,transparent_16px)]"/>
 					</div>
-					
 					<div className="absolute -top-24 -left-20 h-72 w-72 rounded-full bg-festive-gold/20 blur-[30px]"/>
 					<div className="absolute -bottom-20 right-10 h-80 w-80 rounded-full bg-white/10 blur-[40px]"/>
 					<div className="absolute left-10 top-10 h-24 w-24 rounded-full border border-white/25"/>
 					<div className="absolute right-12 top-16 h-16 w-16 rounded-full border border-white/25"/>
-					<div
-							className="absolute left-1/2 top-0 h-12 w-48 -translate-x-1/2 rounded-b-3xl bg-festive-gold/30 blur-[1px]"/>
+					<div className="absolute left-1/2 top-0 h-12 w-48 -translate-x-1/2 rounded-b-3xl bg-festive-gold/30 blur-[1px]"/>
 					
 					<TrongDongWatermark opacity={0.08} className="text-festive-gold"/>
 					
@@ -163,8 +162,8 @@ export default function AboutPage() {
 										nguyên bản – thứ mà khó có thể tìm thấy ở nơi nào khác.
 									</p>
 									<p className="border-l-4 border-festive-gold/30 pl-6 py-2 italic bg-festive-gold/5 rounded-r-xl">
-										"Chúng mình không chỉ bán đặc sản, chúng mình kể câu chuyện về văn hóa và lòng hiếu khách của người
-										dân Tây Bắc thông qua từng hương vị."
+										&quot;Chúng mình không chỉ bán đặc sản, chúng mình kể câu chuyện về văn hóa và lòng hiếu khách của người
+										 dân Tây Bắc thông qua từng hương vị.&quot;
 									</p>
 									<p>
 										Mỗi sản phẩm đều được chọn lọc kỹ lưỡng, làm việc trực tiếp với các hộ dân và HTX địa phương,
@@ -182,7 +181,7 @@ export default function AboutPage() {
 							>
 								{[
 									{label: 'Đơn hàng/tháng', value: '500+', icon: Sparkles, color: 'text-premium-red'},
-									{label: 'Nguồn gốc', value: 'Điện Biên', icon: Star, color: 'text-festive-gold'},
+									{label: 'Nguồn gốc Điện Biên', value: '100%', icon: Star, color: 'text-festive-gold'},
 									{label: 'Đối tác hộ dân', value: '20+', icon: Users, color: 'text-accent'},
 									{label: 'Hài lòng', value: '99%', icon: Heart, color: 'text-red-500'},
 								].map((stat, idx) => (
@@ -239,7 +238,7 @@ export default function AboutPage() {
 											y={30}
 											delay={index * 0.1}
 											duration={0.6}
-											className="bg-white p-8 rounded-[2rem] border border-border/60 hover:border-festive-gold/30 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_-10px_rgba(212,175,55,0.15)] transition-all duration-500 relative group overflow-hidden"
+											className="bg-white p-8 rounded-[2rem] border border-border/60 hover:border-festive-gold/30 shadow-[0_10px_30px_-5px_rgba(0,0,0,0.08)] hover:shadow-[0_25px_50px_-12px_rgba(212,175,55,0.2)] transition-all duration-500 relative group overflow-hidden"
 									>
 										<div
 												className="absolute -top-6 -right-6 w-24 h-24 opacity-0 group-hover:opacity-[0.05] transition-all duration-700 rotate-12 group-hover:rotate-0">
@@ -282,8 +281,7 @@ export default function AboutPage() {
 						>
 							<p className="text-white/90 mb-12 max-w-2xl mx-auto text-lg md:text-xl font-light">
 								Khám phá ngay bộ sưu tập đặc sản Điện Biên chuẩn vị, được chọn lọc kỹ lưỡng từ đôi bàn tay của bà con
-								vùng
-								cao.
+								vùng cao.
 							</p>
 						</Reveal>
 						<Reveal

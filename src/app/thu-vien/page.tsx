@@ -7,10 +7,15 @@ import GalleryClient from './GalleryClient';
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Thư viện hình ảnh & video | Tiệm Của Bản",
-	description: "Khám phá hình ảnh và video về quy trình sản xuất, đóng gói và những món ăn ngon từ đặc sản Tây Bắc tại Tiệm Của Bản.",
-	keywords: "hình ảnh đặc sản, video quy trình, thịt trâu gác bếp video, lạp xưởng Tây Bắc hình ảnh",
-	alternates: { canonical: "/thu-vien" },
+	title: "Thư viện hình ảnh & Video đặc sản Tây Bắc | Tiệm Của Bản",
+	description: "Bộ sưu tập hình ảnh, video thực tế về sản phẩm và quy trình sản xuất đặc sản Tây Bắc tại Điện Biên của Tiệm Của Bản.",
+	keywords: ["thư viện ảnh", "video đặc sản", "hình ảnh thực tế", "quy trình sản xuất đặc sản"],
+	alternates: {canonical: "/thu-vien"},
+	openGraph: {
+		title: "Thư viện hình ảnh & Video | Tiệm Của Bản",
+		description: "Xem những hình ảnh và video chân thực nhất về bản làng và đặc sản Tây Bắc.",
+		url: 'https://tiemcuaban.vn/thu-vien',
+	}
 };
 
 interface GalleryItem {
@@ -209,7 +214,7 @@ export default function GalleryPage() {
 							<div className="absolute -top-10 -right-6 h-20 w-44 rounded-3xl bg-premium-red/20 blur-[1px]" />
 							<div className="absolute -bottom-8 left-6 h-16 w-36 rounded-3xl bg-festive-gold/25 blur-[1px]" />
 
-							<div className="relative rounded-[2.5rem] bg-white/90 border border-premium-red/10 shadow-[0_20px_60px_-35px_rgba(185,28,28,0.45)] p-6">
+							<div className="relative rounded-[2.5rem] bg-white/90 border border-premium-red/10 shadow-[0_30px_70px_-30px_rgba(185,28,28,0.5)] p-6">
 								<div className="flex items-center justify-between mb-6">
 									<div className="flex items-center gap-2 text-premium-red font-bold uppercase tracking-widest text-xs">
 										<Star size={14} className="text-festive-gold fill-festive-gold" />

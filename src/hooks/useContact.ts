@@ -2,17 +2,19 @@ import {useMutation} from '@tanstack/react-query';
 import {supabase} from '@/integrations/supabase/client';
 import type {CreateContactInput} from '@/types/database';
 
-export const useSubmitContact = () => {
+const useSubmitContact = () => {
 	return useMutation({
 		mutationFn: async (input: CreateContactInput) => {
-			const {data, error} = await supabase
-					.from('contacts')
-					.insert(input)
-					.select()
-					.single();
+			const {data, error} = await supabase.rpc('create_contact', {
+				p_name: input.name,
+				p_email: input.email,
+				p_phone: input.phone ?? "",
+				p_message: input.message
+			});
 			
 			if (error) throw error;
 			return data;
 		},
 	});
 };
+export default useSubmitContact

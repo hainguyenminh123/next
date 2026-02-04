@@ -27,6 +27,50 @@ export default async function Page() {
 					canonicalUrl="/"
 					faqs={faqsForSchema}
 			>
+				<script
+						type="application/ld+json"
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								"@context": "https://schema.org",
+								"@type": "WebSite",
+								"name": "Tiệm Của Bản",
+								"url": "https://tiemcuaban.vn",
+								"potentialAction": {
+									"@type": "SearchAction",
+									"target": "https://tiemcuaban.vn/san-pham?q={search_term_string}",
+									"query-input": "required name=search_term_string"
+								}
+							})
+						}}
+				/>
+				<script
+						type="application/ld+json"
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								"@context": "https://schema.org",
+								"@type": "Store",
+								"name": "Tiệm Của Bản",
+								"image": "https://tiemcuaban.vn/og-image.jpg",
+								"@id": "https://tiemcuaban.vn",
+								"url": "https://tiemcuaban.vn",
+								"telephone": "0339420806",
+								"priceRange": "$$",
+								"address": {
+									"@type": "PostalAddress",
+									"streetAddress": "29 Đức Diễn",
+									"addressLocality": "Bắc Từ Liêm",
+									"addressRegion": "Hà Nội",
+									"postalCode": "100000",
+									"addressCountry": "VN"
+								},
+								"geo": {
+									"@type": "GeoCoordinates",
+									"latitude": 21.0427,
+									"longitude": 105.7486
+								}
+							})
+						}}
+				/>
 				<h1 className="sr-only">Tiệm Của Bản - Đặc sản Tây Bắc Điện Biên chuẩn vị</h1>
 				<HeroSlider/>
 				<FeaturedProducts initialProducts={featuredProducts}/>

@@ -1,16 +1,21 @@
-import { ChevronRight, RefreshCw, Shield, Star, Truck } from 'lucide-react';
+import type {Metadata} from "next";
+import {ChevronRight, RefreshCw, Shield, Star, Truck} from 'lucide-react';
 import Link from 'next/link';
-import { TrongDongBadge, TrongDongWatermark } from '@/components/TrongDongPattern';
+import Layout from '@/components/Layout';
+import {TrongDongBadge, TrongDongWatermark} from '@/components/TrongDongPattern';
 import Reveal from '@/components/Reveal';
-import MotionViewport from '@/components/MotionViewport';
 import HashScrollHandler from '@/components/HashScrollHandler';
-import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Chính sách giao hàng, đổi trả, bảo mật | Tiệm Của Bản",
-	description: "Chính sách giao hàng toàn quốc, đổi trả 7 ngày, hoàn tiền 100% và bảo mật thông tin tại Tiệm Của Bản.",
-	keywords: "chính sách giao hàng, đổi trả sản phẩm, hoàn tiền, bảo mật thông tin, Tiệm Của Bản",
-	alternates: { canonical: "/chinh-sach" },
+	title: "Chính sách mua hàng & Bảo mật | Tiệm Của Bản",
+	description: "Thông tin chi tiết về chính sách giao hàng, đổi trả hoàn tiền trong 7 ngày và cam kết bảo mật thông tin khách hàng tại Tiệm Của Bản.",
+	keywords: ["chính sách giao hàng", "đổi trả sản phẩm", "bảo mật thông tin", "quy định mua hàng"],
+	alternates: {canonical: "/chinh-sach"},
+	openGraph: {
+		title: "Chính sách mua hàng & Bảo mật | Tiệm Của Bản",
+		description: "Minh bạch trong mọi kết nối, trọn vẹn trong từng lời hứa.",
+		url: 'https://tiemcuaban.vn/chinh-sach',
+	}
 };
 
 const policies = [
@@ -86,152 +91,164 @@ const policies = [
 ];
 
 export default function PoliciesPage() {
+	const breadcrumbs = [
+		{name: 'Trang chủ', url: '/'},
+		{name: 'Chính sách', url: '/chinh-sach'},
+	];
+	
 	return (
-		<main className="flex-1">
+		<Layout breadcrumbs={breadcrumbs}>
 			<HashScrollHandler />
-			{/* Breadcrumb - Festive Style */}
-			<section className="pt-28 pb-6 bg-secondary/30 relative overflow-hidden">
-				<div className="absolute inset-0 bg-gradient-to-br from-premium-red/5 via-transparent to-festive-gold/5 pointer-events-none" />
-				<div className="container-main relative z-10">
-					<nav className="flex items-center gap-2 text-sm font-bold">
-						<Link href="/" className="text-muted-foreground hover:text-premium-red transition-colors">Trang chủ</Link>
-						<ChevronRight size={14} className="text-muted-foreground" />
-						<span className="text-premium-red">Chính sách</span>
-					</nav>
-				</div>
-			</section>
-
+			
 			{/* Hero Section */}
-			<section className="relative py-20 md:py-28 overflow-hidden bg-white">
-				<TrongDongWatermark opacity={0.03} className="text-premium-red" />
+			<section className="relative pt-32 pb-20 md:pt-48 md:pb-44 overflow-hidden bg-[#fafafa]">
+				{/* Architect Grid Background */}
+				<div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" 
+					style={{ 
+						backgroundImage: `linear-gradient(#b91c1c 1px, transparent 1px), linear-gradient(90deg, #b91c1c 1px, transparent 1px)`,
+						backgroundSize: '40px 40px'
+					}} 
+				/>
+				
+				{/* Cultural Core - Centered Pulse */}
+				<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-[0.02]">
+					<div className="w-full h-full animate-spin-slow">
+						<TrongDongWatermark className="text-premium-red" />
+					</div>
+				</div>
+
 				<div className="container-main relative z-10">
-					<div className="max-w-3xl">
-						<Reveal className="inline-block px-4 py-1.5 rounded-full bg-premium-red/10 text-premium-red text-xs font-bold uppercase tracking-[0.2em] mb-6 border border-premium-red/20">
-							Quyền lợi khách hàng
-						</Reveal>
-						<Reveal delay={0.1} className="text-5xl md:text-7xl font-heading font-bold mb-8 text-foreground leading-[1.1]">
-							Chính Sách & <br />
-							<span className="text-premium-red">Điều Khoản</span>
-						</Reveal>
-						<Reveal delay={0.2} className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
-							Tiệm Của Bản cam kết mang đến trải nghiệm mua sắm an tâm, minh bạch và bảo vệ tối đa quyền lợi của bạn.
-						</Reveal>
-					</div>
-				</div>
-			</section>
-
-			{/* Policies Navigation */}
-			<section className="sticky top-[var(--navbar-height)] z-40 bg-white/80 backdrop-blur-md border-y border-premium-red/10 shadow-sm hidden md:block">
-				<div className="container-main">
-					<div className="flex items-center gap-8 py-4">
-						<span className="text-xs font-bold uppercase tracking-widest text-muted-foreground border-r border-premium-red/10 pr-8">Xem nhanh</span>
-						{policies.map((policy) => (
-							<a
-								key={policy.id}
-								href={`#${policy.id}`}
-								className="text-sm font-bold text-foreground hover:text-premium-red transition-colors flex items-center gap-2"
-							>
-								<policy.icon size={16} />
-								{policy.title}
-							</a>
-						))}
-					</div>
-				</div>
-			</section>
-
-			{/* Main Content */}
-			<section className="py-20 bg-white">
-				<div className="container-main">
-					<div className="grid lg:grid-cols-12 gap-16">
-						{/* Sidebar Info */}
-						<aside className="lg:col-span-4 space-y-8">
-							<Reveal x={-30} y={0} className="p-8 rounded-[2.5rem] bg-secondary/50 border border-premium-red/5">
-								<h3 className="text-xl font-bold mb-6 flex items-center gap-3">
-									<Star className="text-festive-gold fill-festive-gold" size={20} />
-									Cam kết từ Tiệm
-								</h3>
-								<ul className="space-y-4">
-									{[
-										'Sản phẩm đúng mô tả 100%',
-										'Nguồn gốc rõ ràng, sạch sẽ',
-										'Hỗ trợ khách hàng tận tâm',
-										'Giao hàng nhanh, đóng gói kỹ',
-									].map((text) => (
-										<li key={text} className="flex items-start gap-3 text-sm text-muted-foreground">
-											<div className="w-5 h-5 rounded-full bg-premium-red/10 flex items-center justify-center text-premium-red flex-shrink-0 mt-0.5">
-												<ChevronRight size={12} />
-											</div>
-											{text}
-										</li>
-									))}
-								</ul>
+					<div className="flex flex-col lg:flex-row gap-16 items-start">
+						{/* Left Content */}
+						<div className="w-full lg:w-2/3">
+							<Reveal y={-20} className="flex items-center gap-4 mb-12">
+								<div className="h-[2px] w-12 bg-premium-red" />
+								<span className="text-premium-red font-black uppercase tracking-[0.5em] text-xs">Standards of Trust</span>
 							</Reveal>
 
-							<Reveal x={-30} y={0} delay={0.1} className="p-8 rounded-[2.5rem] bg-premium-red text-white relative overflow-hidden">
-								<TrongDongBadge className="absolute -bottom-10 -right-10 w-40 h-40 opacity-10 rotate-12" />
-								<div className="relative z-10">
-									<h3 className="text-xl font-bold mb-4">Cần hỗ trợ gấp?</h3>
-									<p className="text-white/80 text-sm mb-6">Đừng ngần ngại liên hệ trực tiếp với chúng mình để được giải quyết nhanh nhất.</p>
-									<a
-										href="tel:0339420806"
-										className="flex items-center justify-center gap-2 w-full py-4 bg-white text-premium-red rounded-2xl font-bold hover:bg-festive-gold hover:text-white transition-colors shadow-lg"
+							<div className="relative">
+								<Reveal x={-50} duration={0.8}>
+									<h1 className="text-6xl md:text-8xl lg:text-9xl font-heading font-black text-foreground leading-[0.8] tracking-tighter mb-4">
+										CHÍNH <br />
+										<span className="relative">
+											SÁCH
+										</span>
+									</h1>
+								</Reveal>
+								
+								<Reveal delay={0.5} duration={0.8} className="mt-12 max-w-lg">
+									<p className="text-xl md:text-3xl text-muted-foreground font-light leading-snug border-l-4 border-premium-red pl-8 italic">
+										Minh bạch trong <span className="text-foreground font-bold">mọi kết nối</span>, 
+										trọn vẹn trong <span className="text-premium-red font-bold">từng lời hứa</span>.
+									</p>
+								</Reveal>
+							</div>
+						</div>
+
+						{/* Right Content - Stacked Cards */}
+						<div className="w-full lg:w-1/3 relative mt-12 lg:mt-0">
+							<div className="relative h-[280px] md:h-[350px]">
+								{[
+									{ icon: Truck, text: "Giao hàng", color: "text-premium-red", bg: "bg-premium-red/5", id: 'shipping', rotate: -5, top: 0, left: 0 },
+									{ icon: RefreshCw, text: "Đổi trả", color: "text-festive-gold", bg: "bg-festive-gold/5", id: 'returns', rotate: 0, top: 80, left: 10 },
+									{ icon: Shield, text: "Bảo mật", color: "text-accent", bg: "bg-accent/5", id: 'privacy', rotate: 5, top: 160, left: 20 }
+								].map((card, idx) => (
+									<Reveal 
+										key={idx} 
+										delay={0.6 + idx * 0.1} 
+										x={50}
+										className="absolute w-full"
+										style={{ top: `${card.top}px`, left: `${card.left}px`, transform: `rotate(${card.rotate}deg)` }}
 									>
-										Hotline: 0339 420 806
-									</a>
-								</div>
-							</Reveal>
-						</aside>
-
-						{/* Content */}
-						<div className="lg:col-span-8 space-y-24">
-							{policies.map((policy, idx) => (
-								<section key={policy.id} id={policy.id} className="scroll-mt-32">
-									<Reveal y={40}>
-										<div className="flex items-center gap-4 mb-8">
-											<div className="w-14 h-14 rounded-2xl bg-premium-red/5 flex items-center justify-center text-premium-red">
-												<policy.icon size={28} />
-											</div>
-											<h2 className="text-3xl font-heading font-bold">{policy.title}</h2>
-										</div>
-
-										<div className="space-y-12">
-											{policy.content.map((item, i) => (
-												<div key={item.heading} className="relative pl-8 before:absolute before:left-0 before:top-3 before:w-1.5 before:h-1.5 before:bg-premium-red before:rounded-full">
-													<h4 className="text-xl font-bold text-foreground mb-3">{item.heading}</h4>
-													<p className="text-muted-foreground leading-relaxed text-lg">{item.text}</p>
+										<Link
+											href={`#${card.id}`}
+											className="block bg-white p-6 md:p-8 rounded-3xl shadow-[0_25px_60px_rgba(0,0,0,0.12)] border border-border/50 cursor-pointer backdrop-blur-xl group hover:-translate-y-2 transition-all duration-300"
+										>
+											<div className="flex items-center gap-6">
+												<div className={`w-12 h-12 md:w-16 md:h-16 rounded-2xl ${card.bg} flex items-center justify-center ${card.color} group-hover:scale-110 transition-transform`}>
+													<card.icon size={28} />
 												</div>
-											))}
-										</div>
+												<div>
+													<p className="text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">Quy định</p>
+													<h3 className="text-lg md:text-xl font-bold text-foreground">{card.text}</h3>
+												</div>
+												<div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity">
+													<ChevronRight className={card.color} />
+												</div>
+											</div>
+										</Link>
 									</Reveal>
-									{idx < policies.length - 1 && (
-										<div className="mt-24 h-px bg-gradient-to-r from-premium-red/10 via-premium-red/5 to-transparent" />
-									)}
-								</section>
-							))}
+								))}
+							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-
-			{/* CTA */}
-			<MotionViewport className="py-24 bg-premium-red text-white text-center relative overflow-hidden">
-				<div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,215,0,0.1),transparent_70%)]" />
+			
+			{/* Content Sections */}
+			<section className="py-12 md:py-24 bg-white relative overflow-hidden">
+				<div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-secondary/30 to-transparent pointer-events-none" />
+				<TrongDongWatermark opacity={0.015} className="text-premium-red pointer-events-none" />
+				
 				<div className="container-main relative z-10">
-					<Reveal className="max-w-2xl mx-auto">
-						<h2 className="text-3xl md:text-4xl font-heading font-bold mb-6 text-white">Cảm ơn bạn đã tin tưởng</h2>
-						<p className="text-white/80 mb-10 text-lg italic">
-							&quot;Sự hài lòng của khách hàng là niềm tự hào và động lực của bản làng chúng mình.&quot;
-						</p>
-						<Link
-							href="/san-pham"
-							className="inline-flex items-center gap-2 bg-white text-premium-red px-10 py-4 rounded-full font-bold hover:bg-festive-gold hover:text-white transition-all shadow-xl"
-						>
-							Quay lại cửa hàng
-							<ChevronRight size={18} />
-						</Link>
-					</Reveal>
+					<div className="max-w-4xl mx-auto space-y-16">
+						{policies.map((policy, index) => (
+								<div
+										key={policy.id}
+										id={policy.id}
+										className="scroll-mt-32"
+								>
+									<Reveal y={30} duration={0.6}>
+										<div className="flex items-center gap-4 mb-8">
+											<div className="w-14 h-14 rounded-2xl bg-premium-red/10 flex items-center justify-center text-premium-red shadow-sm border border-premium-red/10">
+												<policy.icon className="w-7 h-7"/>
+											</div>
+											<div>
+												<h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground">{policy.title}</h2>
+												<div className="h-1 w-12 bg-festive-gold/30 mt-1 rounded-full" />
+											</div>
+										</div>
+										
+										<div className="card-premium p-6 md:p-12 space-y-10 relative overflow-hidden bg-white shadow-[0_8px_40px_-10px_rgba(0,0,0,0.1)] border-none group">
+											<div className="absolute top-0 right-0 w-48 h-48 opacity-[0.02] -mr-12 -mt-12 rotate-12 transition-transform duration-700 group-hover:rotate-0">
+												<TrongDongBadge className="w-full h-full text-premium-red" />
+											</div>
+
+											{policy.content.map((section, sIndex) => (
+													<div key={sIndex} className="relative z-10">
+														<div className="flex items-center gap-3 mb-4">
+															<Star size={16} className="text-festive-gold fill-festive-gold" />
+															<h4 className="font-heading font-bold text-foreground text-lg md:text-xl">{section.heading}</h4>
+														</div>
+														<p className="text-sm md:text-md text-muted-foreground leading-relaxed pl-7 border-l-2 border-festive-gold/20">
+															{section.text}
+														</p>
+													</div>
+											))}
+										</div>
+									</Reveal>
+								</div>
+						))}
+						
+						{/* Contact CTA */}
+						<Reveal y={20} className="text-center pt-12 relative">
+							<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-premium-red/5 blur-[80px] rounded-full -z-10" />
+							
+							<p className="text-muted-foreground mb-8 text-md md:text-lg font-medium">
+								Bạn vẫn còn thắc mắc về các chính sách của chúng tôi?
+							</p>
+							<Link
+									href="/lien-he"
+									className="inline-flex items-center gap-3 bg-premium-red text-white px-8 py-4 md:px-10 md:py-5 rounded-2xl font-bold
+                       transition-all duration-300 hover:shadow-[0_10px_30px_-5px_rgba(185,28,28,0.4)] hover:-translate-y-1 text-sm md:text-lg group shadow-lg shadow-premium-red/20"
+							>
+								Liên hệ hỗ trợ ngay
+								<ChevronRight className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform"/>
+							</Link>
+						</Reveal>
+					</div>
 				</div>
-			</MotionViewport>
-		</main>
+			</section>
+		</Layout>
 	);
 }

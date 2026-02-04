@@ -1,0 +1,844 @@
+node_modules/next/dist/build/webpack/loaders/next-app-loader.d.ts:1:13 - error TS2613: Module '"next/dist/compiled/webpack/webpack"' has no default export. Did you mean to use 'import { webpack } from "next/dist/compiled/webpack/webpack"' instead?
+1 import type webpack from 'next/dist/compiled/webpack/webpack';
+              ~~~~~~~
+node_modules/next/dist/client/components/error-boundary.d.ts:1:8 - error TS1259: Module '"C:/Users/63200421/Downloads/tiemcuaban-next/node_modules/@types/react/index"' can only be default-imported using the 'esModuleInterop' flag
+1 import React from 'react';
+         ~~~~~
+  node_modules/@types/react/index.d.ts:47:1
+    47 export = React;
+       ~~~~~~~~~~~~~~~
+    This module is declared with 'export =', and can only be used with a default import when using the 'esModuleInterop' flag.
+node_modules/next/dist/client/components/layout-router.d.ts:3:8 - error TS1259: Module '"C:/Users/63200421/Downloads/tiemcuaban-next/node_modules/@types/react/index"' can only be default-imported using the 'esModuleInterop' flag
+3 import React from 'react';
+         ~~~~~
+  node_modules/@types/react/index.d.ts:47:1
+    47 export = React;
+       ~~~~~~~~~~~~~~~
+    This module is declared with 'export =', and can only be used with a default import when using the 'esModuleInterop' flag.
+node_modules/next/dist/client/components/not-found-boundary.d.ts:1:8 - error TS1259: Module '"C:/Users/63200421/Downloads/tiemcuaban-next/node_modules/@types/react/index"' can only be default-imported using the 'esModuleInterop' flag
+1 import React from 'react';
+         ~~~~~
+  node_modules/@types/react/index.d.ts:47:1
+    47 export = React;
+       ~~~~~~~~~~~~~~~
+    This module is declared with 'export =', and can only be used with a default import when using the 'esModuleInterop' flag.
+node_modules/next/dist/client/image-component.d.ts:1:8 - error TS1259: Module '"C:/Users/63200421/Downloads/tiemcuaban-next/node_modules/@types/react/index"' can only be default-imported using the 'esModuleInterop' flag
+1 import React from 'react';
+         ~~~~~
+  node_modules/@types/react/index.d.ts:47:1
+    47 export = React;
+       ~~~~~~~~~~~~~~~
+    This module is declared with 'export =', and can only be used with a default import when using the 'esModuleInterop' flag.
+node_modules/next/dist/client/link.d.ts:2:8 - error TS1259: Module '"C:/Users/63200421/Downloads/tiemcuaban-next/node_modules/@types/react/index"' can only be default-imported using the 'esModuleInterop' flag
+2 import React from 'react';
+         ~~~~~
+  node_modules/@types/react/index.d.ts:47:1
+    47 export = React;
+       ~~~~~~~~~~~~~~~
+    This module is declared with 'export =', and can only be used with a default import when using the 'esModuleInterop' flag.
+node_modules/next/dist/client/script.d.ts:1:8 - error TS1259: Module '"C:/Users/63200421/Downloads/tiemcuaban-next/node_modules/@types/react/index"' can only be default-imported using the 'esModuleInterop' flag
+1 import React from 'react';
+         ~~~~~
+  node_modules/@types/react/index.d.ts:47:1
+    47 export = React;
+       ~~~~~~~~~~~~~~~
+    This module is declared with 'export =', and can only be used with a default import when using the 'esModuleInterop' flag.
+node_modules/next/dist/client/with-router.d.ts:1:8 - error TS1259: Module '"C:/Users/63200421/Downloads/tiemcuaban-next/node_modules/@types/react/index"' can only be default-imported using the 'esModuleInterop' flag
+1 import React from 'react';
+         ~~~~~
+  node_modules/@types/react/index.d.ts:47:1
+    47 export = React;
+       ~~~~~~~~~~~~~~~
+    This module is declared with 'export =', and can only be used with a default import when using the 'esModuleInterop' flag.
+node_modules/next/dist/pages/_app.d.ts:1:8 - error TS1259: Module '"C:/Users/63200421/Downloads/tiemcuaban-next/node_modules/@types/react/index"' can only be default-imported using the 'esModuleInterop' flag
+1 import React from 'react';
+         ~~~~~
+  node_modules/@types/react/index.d.ts:47:1
+    47 export = React;
+       ~~~~~~~~~~~~~~~
+    This module is declared with 'export =', and can only be used with a default import when using the 'esModuleInterop' flag.
+node_modules/next/dist/pages/_document.d.ts:1:8 - error TS1259: Module '"C:/Users/63200421/Downloads/tiemcuaban-next/node_modules/@types/react/index"' can only be default-imported using the 'esModuleInterop' flag
+1 import React from 'react';
+         ~~~~~
+  node_modules/@types/react/index.d.ts:47:1
+    47 export = React;
+       ~~~~~~~~~~~~~~~
+    This module is declared with 'export =', and can only be used with a default import when using the 'esModuleInterop' flag.
+node_modules/next/dist/pages/_error.d.ts:1:8 - error TS1259: Module '"C:/Users/63200421/Downloads/tiemcuaban-next/node_modules/@types/react/index"' can only be default-imported using the 'esModuleInterop' flag
+1 import React from 'react';
+         ~~~~~
+  node_modules/@types/react/index.d.ts:47:1
+    47 export = React;
+       ~~~~~~~~~~~~~~~
+    This module is declared with 'export =', and can only be used with a default import when using the 'esModuleInterop' flag.
+node_modules/next/dist/server/app-render/types.d.ts:13:8 - error TS1192: Module '"next/dist/compiled/superstruct"' has no default export.
+13 import s from 'next/dist/compiled/superstruct';
+          ~
+node_modules/next/dist/server/render.d.ts:17:8 - error TS1259: Module '"C:/Users/63200421/Downloads/tiemcuaban-next/node_modules/@types/react/index"' can only be default-imported using the 'esModuleInterop' flag
+17 import React from 'react';
+          ~~~~~
+  node_modules/@types/react/index.d.ts:47:1
+    47 export = React;
+       ~~~~~~~~~~~~~~~
+    This module is declared with 'export =', and can only be used with a default import when using the 'esModuleInterop' flag.
+node_modules/next/dist/shared/lib/amp-context.shared-runtime.d.ts:1:8 - error TS1259: Module '"C:/Users/63200421/Downloads/tiemcuaban-next/node_modules/@types/react/index"' can only be default-imported using the 'esModuleInterop' flag
+1 import React from 'react';
+         ~~~~~
+  node_modules/@types/react/index.d.ts:47:1
+    47 export = React;
+       ~~~~~~~~~~~~~~~
+    This module is declared with 'export =', and can only be used with a default import when using the 'esModuleInterop' flag.
+node_modules/next/dist/shared/lib/app-router-context.shared-runtime.d.ts:4:8 - error TS1259: Module '"C:/Users/63200421/Downloads/tiemcuaban-next/node_modules/@types/react/index"' can only be default-imported using the 'esModuleInterop' flag
+4 import React from 'react';
+         ~~~~~
+  node_modules/@types/react/index.d.ts:47:1
+    47 export = React;
+       ~~~~~~~~~~~~~~~
+    This module is declared with 'export =', and can only be used with a default import when using the 'esModuleInterop' flag.
+node_modules/next/dist/shared/lib/dynamic.d.ts:1:8 - error TS1259: Module '"C:/Users/63200421/Downloads/tiemcuaban-next/node_modules/@types/react/index"' can only be default-imported using the 'esModuleInterop' flag
+1 import React from 'react';
+         ~~~~~
+  node_modules/@types/react/index.d.ts:47:1
+    47 export = React;
+       ~~~~~~~~~~~~~~~
+    This module is declared with 'export =', and can only be used with a default import when using the 'esModuleInterop' flag.
+node_modules/next/dist/shared/lib/head-manager-context.shared-runtime.d.ts:1:8 - error TS1259: Module '"C:/Users/63200421/Downloads/tiemcuaban-next/node_modules/@types/react/index"' can only be default-imported using the 'esModuleInterop' flag
+1 import React from 'react';
+         ~~~~~
+  node_modules/@types/react/index.d.ts:47:1
+    47 export = React;
+       ~~~~~~~~~~~~~~~
+    This module is declared with 'export =', and can only be used with a default import when using the 'esModuleInterop' flag.
+node_modules/next/dist/shared/lib/head.d.ts:1:8 - error TS1259: Module '"C:/Users/63200421/Downloads/tiemcuaban-next/node_modules/@types/react/index"' can only be default-imported using the 'esModuleInterop' flag
+1 import React from 'react';
+         ~~~~~
+  node_modules/@types/react/index.d.ts:47:1
+    47 export = React;
+       ~~~~~~~~~~~~~~~
+    This module is declared with 'export =', and can only be used with a default import when using the 'esModuleInterop' flag.
+node_modules/next/dist/shared/lib/image-config-context.shared-runtime.d.ts:1:8 - error TS1259: Module '"C:/Users/63200421/Downloads/tiemcuaban-next/node_modules/@types/react/index"' can only be default-imported using the 'esModuleInterop' flag
+1 import React from 'react';
+         ~~~~~
+  node_modules/@types/react/index.d.ts:47:1
+    47 export = React;
+       ~~~~~~~~~~~~~~~
+    This module is declared with 'export =', and can only be used with a default import when using the 'esModuleInterop' flag.
+node_modules/next/dist/shared/lib/loadable-context.shared-runtime.d.ts:1:8 - error TS1259: Module '"C:/Users/63200421/Downloads/tiemcuaban-next/node_modules/@types/react/index"' can only be default-imported using the 'esModuleInterop' flag
+1 import React from 'react';
+         ~~~~~
+  node_modules/@types/react/index.d.ts:47:1
+    47 export = React;
+       ~~~~~~~~~~~~~~~
+    This module is declared with 'export =', and can only be used with a default import when using the 'esModuleInterop' flag.
+node_modules/next/dist/shared/lib/loadable.shared-runtime.d.ts:21:8 - error TS1259: Module '"C:/Users/63200421/Downloads/tiemcuaban-next/node_modules/@types/react/index"' can only be default-imported using the 'esModuleInterop' flag
+21 import React from 'react';
+          ~~~~~
+  node_modules/@types/react/index.d.ts:47:1
+    47 export = React;
+       ~~~~~~~~~~~~~~~
+    This module is declared with 'export =', and can only be used with a default import when using the 'esModuleInterop' flag.
+node_modules/next/dist/shared/lib/router-context.shared-runtime.d.ts:1:8 - error TS1259: Module '"C:/Users/63200421/Downloads/tiemcuaban-next/node_modules/@types/react/index"' can only be default-imported using the 'esModuleInterop' flag
+1 import React from 'react';
+         ~~~~~
+  node_modules/@types/react/index.d.ts:47:1
+    47 export = React;
+       ~~~~~~~~~~~~~~~
+    This module is declared with 'export =', and can only be used with a default import when using the 'esModuleInterop' flag.
+node_modules/next/dist/shared/lib/server-inserted-html.shared-runtime.d.ts:1:8 - error TS1259: Module '"C:/Users/63200421/Downloads/tiemcuaban-next/node_modules/@types/react/index"' can only be default-imported using the 'esModuleInterop' flag
+1 import React from 'react';
+         ~~~~~
+  node_modules/@types/react/index.d.ts:47:1
+    47 export = React;
+       ~~~~~~~~~~~~~~~
+    This module is declared with 'export =', and can only be used with a default import when using the 'esModuleInterop' flag.
+node_modules/next/dist/shared/lib/utils.d.ts:12:13 - error TS1192: Module '"fs"' has no default export.
+12 import type fs from 'fs';
+               ~~
+node_modules/next/dist/styled-jsx/types/global.d.ts:6:8 - error TS1259: Module '"C:/Users/63200421/Downloads/tiemcuaban-next/node_modules/@types/react/index"' can only be default-imported using the 'esModuleInterop' flag
+6 import React from 'react'
+         ~~~~~
+  node_modules/@types/react/index.d.ts:47:1
+    47 export = React;
+       ~~~~~~~~~~~~~~~
+    This module is declared with 'export =', and can only be used with a default import when using the 'esModuleInterop' flag.
+node_modules/next/types/index.d.ts:10:13 - error TS1259: Module '"C:/Users/63200421/Downloads/tiemcuaban-next/node_modules/@types/react/index"' can only be default-imported using the 'esModuleInterop' flag
+10 import type React from 'react'
+               ~~~~~
+  node_modules/@types/react/index.d.ts:47:1
+    47 export = React;
+       ~~~~~~~~~~~~~~~
+    This module is declared with 'export =', and can only be used with a default import when using the 'esModuleInterop' flag.
+node_modules/sonner/dist/index.d.ts:1:8 - error TS1259: Module '"C:/Users/63200421/Downloads/tiemcuaban-next/node_modules/@types/react/index"' can only be default-imported using the 'esModuleInterop' flag
+1 import React from 'react';
+         ~~~~~
+  node_modules/@types/react/index.d.ts:47:1
+    47 export = React;
+       ~~~~~~~~~~~~~~~
+    This module is declared with 'export =', and can only be used with a default import when using the 'esModuleInterop' flag.
+src/app/lien-he/page.tsx:2:20 - error TS2307: Cannot find module '@/components/Layout' or its corresponding type declarations.
+2 import Layout from '@/components/Layout';
+                     ~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:3:50 - error TS2307: Cannot find module '@/components/TrongDongPattern' or its corresponding type declarations.
+3 import {TrongDongBadge, TrongDongWatermark} from '@/components/TrongDongPattern';
+                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:4:20 - error TS2307: Cannot find module '@/components/Reveal' or its corresponding type declarations.
+4 import Reveal from '@/components/Reveal';
+                     ~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:5:25 - error TS2307: Cannot find module '@/components/contact/ContactForm' or its corresponding type declarations.
+5 import ContactForm from '@/components/contact/ContactForm';
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:6:25 - error TS2307: Cannot find module '@/components/contact/ContactMaps' or its corresponding type declarations.
+6 import ContactMaps from '@/components/contact/ContactMaps';
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:24:4 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+24    <Layout breadcrumbs={breadcrumbs}>
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:26:5 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+26     <section className="relative pt-32 pb-24 md:pt-48 md:pb-40 overflow-hidden bg-white">
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:28:6 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+28      <div className="absolute inset-0 z-0">
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:29:7 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+29       <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white"/>
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:30:7 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+30       <div className="absolute inset-0 bg-gradient-to-r from-premium-red/5 via-transparent to-festive-gold/5"/>
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:34:6 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+34      <div
+        ~~~~
+35        className="absolute top-1/4 -left-20 w-96 h-96 bg-premium-red/10 blur-[100px] rounded-full animate-pulse"/>
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:36:6 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+36      <div
+        ~~~~
+37        className="absolute bottom-1/4 -right-20 w-96 h-96 bg-festive-gold/15 blur-[120px] rounded-full animate-pulse"
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+38        style={{animationDelay: '2s'}}/>
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:41:6 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+41      <div
+        ~~~~
+42        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] opacity-[0.02] pointer-events-none">
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:43:7 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+43       <TrongDongWatermark className="text-premium-red"/>
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:46:6 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+46      <div className="container-main relative z-10">
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:47:7 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+47       <div className="max-w-6xl mx-auto">
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:48:8 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+48        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:49:9 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+49         <div className="text-left">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:50:10 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+50          <Reveal
+            ~~~~~~~
+51            y={-20}
+   ~~~~~~~~~~~~~~~~~~
+52            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-premium-red/5 text-premium-red text-xs font-bold uppercase tracking-[0.2em] mb-8 border border-premium-red/10 backdrop-blur-sm shadow-sm"
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+53          >
+   ~~~~~~~~~~
+src/app/lien-he/page.tsx:54:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+54           <Sparkles size={14} className="animate-pulse"/>
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:56:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+56           <Sparkles size={14} className="animate-pulse"/>
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:59:10 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+ 59          <Reveal
+             ~~~~~~~
+ 60            y={30}
+    ~~~~~~~~~~~~~~~~~
+...
+ 62            className="text-5xl md:text-7xl font-heading font-bold text-foreground mb-8 leading-[1.1]"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 63          >
+    ~~~~~~~~~~
+src/app/lien-he/page.tsx:64:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+64           <h1>
+             ~~~~
+src/app/lien-he/page.tsx:65:27 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+65            Đồng hành cùng <br/>
+                             ~~~~~
+src/app/lien-he/page.tsx:66:12 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+66            <span
+              ~~~~~
+67              className="text-transparent bg-clip-text bg-gradient-to-r from-premium-red via-accent to-festive-gold">
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:73:10 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+ 73          <Reveal
+             ~~~~~~~
+ 74            y={20}
+    ~~~~~~~~~~~~~~~~~
+...
+ 77            className="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 78          >
+    ~~~~~~~~~~
+src/app/lien-he/page.tsx:79:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+79           <p>
+             ~~~
+src/app/lien-he/page.tsx:86:9 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+ 86         <Reveal
+            ~~~~~~~
+ 87           scale={0.9}
+    ~~~~~~~~~~~~~~~~~~~~~
+...
+ 89           className="hidden lg:flex justify-end relative"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 90         >
+    ~~~~~~~~~
+src/app/lien-he/page.tsx:91:10 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+91          <div className="relative">
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:92:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+92           <div
+             ~~~~
+93             className="w-80 h-80 md:w-96 md:h-96 rounded-[3rem] border-2 border-festive-gold/20 rotate-6 absolute inset-0 -z-10 bg-festive-gold/5"/>
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:94:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+94           <div
+             ~~~~
+95             className="w-80 h-80 md:w-96 md:h-96 rounded-[3rem] border-2 border-premium-red/20 -rotate-3 absolute inset-0 -z-10 bg-premium-red/5"/>
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:96:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+96           <div className="w-80 h-80 md:w-96 md:h-96 rounded-[3rem] overflow-hidden shadow-2xl relative">
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:97:12 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+ 97            <Image
+               ~~~~~~
+ 98              src="/hero-bg.jpg"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+...
+100              className="w-full h-full object-cover opacity-80"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+101            />
+    ~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:102:12 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+102            <div className="absolute inset-0 bg-gradient-to-t from-premium-red/40 to-transparent"/>
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:103:12 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+103            <div className="absolute bottom-8 left-8 right-8 text-white">
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:104:13 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+104             <div className="flex items-center gap-2 mb-2">
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:105:14 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+105              <Star className="w-5 h-5 fill-festive-gold text-festive-gold"/>
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:106:14 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+106              <span className="text-sm font-bold uppercase tracking-widest">Tiệm Của Bản</span>
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:108:13 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+108             <p className="text-lg font-medium italic">&quot;Gói ghém chân tình Tây Bắc trong từng món quà&quot;</p>
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:114:10 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+114          <div
+             ~~~~
+115            className="absolute -top-10 -right-10 w-24 h-24 bg-white rounded-3xl shadow-xl flex items-center justify-center border border-festive-gold/20 backdrop-blur-sm z-20 animate-bounce-slow">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:116:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+116           <div className="text-center">
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:117:12 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+117            <p className="text-2xl font-bold text-premium-red">24/7</p>
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:118:12 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+118            <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider">Hỗ trợ</p>
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:127:5 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+127     <section className="section-spacing pb-24 bg-white relative">
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:128:6 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+128      <div className="container-main">
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:129:7 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+129       <div className="grid lg:grid-cols-3 gap-12">
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:130:8 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+130        <div className="lg:col-span-1 space-y-8">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:131:9 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+131         <Reveal x={-30} y={0}>
+            ~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:132:10 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+132          <div className="flex items-center gap-3 mb-4">
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:133:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+133           <div className="h-px w-8 bg-premium-red"/>
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:134:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+134           <span className="text-sm font-bold text-premium-red uppercase tracking-widest">
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:138:10 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+138          <h2 className="text-3xl font-heading font-bold text-foreground mb-4">Kết nối trực tiếp</h2>
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:139:10 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+139          <p className="text-muted-foreground text-sm leading-relaxed mb-8">
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:144:10 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+144          <div className="space-y-4">
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:174:13 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+174             <a
+                ~~
+175               key={item.label}
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+...
+177               className={`flex items-start gap-4 p-5 rounded-2xl border border-border/60 ${item.hoverBorder} hover:shadow-lift transition-all group bg-white/50 backdrop-blur-sm`}
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+178             >
+    ~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:179:14 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+179              <div
+                 ~~~~
+180                className={`w-12 h-12 rounded-xl ${item.bgColor} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:181:15 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+181               <item.icon className={`w-6 h-6 ${item.color}`}/>
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:183:14 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+183              <div>
+                 ~~~~~
+src/app/lien-he/page.tsx:184:15 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+184               <p className="font-bold text-foreground group-hover:text-foreground transition-colors text-sm uppercase tracking-wider">
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:187:15 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+187               <p className="text-muted-foreground text-lg font-medium">{item.value}</p>
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:192:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+192           <div
+              ~~~~
+193             className="flex items-start gap-4 p-5 rounded-2xl border border-border/60 bg-white/50 backdrop-blur-sm shadow-sm relative overflow-hidden group">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:194:12 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+194            <div
+               ~~~~
+195              className="absolute top-0 right-0 w-16 h-16 opacity-[0.03] -mr-4 -mt-4 group-hover:opacity-[0.08] transition-opacity">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:196:13 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+196             <TrongDongBadge className="w-full h-full text-premium-red"/>
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:198:12 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+198            <div
+               ~~~~
+199              className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:200:13 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+200             <MapPin className="w-6 h-6 text-primary"/>
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:202:12 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+202            <div className="relative z-10">
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:203:13 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+203             <p className="font-bold text-foreground text-sm uppercase tracking-wider">Địa chỉ</p>
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:204:13 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+204             <p className="text-muted-foreground text-md font-medium">29 Đ. Đức Diễn, Phúc Diễn, Bắc Từ Liêm,
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:213:8 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+213        <div className="lg:col-span-2">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:214:9 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+214         <Reveal y={30}
+            ~~~~~~~~~~~~~~
+215                 className="bg-white p-8 md:p-12 rounded-[3rem] shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-premium-red/5 relative overflow-hidden">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:217:10 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+217          <div
+             ~~~~
+218            className="absolute top-0 right-0 w-64 h-64 bg-premium-red/5 blur-[80px] rounded-full -mr-32 -mt-32"/>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:219:10 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+219          <div
+             ~~~~
+220            className="absolute bottom-0 left-0 w-64 h-64 bg-festive-gold/5 blur-[80px] rounded-full -ml-32 -mb-32"/>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:222:10 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+222          <div className="absolute top-10 right-10 w-20 h-20 opacity-[0.03] rotate-12">
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:223:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+223           <TrongDongBadge className="w-full h-full text-premium-red"/>
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:226:10 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+226          <div className="relative z-10">
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:227:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+227           <div className="flex items-center gap-4 mb-10">
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:228:12 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+228            <div
+               ~~~~
+229              className="w-12 h-12 rounded-2xl bg-gradient-to-br from-premium-red to-accent flex items-center justify-center text-white shadow-lg shadow-premium-red/20">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:230:13 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+230             <MessageCircle size={24}/>
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:232:12 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+232            <div>
+               ~~~~~
+src/app/lien-he/page.tsx:233:13 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+233             <h2 className="text-3xl font-heading font-bold text-foreground">Gửi tin nhắn</h2>
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:234:13 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+234             <p className="text-muted-foreground text-sm">Chúng mình sẽ phản hồi bạn trong vòng 24 giờ</p>
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:237:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+237           <ContactForm/>
+              ~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:246:5 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+246     <section className="section-spacing bg-secondary/30 relative overflow-hidden">
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:247:6 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+247      <div
+         ~~~~
+248        className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-white to-transparent pointer-events-none"/>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:249:6 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+249      <TrongDongWatermark opacity={0.03} className="text-premium-red"/>
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:251:6 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+251      <div className="container-main relative z-10">
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:252:7 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+252       <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-16">
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:253:8 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+253        <div className="flex items-center gap-5">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:254:9 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+254         <div
+            ~~~~
+255           className="w-16 h-16 rounded-2xl bg-premium-red/10 flex items-center justify-center shadow-sm border border-premium-red/10 group">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:256:10 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+256          <MapPin className="w-8 h-8 text-premium-red group-hover:scale-110 transition-transform"/>
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:258:9 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+258         <div>
+            ~~~~~
+src/app/lien-he/page.tsx:259:10 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+259          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">Ghé thăm chúng mình</h2>
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:260:10 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+260          <p className="text-muted-foreground text-md mt-1">
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:266:8 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+266        <div className="flex items-center gap-3">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:267:9 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+267         <div className="h-px w-12 bg-festive-gold/30 hidden md:block"/>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:268:9 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+268         <div className="h-2 w-2 rounded-full bg-premium-red"/>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:269:9 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+269         <div className="h-px w-12 bg-festive-gold/30 hidden md:block"/>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/app/lien-he/page.tsx:272:7 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+272       <ContactMaps/>
+          ~~~~~~~~~~~~~~
+src/components/contact/ContactForm.tsx:5:34 - error TS2307: Cannot find module '@/hooks/useContact' or its corresponding type declarations.
+5 import { useSubmitContact } from '@/hooks/useContact';
+                                   ~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactForm.tsx:43:5 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+43     <form onSubmit={handleSubmit} className="space-y-8">
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactForm.tsx:44:7 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+44       <div className="grid md:grid-cols-2 gap-8">
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactForm.tsx:45:9 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+45         <div className="space-y-2">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactForm.tsx:46:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+46           <label htmlFor="name" className="text-xs font-bold text-foreground/60 uppercase tracking-[0.1em] ml-1">
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactForm.tsx:47:20 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+47             Họ tên <span className="text-premium-red">*</span>
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactForm.tsx:49:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+ 49           <input
+              ~~~~~~
+ 50             id="name"
+    ~~~~~~~~~~~~~~~~~~~~~
+...
+ 56             className="w-full bg-secondary/30 border-2 border-transparent focus:border-premium-red/20 focus:bg-white rounded-2xl px-6 py-4 outline-none transition-all duration-300 placeholder:text-muted-foreground/50 font-medium"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 57           />
+    ~~~~~~~~~~~~
+src/components/contact/ContactForm.tsx:59:9 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+59         <div className="space-y-2">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactForm.tsx:60:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+60           <label htmlFor="phone" className="text-xs font-bold text-foreground/60 uppercase tracking-[0.1em] ml-1">
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactForm.tsx:63:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+ 63           <input
+              ~~~~~~
+ 64             id="phone"
+    ~~~~~~~~~~~~~~~~~~~~~~
+...
+ 69             className="w-full bg-secondary/30 border-2 border-transparent focus:border-premium-red/20 focus:bg-white rounded-2xl px-6 py-4 outline-none transition-all duration-300 placeholder:text-muted-foreground/50 font-medium"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 70           />
+    ~~~~~~~~~~~~
+src/components/contact/ContactForm.tsx:74:7 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+74       <div className="space-y-2">
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactForm.tsx:75:9 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+75         <label htmlFor="email" className="text-xs font-bold text-foreground/60 uppercase tracking-[0.1em] ml-1">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactForm.tsx:78:9 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+ 78         <input
+            ~~~~~~
+ 79           id="email"
+    ~~~~~~~~~~~~~~~~~~~~
+...
+ 85           className="w-full bg-secondary/30 border-2 border-transparent focus:border-premium-red/20 focus:bg-white rounded-2xl px-6 py-4 outline-none transition-all duration-300 placeholder:text-muted-foreground/50 font-medium"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 86         />
+    ~~~~~~~~~~
+src/components/contact/ContactForm.tsx:89:7 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+89       <div className="space-y-2">
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactForm.tsx:90:9 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+90         <label htmlFor="message" className="text-xs font-bold text-foreground/60 uppercase tracking-[0.1em] ml-1">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactForm.tsx:91:20 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+91           Nội dung <span className="text-premium-red">*</span>
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactForm.tsx:93:9 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+ 93         <textarea
+            ~~~~~~~~~
+ 94           id="message"
+    ~~~~~~~~~~~~~~~~~~~~~~
+...
+101           className="w-full bg-secondary/30 border-2 border-transparent focus:border-premium-red/20 focus:bg-white rounded-2xl px-6 py-4 outline-none transition-all duration-300 placeholder:text-muted-foreground/50 font-medium resize-none"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+102         />
+    ~~~~~~~~~~
+src/components/contact/ContactForm.tsx:105:7 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+105       <div className="flex flex-col md:flex-row items-center justify-between gap-8 pt-4">
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactForm.tsx:106:9 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+106         <div className="flex items-center gap-3 text-muted-foreground bg-secondary/20 px-4 py-2 rounded-full border border-border/50">
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactForm.tsx:107:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+107           <div className="w-1.5 h-1.5 rounded-full bg-festive-gold animate-pulse" />
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactForm.tsx:108:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+108           <p className="text-[11px] font-medium leading-tight">
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactForm.tsx:112:9 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+112         <button
+            ~~~~~~~
+113           type="submit"
+    ~~~~~~~~~~~~~~~~~~~~~~~
+...
+115           className="relative group overflow-hidden bg-premium-red text-white px-10 py-5 rounded-2xl font-bold transition-all duration-300 hover:shadow-[0_10px_30px_-5px_rgba(185,28,28,0.4)] hover:-translate-y-1 disabled:opacity-50 w-full md:w-auto"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+116         >
+    ~~~~~~~~~
+src/components/contact/ContactForm.tsx:117:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+117           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactMaps.tsx:48:5 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+48     <>
+       ~~
+src/components/contact/ContactMaps.tsx:49:7 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+49       <div className="grid md:grid-cols-2 gap-8">
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactMaps.tsx:51:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+ 51           <motion.button
+              ~~~~~~~~~~~~~~
+ 52             key={card.key}
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~
+...
+ 60             aria-label={`Open map popup - ${card.title}`}
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 61           >
+    ~~~~~~~~~~~
+src/components/contact/ContactMaps.tsx:62:13 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+62             <div className="relative aspect-[16/10] md:aspect-[16/9] w-full">
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactMaps.tsx:63:15 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+ 63               <Image
+                  ~~~~~~
+ 64                 src={card.imageSrc}
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+...
+ 68                 className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 69               />
+    ~~~~~~~~~~~~~~~~
+src/components/contact/ContactMaps.tsx:70:15 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+ 70               <iframe
+                  ~~~~~~~
+ 71                 title={`Mini map hover - ${card.title}`}
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+...
+ 75                 className="pointer-events-none absolute inset-0 w-full h-full opacity-0 transition-opacity duration-300 group-hover:opacity-100 border-0"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 76               />
+    ~~~~~~~~~~~~~~~~
+src/components/contact/ContactMaps.tsx:78:15 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+78               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent pointer-events-none"/>
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactMaps.tsx:79:15 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+79               <div className="absolute top-4 left-4">
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactMaps.tsx:80:17 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+80                 <span className="inline-flex items-center rounded-full border border-premium-red/20 bg-background/90 backdrop-blur-md px-4 py-1.5 text-xs font-bold text-premium-red shadow-sm uppercase tracking-widest">
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactMaps.tsx:84:15 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+84               <div className="absolute top-4 right-4 inline-flex items-center gap-2 rounded-full border border-festive-gold/30 bg-background/90 backdrop-blur-md px-4 py-1.5 text-xs font-bold text-foreground transition-all group-hover:bg-festive-gold group-hover:text-premium-red shadow-sm">
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactMaps.tsx:85:17 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+85                 <ExternalLink className="w-4 h-4 text-premium-red"/>
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactMaps.tsx:89:15 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+89               <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactMaps.tsx:90:17 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+90                 <div className="flex items-start justify-between gap-4">
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactMaps.tsx:91:19 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+91                   <div className="drop-shadow-sm">
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactMaps.tsx:92:21 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+92                     <div className="flex items-center gap-2 mb-1">
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactMaps.tsx:93:23 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+93                       <div className="w-1.5 h-1.5 rounded-full bg-festive-gold animate-pulse" />
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactMaps.tsx:94:23 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+94                       <h3 className="text-2xl md:text-3xl font-heading font-bold text-foreground leading-snug">
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactMaps.tsx:98:21 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+98                     <p className="text-md font-bold text-premium-red/80 uppercase tracking-widest text-[10px] mb-2">{card.subtitle}</p>
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactMaps.tsx:99:21 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+99                     <p className="text-sm text-muted-foreground line-clamp-2">{card.address}</p>
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactMaps.tsx:103:17 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+103                 <div className="mt-6 h-px w-full bg-gradient-to-r from-premium-red/20 via-festive-gold/20 to-transparent"/>
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactMaps.tsx:104:17 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+104                 <div className="mt-4 flex items-center justify-between text-xs">
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactMaps.tsx:105:19 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+105                   <span className="text-muted-foreground font-medium italic">Click để phóng to bản đồ</span>
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactMaps.tsx:106:19 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+106                   <span className="text-premium-red font-bold group-hover:underline underline-offset-4 flex items-center gap-1">
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactMaps.tsx:107:34 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+107                     Xem chi tiết <ExternalLink size={14} />
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactMaps.tsx:116:7 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+116       <AnimatePresence>
+          ~~~~~~~~~~~~~~~~~
+src/components/contact/ContactMaps.tsx:118:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+118           <motion.div
+              ~~~~~~~~~~~
+119             initial={{ opacity: 0 }}
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+...
+123             onClick={() => setOpenMapKey(null)}
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+124           >
+    ~~~~~~~~~~~
+src/components/contact/ContactMaps.tsx:125:13 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+125             <motion.div
+                ~~~~~~~~~~~
+126               initial={{ scale: 0.9, y: 20 }}
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+...
+130               onClick={(e) => e.stopPropagation()}
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+131             >
+    ~~~~~~~~~~~~~
+src/components/contact/ContactMaps.tsx:132:15 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+132               <button
+                  ~~~~~~~
+133                 onClick={() => setOpenMapKey(null)}
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+134                 className="absolute top-6 right-6 z-10 p-3 bg-white/10 backdrop-blur-md hover:bg-premium-red hover:text-white text-white rounded-full transition-all border border-white/20"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+135               >
+    ~~~~~~~~~~~~~~~
+src/components/contact/ContactMaps.tsx:136:17 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+136                 <X size={24} />
+                    ~~~~~~~~~~~~~~~
+src/components/contact/ContactMaps.tsx:139:15 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+139               <div className="absolute top-6 left-6 z-10 p-6 bg-white/90 backdrop-blur-md rounded-2xl shadow-xl max-w-sm hidden md:block">
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactMaps.tsx:140:17 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+140                 <h4 className="text-xl font-bold text-foreground mb-2">{activeMap.title}</h4>
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactMaps.tsx:141:17 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+141                 <p className="text-sm text-muted-foreground mb-4">{activeMap.address}</p>
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactMaps.tsx:142:17 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+142                 <a
+                    ~~
+143                   href={activeMap.href}
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+...
+146                   className="inline-flex items-center gap-2 text-premium-red font-bold text-sm hover:underline"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+147                 >
+    ~~~~~~~~~~~~~~~~~
+src/components/contact/ContactMaps.tsx:148:19 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+148                   <ExternalLink size={16} />
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/components/contact/ContactMaps.tsx:153:15 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+153               <iframe
+                  ~~~~~~~
+154                 src={activeMap.embedSrc}
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+...
+158                 referrerPolicy="no-referrer-when-downgrade"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+159               />
+    ~~~~~~~~~~~~~~~~
+Found 183 errors in 30 files.
+Errors  Files
+     1  node_modules/next/dist/build/webpack/loaders/next-app-loader.d.ts:1
+     1  node_modules/next/dist/client/components/error-boundary.d.ts:1
+     1  node_modules/next/dist/client/components/layout-router.d.ts:3
+     1  node_modules/next/dist/client/components/not-found-boundary.d.ts:1
+     1  node_modules/next/dist/client/image-component.d.ts:1
+     1  node_modules/next/dist/client/link.d.ts:2
+     1  node_modules/next/dist/client/script.d.ts:1
+     1  node_modules/next/dist/client/with-router.d.ts:1
+     1  node_modules/next/dist/pages/_app.d.ts:1
+     1  node_modules/next/dist/pages/_document.d.ts:1
+     1  node_modules/next/dist/pages/_error.d.ts:1
+     1  node_modules/next/dist/server/app-render/types.d.ts:13
+     1  node_modules/next/dist/server/render.d.ts:17
+     1  node_modules/next/dist/shared/lib/amp-context.shared-runtime.d.ts:1
+     1  node_modules/next/dist/shared/lib/app-router-context.shared-runtime.d.ts:4
+     1  node_modules/next/dist/shared/lib/dynamic.d.ts:1
+     1  node_modules/next/dist/shared/lib/head-manager-context.shared-runtime.d.ts:1
+     1  node_modules/next/dist/shared/lib/head.d.ts:1
+     1  node_modules/next/dist/shared/lib/image-config-context.shared-runtime.d.ts:1
+     1  node_modules/next/dist/shared/lib/loadable-context.shared-runtime.d.ts:1
+     1  node_modules/next/dist/shared/lib/loadable.shared-runtime.d.ts:21
+     1  node_modules/next/dist/shared/lib/router-context.shared-runtime.d.ts:1
+     1  node_modules/next/dist/shared/lib/server-inserted-html.shared-runtime.d.ts:1
+     1  node_modules/next/dist/shared/lib/utils.d.ts:12
+     1  node_modules/next/dist/styled-jsx/types/global.d.ts:6
+     1  node_modules/next/types/index.d.ts:10
+     1  node_modules/sonner/dist/index.d.ts:1
+    98  src/app/lien-he/page.tsx:2
+    23  src/components/contact/ContactForm.tsx:5
+    35  src/components/contact/ContactMaps.tsx:48

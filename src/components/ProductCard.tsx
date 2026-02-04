@@ -66,7 +66,7 @@ export default function ProductCard({product, index = 0}: ProductCardProps) {
 			>
 				<Link href={`/san-pham/${product.slug}`} className="group block h-full">
 					<div
-							className="card-premium overflow-hidden h-full flex flex-col group/card relative hover:border-festive-gold/50 hover:shadow-[0_10px_30px_-10px_rgba(212,175,55,0.2)]">
+							className="card-premium overflow-hidden h-full flex flex-col group/card relative hover:border-festive-gold/50 hover:shadow-[0_20px_40px_-15px_rgba(212,175,55,0.25)]">
 						{/* Image container */}
 						<div className="relative aspect-square overflow-hidden bg-muted">
 							{isVideo ? (

@@ -2,6 +2,7 @@
 
 import {useEffect, useMemo, useState} from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {motion, AnimatePresence} from 'framer-motion';
 import Reveal from "@/components/Reveal";
 import {
@@ -36,7 +37,6 @@ import {useCart} from "@/store/cart";
 import {toast} from "@/components/ui/sonner";
 import {getVideoThumbnail, isVideoUrl} from "@/lib/utils";
 import type {Product, Review} from "@/types/database";
-import LoadingSpinner from "@/components/LoadingSpinner";
 import {TrongDongBadge, TrongDongWatermark} from "@/components/TrongDongPattern";
 
 const REVIEWS_PER_PAGE = 6;
@@ -73,13 +73,13 @@ export default function ProductDetailClient({
 		setSelectedPrice(defaultWeightOption?.price || product.basePrice);
 	}, [product]);
 	
-	const productImages = product?.galleryImages?.length
+	const productImages = useMemo(() => product?.galleryImages?.length
 			? product.galleryImages.map((img) => img.imageUrl)
 			: product?.images?.length
 					? product.images
-					: ["/placeholder.svg"];
+					: ["/placeholder.svg"], [product]);
 	
-	const allReviews = initialReviews || [];
+	const allReviews = useMemo(() => initialReviews || [], [initialReviews]);
 	const totalReviewPages = Math.max(1, Math.ceil(allReviews.length / REVIEWS_PER_PAGE));
 	
 	const displayReviews = useMemo(() => {
@@ -114,7 +114,7 @@ export default function ProductDetailClient({
 						});
 			}
 		});
-	}, [productImages, product?.blogSections]);
+	}, [productImages, product?.blogSections, videoThumbnailUrls]);
 	
 	const handleAddToCart = () => {
 		const firstImage = productImages.find((img) => !isVideo(img)) || productImages[0] || "";
@@ -308,10 +308,12 @@ export default function ProductDetailClient({
 											>
 												{isVideo(img) ? (
 														<>
-															<img
+															<Image
 																	src={videoThumbnailUrls[img] || '/placeholder.svg'}
 																	alt={`${product.name} video thumbnail ${idx + 1}`}
-																	className="w-full h-full object-cover"
+																	fill
+																	sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+																	className="object-cover"
 															/>
 															<div className="absolute inset-0 flex items-center justify-center bg-black/30">
 																<div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/40">
@@ -320,10 +322,12 @@ export default function ProductDetailClient({
 															</div>
 														</>
 												) : (
-														<img
+														<Image
 																src={img}
 																alt={`${product.name} thumbnail ${idx + 1}`}
-																className="w-full h-full object-cover"
+																fill
+																sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+																className="object-cover"
 														/>
 												)}
 											</button>
@@ -628,10 +632,12 @@ export default function ProductDetailClient({
 																				poster={section.thumbnail || videoThumbnailUrls[section.image] || productImages[0]}
 																		/>
 																) : (
-																		<img
+																		<Image
 																				src={section.image || productImages[0] || '/placeholder.svg'}
 																				alt={section.title}
-																				className="w-full h-full object-cover transition-transform duration-1000 group-hover/section-media:scale-110"
+																				fill
+																				sizes="(max-width: 768px) 100vw, 50vw"
+																				className="object-cover transition-transform duration-1000 group-hover/section-media:scale-110"
 																		/>
 																)}
 																<div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover/section-media:opacity-100 transition-opacity duration-500 pointer-events-none" />
@@ -671,8 +677,8 @@ export default function ProductDetailClient({
 						)}
 						
 						{/* Customer Reviews Section with Pagination */}
-						<div className="mt-16 md:mt-24 relative overflow-hidden px-4 md:px-6">
-							{/* Decorative background for reviews section */}
+						<div className="mt-16 md:mt-24 pb-16 relative overflow-hidden px-4 md:px-6">
+							{/* Decorative background for a reviews section */}
 							<div className="absolute inset-0 bg-gradient-to-b from-premium-red/5 via-transparent to-transparent pointer-events-none rounded-3xl" />
 							<div className="absolute top-1/4 -right-20 w-80 h-80 bg-premium-red/5 blur-[120px] rounded-full pointer-events-none" />
 							<div className="absolute bottom-1/4 -left-20 w-80 h-80 bg-festive-gold/10 blur-[120px] rounded-full pointer-events-none" />
@@ -802,7 +808,6 @@ export default function ProductDetailClient({
 												>
 													{submitReviewMutation.isPending ? (
 															<>
-																<LoadingSpinner size="sm" />
 																Đang gửi...
 															</>
 													) : (
@@ -834,7 +839,7 @@ export default function ProductDetailClient({
 																		y={40}
 																		delay={index * 0.06}
 																		whileHover={{y: -5}}
-																		className="bg-card/80 backdrop-blur-sm p-6 md:p-7 rounded-3xl border border-premium-red/10 hover:border-festive-gold/40 hover:shadow-[0_15px_30px_-10px_rgba(212,175,55,0.12)] transition-all duration-500 relative group overflow-hidden flex flex-col h-full"
+																		className="bg-card/80 backdrop-blur-sm p-6 md:p-7 rounded-3xl border border-premium-red/10 hover:border-festive-gold/40 hover:shadow-[0_25px_50px_-15px_rgba(212,175,55,0.25)] transition-all duration-500 relative group overflow-hidden flex flex-col h-full"
 																>
 																	{/* Quote Icon */}
 																	<div className="relative z-10">
