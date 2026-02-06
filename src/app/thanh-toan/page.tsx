@@ -104,7 +104,7 @@ export default function CheckoutPage() {
 			return;
 		}
 		
-		if (!VIETNAM_PROVINCES.includes(formData.city)) {
+		if (!(VIETNAM_PROVINCES as readonly string[]).includes(formData.city)) {
 			toast.error('Vui lòng chọn tỉnh/thành phố trong danh sách.');
 			return;
 		}
