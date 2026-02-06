@@ -21,6 +21,7 @@ const navLinks = [
 export default function Navbar() {
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+	const [isMounted, setIsMounted] = useState(false);
 	const headerRef = useRef<HTMLElement | null>(null);
 	const pathname = usePathname();
 	const {toggleCart, getTotalItems} = useCart();
@@ -37,6 +38,10 @@ export default function Navbar() {
 	useEffect(() => {
 		setIsMobileMenuOpen(false);
 	}, [pathname]);
+	
+	useEffect(() => {
+		setIsMounted(true);
+	}, []);
 	
 	useLayoutEffect(() => {
 		const header = headerRef.current;
@@ -129,7 +134,7 @@ export default function Navbar() {
 											<Link
 													key={link.href}
 													href={link.href}
-													className={`px-4 py-2 text-[13px] font-bold transition-all duration-300 relative group whitespace-nowrap rounded-lg hover:bg-premium-red/5 ${
+													className={`px-4 py-2 text-[13px] font-medium transition-all duration-300 relative group whitespace-nowrap rounded-lg hover:bg-premium-red/5 ${
 															pathname === link.href
 																	? 'text-premium-red'
 																	: 'text-foreground/80 hover:text-premium-red'
@@ -165,7 +170,7 @@ export default function Navbar() {
 											aria-label="Giỏ hàng"
 									>
 										<ShoppingBag className="w-5 h-5 group-hover:scale-110 transition-transform"/>
-										{totalItems > 0 && (
+										{isMounted && totalItems > 0 && (
 												<motion.span
 														initial={{scale: 0}}
 														animate={{scale: 1}}
@@ -226,7 +231,7 @@ export default function Navbar() {
 													>
 														<Link
 																href={link.href}
-																className={`text-sm font-bold py-3 px-4 rounded-xl flex items-center justify-between transition-all ${
+																className={`text-sm font-medium py-3 px-4 rounded-xl flex items-center justify-between transition-all ${
 																		pathname === link.href
 																				? 'bg-premium-red text-white shadow-medium'
 																				: 'text-foreground/70 hover:bg-premium-red/5 hover:text-premium-red'

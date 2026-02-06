@@ -45,7 +45,7 @@ export default function ReviewsSectionClient({ allReviews }: ReviewsSectionClien
                 ))}
               </div>
               
-              <p className="text-foreground leading-relaxed mb-6 text-sm md:text-[15px] italic line-clamp-4 flex-1">
+              <p className="text-foreground leading-relaxed mb-6 text-sm font-light italic line-clamp-4 flex-1">
               &quot;{review.content}&quot;
               </p>
               
