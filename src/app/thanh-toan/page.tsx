@@ -163,7 +163,6 @@ export default function CheckoutPage() {
 					form.appendChild(input);
 				});
 				document.body.appendChild(form);
-				clearCart();
 				form.submit();
 				return;
 			}
