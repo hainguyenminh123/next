@@ -41,7 +41,7 @@ export default function FAQSection() {
 							</Reveal>
 							<Reveal
 									delay={0.2}
-									className="text-lg text-muted-foreground mb-8 leading-relaxed"
+									className="text-sm font-light text-muted-foreground mb-8 leading-relaxed"
 							>
 								Giải đáp nhanh những thắc mắc phổ biến về sản phẩm và dịch vụ của chúng tôi.
 								Đừng ngần ngại liên hệ nếu bạn cần thêm thông tin nhé!
@@ -57,7 +57,7 @@ export default function FAQSection() {
 									</div>
 									<div>
 										<h4 className="font-bold text-foreground">Hỗ trợ 24/7</h4>
-										<p className="text-sm text-muted-foreground">Luôn sẵn sàng lắng nghe bạn</p>
+										<p className="text-sm font-light text-muted-foreground">Luôn sẵn sàng lắng nghe bạn</p>
 									</div>
 								</Reveal>
 								<Reveal
@@ -69,7 +69,7 @@ export default function FAQSection() {
 									</div>
 									<div>
 										<h4 className="font-bold text-foreground">Zalo / Hotline</h4>
-										<p className="text-sm text-muted-foreground">0339 420 806</p>
+										<p className="text-sm font-light text-muted-foreground">0339 420 806</p>
 									</div>
 								</Reveal>
 							</div>
@@ -94,10 +94,13 @@ export default function FAQSection() {
 															className="flex-shrink-0 w-8 h-8 rounded-full bg-premium-red/5 flex items-center justify-center text-xs text-premium-red border border-premium-red/10 group-data-[state=open]:bg-premium-red group-data-[state=open]:text-white transition-all">
 														{index + 1 < 10 ? `0${index + 1}` : index + 1}
 													</span>
-														{faq.question}
+														<span className="text-sm font-medium">
+															{faq.question}
+														</span>
 													</div>
 												</AccordionTrigger>
-												<AccordionContent className="text-muted-foreground text-md pb-6 leading-relaxed relative">
+												<AccordionContent
+														className="text-muted-foreground font-light text-md pb-6 leading-relaxed relative">
 													<div className="pl-12">
 														{faq.answer}
 													</div>

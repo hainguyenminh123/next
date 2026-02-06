@@ -94,7 +94,7 @@ export default function ShopClient({initialProducts}: { initialProducts: Product
 								initial={{opacity: 0, y: 20}}
 								animate={{opacity: 1, y: 0}}
 								transition={{delay: 0.2}}
-								className="text-white/80 mt-2 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
+								className="text-white/80 mt-2 text-md font-light max-w-2xl mx-auto leading-relaxed"
 						>
 							Khám phá danh mục đặc sản chuẩn vị Điện Biên,
 							được chọn lọc kỹ lưỡng cho bữa cơm Tết trọn vẹn.
@@ -116,7 +116,7 @@ export default function ShopClient({initialProducts}: { initialProducts: Product
 								<Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-premium-red/40 group-focus-within/search:text-premium-red transition-colors"/>
 								<input
 										type="text"
-										placeholder="Tìm sản phẩm tinh hoa..."
+										placeholder="Tìm sản phẩm..."
 										value={searchQuery}
 										onChange={(e) => setSearchQuery(e.target.value)}
 										className="w-full pl-12 pr-10 py-3.5 rounded-2xl border border-border bg-white/50 placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-premium-red/20 focus:border-premium-red/30 transition-all text-sm"
@@ -214,7 +214,7 @@ export default function ShopClient({initialProducts}: { initialProducts: Product
 										<div className="mt-10 pt-8 border-t border-premium-red/5">
 											<div className="p-4 rounded-2xl bg-premium-red/5 border border-premium-red/10">
 												<p className="text-[10px] font-bold text-premium-red/60 uppercase tracking-widest mb-2">Hỗ trợ khách hàng</p>
-												<p className="text-xs font-medium text-foreground/80 leading-relaxed mb-3">Cần tư vấn chọn quà Tết chuẩn vị?</p>
+												<p className="text-xs font-light text-foreground/80 leading-relaxed mb-3">Cần tư vấn chọn quà Tết chuẩn vị?</p>
 												<a href="tel:0339 420 806" className="text-sm font-bold text-premium-red hover:text-premium-red-light transition-colors flex items-center gap-2">
 													0339 420 806
 												</a>

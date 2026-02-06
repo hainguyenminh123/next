@@ -82,6 +82,7 @@ export interface DBOrder {
 	shipping_fee: number;
 	total: number;
 	status: OrderStatus;
+	is_paid: boolean;
 	created_at: string;
 	updated_at: string;
 }
@@ -182,6 +183,7 @@ export interface CreateOrderInput {
 	subtotal: number;
 	shipping_fee: number;
 	total: number;
+	is_paid?: boolean;
 }
 
 export interface CreateOrderItemInput {

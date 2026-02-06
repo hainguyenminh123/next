@@ -97,7 +97,7 @@ export default function AboutPage() {
 									y={16}
 									delay={0.2}
 									duration={0.8}
-									className="text-white/85 text-base md:text-lg max-w-2xl leading-relaxed"
+									className="text-white/85 text-sm font-light max-w-2xl leading-relaxed"
 							>
 								<p>
 									Tiệm Của Bản kể lại phong vị vùng cao bằng những thức quà nguyên bản, sạch và rõ nguồn gốc,
@@ -118,17 +118,17 @@ export default function AboutPage() {
 						<div className="mt-12 grid gap-4 md:grid-cols-3">
 							<div className="rounded-2xl border border-white/20 bg-white/10 backdrop-blur-sm p-4">
 								<p className="text-xs uppercase tracking-[0.3em] text-festive-gold font-bold mb-2">Bản sắc</p>
-								<p className="text-white/80 text-sm leading-relaxed">Mỗi món quà mang câu chuyện vùng cao và tay nghề
+								<p className="text-white/80 text-sm font-light leading-relaxed">Mỗi món quà mang câu chuyện vùng cao và tay nghề
 									truyền thống.</p>
 							</div>
 							<div className="rounded-2xl border border-white/20 bg-white/10 backdrop-blur-sm p-4">
 								<p className="text-xs uppercase tracking-[0.3em] text-festive-gold font-bold mb-2">Tươi sạch</p>
-								<p className="text-white/80 text-sm leading-relaxed">Lựa chọn kỹ, đóng gói chỉn chu để giữ hương vị bền
+								<p className="text-white/80 text-sm font-light leading-relaxed">Lựa chọn kỹ, đóng gói chỉn chu để giữ hương vị bền
 									lâu.</p>
 							</div>
 							<div className="rounded-2xl border border-white/20 bg-white/10 backdrop-blur-sm p-4">
 								<p className="text-xs uppercase tracking-[0.3em] text-festive-gold font-bold mb-2">Gắn kết</p>
-								<p className="text-white/80 text-sm leading-relaxed">Kết nối hộ dân vùng cao với bữa cơm ấm cúng mọi gia
+								<p className="text-white/80 text-sm font-light leading-relaxed">Kết nối hộ dân vùng cao với bữa cơm ấm cúng mọi gia
 									đình.</p>
 							</div>
 						</div>
@@ -155,13 +155,13 @@ export default function AboutPage() {
 								<h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-8 leading-tight">
 									Từ nhịp sống vùng cao đến <span className="text-premium-red italic">mâm cơm gia đình</span>
 								</h2>
-								<div className="text-md space-y-6 text-muted-foreground leading-relaxed">
+								<div className="text-sm font-light space-y-6 text-muted-foreground leading-relaxed">
 									<p>
 										Tiệm Của Bản được hình thành từ những chuyến đi thực tế lên vùng cao Điện Biên.
 										Ở đó, chúng mình gặp gỡ bà con, thưởng thức những món đặc sản mang hương vị núi rừng
 										nguyên bản – thứ mà khó có thể tìm thấy ở nơi nào khác.
 									</p>
-									<p className="border-l-4 border-festive-gold/30 pl-6 py-2 italic bg-festive-gold/5 rounded-r-xl">
+									<p className="border-l-4 font-bold border-festive-gold/30 pl-6 py-2 italic bg-festive-gold/5 rounded-r-xl">
 										&quot;Chúng mình không chỉ bán đặc sản, chúng mình kể câu chuyện về văn hóa và lòng hiếu khách của người
 										 dân Tây Bắc thông qua từng hương vị.&quot;
 									</p>
@@ -250,7 +250,7 @@ export default function AboutPage() {
 											<value.icon className={`w-8 h-8 ${value.color}`}/>
 										</div>
 										<h3 className="text-xl font-bold text-foreground mb-3 font-heading group-hover:text-premium-red transition-colors">{value.title}</h3>
-										<p className="text-sm text-muted-foreground leading-relaxed">{value.description}</p>
+										<p className="text-sm font-light text-muted-foreground leading-relaxed">{value.description}</p>
 										
 										<div
 												className="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-premium-red to-festive-gold group-hover:w-full transition-all duration-500"/>
@@ -279,7 +279,7 @@ export default function AboutPage() {
 								y={20}
 								delay={0.1}
 						>
-							<p className="text-white/90 mb-12 max-w-2xl mx-auto text-lg md:text-xl font-light">
+							<p className="text-white/90 mb-12 max-w-2xl mx-auto text-md font-light">
 								Khám phá ngay bộ sưu tập đặc sản Điện Biên chuẩn vị, được chọn lọc kỹ lưỡng từ đôi bàn tay của bà con
 								vùng cao.
 							</p>

@@ -48,7 +48,7 @@ export default function ContactPage() {
 						<TrongDongWatermark className="text-premium-red"/>
 					</div>
 					
-					<div className="container-main relative z-10 px-4 md:px-0">
+					<div className="container-main relative z-10">
 						<div className="max-w-6xl mx-auto">
 						<div className="grid md:grid-cols-2 gap-10 md:gap-12 items-center">
 								<div className="text-center md:text-left md:pr-8">
@@ -75,7 +75,7 @@ export default function ContactPage() {
 											y={20}
 											delay={0.3}
 											duration={0.8}
-											className="text-sm md:text-xl text-muted-foreground max-w-xl leading-relaxed mx-auto md:mx-0"
+											className="text-sm font-light text-muted-foreground max-w-xl leading-relaxed mx-auto md:mx-0"
 									>
 										<p>
 											Chúng mình luôn sẵn lòng lắng nghe và tư vấn những thức quà tinh tế nhất từ vùng cao Tây Bắc.
@@ -108,7 +108,7 @@ export default function ContactPage() {
 													<Star className="w-4 h-4 md:w-5 md:h-5 fill-festive-gold text-festive-gold"/>
 													<span className="text-[10px] md:text-sm font-bold uppercase tracking-widest">Tiệm Của Bản</span>
 												</div>
-												<p className="text-sm md:text-lg font-medium italic leading-snug">&quot;Gói ghém chân tình Tây Bắc trong từng món quà&quot;</p>
+												<p className="text-sm font-medium italic leading-snug">&quot;Gói ghém chân tình Tây Bắc trong từng món quà&quot;</p>
 											</div>
 										</div>
 									</div>
@@ -139,7 +139,7 @@ export default function ContactPage() {
 									</span>
 									</div>
 									<h2 className="text-2xl sm:text-3xl font-heading font-bold text-foreground mb-4 text-center lg:text-left">Kết nối trực tiếp</h2>
-									<p className="text-muted-foreground text-sm leading-relaxed mb-8 text-center lg:text-left">
+									<p className="text-muted-foreground text-sm font-light leading-relaxed mb-8 text-center lg:text-left">
 										Đội ngũ Tiệm Của Bản luôn sẵn sàng hỗ trợ bạn. Liên hệ qua Zalo hoặc Hotline để được tư vấn nhanh
 										nhất!
 									</p>
@@ -216,7 +216,7 @@ export default function ContactPage() {
 										<div className="relative z-10">
 											<div className="mb-10 text-center lg:text-left">
 												<h3 className="text-2xl font-heading font-bold text-foreground mb-3">Gửi tin nhắn</h3>
-												<p className="text-muted-foreground text-sm">Điền thông tin dưới đây, chúng mình sẽ phản hồi
+												<p className="text-muted-foreground text-sm font-light">Điền thông tin dưới đây, chúng mình sẽ phản hồi
 													bạn ngay lập tức.</p>
 											</div>
 											
@@ -244,7 +244,7 @@ export default function ContactPage() {
 								</div>
 								<div className="text-center sm:text-left">
 									<h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-foreground">Ghé thăm chúng mình</h2>
-									<p className="text-muted-foreground text-sm sm:text-md mt-1">
+									<p className="text-muted-foreground text-sm font-light sm:text-md mt-1">
 										Tìm kiếm Tiệm Của Bản tại Hà Nội hoặc Điện Biên
 									</p>
 								</div>

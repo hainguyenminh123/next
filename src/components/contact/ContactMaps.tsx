@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { createPortal } from 'react-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ExternalLink, MapPin, X } from 'lucide-react';
 
@@ -41,8 +42,13 @@ const MAP_CARDS: readonly MapCard[] = [
 
 export default function ContactMaps() {
   const [openMapKey, setOpenMapKey] = useState<'hanoi' | 'dienbien' | null>(null);
+  const [mounted, setMounted] = useState(false);
 
   const activeMap = openMapKey ? MAP_CARDS.find((m) => m.key === openMapKey) : null;
+  
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <>
@@ -75,7 +81,7 @@ export default function ContactMaps() {
                 className="pointer-events-none absolute inset-0 w-full h-full opacity-0 transition-opacity duration-300 group-hover:opacity-100 border-0"
               />
               
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent pointer-events-none"/>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none"/>
               <div className="absolute top-4 left-4">
                 <span className="inline-flex items-center rounded-full border border-premium-red/20 bg-background/90 backdrop-blur-md px-4 py-1.5 text-xs font-bold text-premium-red shadow-sm uppercase tracking-widest">
                   {card.badge}
@@ -86,26 +92,18 @@ export default function ContactMaps() {
                 Mở Maps
               </div>
               
-              <div className="absolute bottom-0 left-0 right-0 p-5 md:p-8">
-                <div className="flex items-start justify-between gap-4">
-                  <div className="drop-shadow-sm">
-                    <div className="flex items-center gap-2 mb-1">
+              <div className="absolute bottom-0 left-0 right-0 p-5 md:p-7">
+                <div className="flex items-center justify-between gap-4">
+                  <div>
+                    <div className="flex items-center gap-2">
                       <div className="w-1.5 h-1.5 rounded-full bg-festive-gold animate-pulse shrink-0" />
-                      <h3 className="text-xl sm:text-2xl md:text-3xl font-heading font-bold text-foreground leading-tight sm:leading-snug">
+                      <h3 className="text-xl sm:text-2xl md:text-3xl font-heading font-bold text-white leading-tight">
                         {card.title}
                       </h3>
                     </div>
-                    <p className="text-md font-bold text-premium-red/80 uppercase tracking-widest text-[9px] sm:text-[10px] mb-2">{card.subtitle}</p>
-                    <p className="text-xs sm:text-sm text-muted-foreground line-clamp-2">{card.address}</p>
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-white/70 mt-2">{card.subtitle}</p>
                   </div>
-                </div>
-                
-                <div className="mt-6 h-px w-full bg-gradient-to-r from-premium-red/20 via-festive-gold/20 to-transparent"/>
-                <div className="mt-4 flex items-center justify-between text-xs">
-                  <span className="text-muted-foreground font-medium italic">Click để phóng to bản đồ</span>
-                  <span className="text-premium-red font-bold group-hover:underline underline-offset-4 flex items-center gap-1">
-                    Xem chi tiết <ExternalLink size={14} />
-                  </span>
+                  <span className="text-xs font-bold uppercase tracking-widest text-white/70">Xem maps</span>
                 </div>
               </div>
             </div>
@@ -113,54 +111,58 @@ export default function ContactMaps() {
         ))}
       </div>
 
-      <AnimatePresence>
-        {activeMap && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8 bg-black/80 backdrop-blur-sm"
-            onClick={() => setOpenMapKey(null)}
-          >
-            <motion.div
-              initial={{ scale: 0.9, y: 20 }}
-              animate={{ scale: 1, y: 0 }}
-              exit={{ scale: 0.9, y: 20 }}
-              className="relative w-full max-w-5xl aspect-video bg-white rounded-[2rem] overflow-hidden shadow-2xl"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <button
+      {mounted &&
+        createPortal(
+          <AnimatePresence>
+            {activeMap && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="fixed inset-0 z-[9999] flex items-center justify-center p-4 md:p-8 bg-black/80 backdrop-blur-sm"
                 onClick={() => setOpenMapKey(null)}
-                className="absolute top-6 right-6 z-10 p-3 bg-white/10 backdrop-blur-md hover:bg-premium-red hover:text-white text-white rounded-full transition-all border border-white/20"
               >
-                <X size={24} />
-              </button>
-              
-              <div className="absolute top-6 left-6 z-10 p-6 bg-white/90 backdrop-blur-md rounded-2xl shadow-xl max-w-sm hidden md:block">
-                <h4 className="text-xl font-bold text-foreground mb-2">{activeMap.title}</h4>
-                <p className="text-sm text-muted-foreground mb-4">{activeMap.address}</p>
-                <a
-                  href={activeMap.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-premium-red font-bold text-sm hover:underline"
+                <motion.div
+                  initial={{ scale: 0.9, y: 20 }}
+                  animate={{ scale: 1, y: 0 }}
+                  exit={{ scale: 0.9, y: 20 }}
+                  className="relative w-full max-w-5xl aspect-video bg-white rounded-[2rem] overflow-hidden shadow-2xl z-[10000]"
+                  onClick={(e) => e.stopPropagation()}
                 >
-                  <ExternalLink size={16} />
-                  Mở trong Google Maps
-                </a>
-              </div>
+                  <button
+                    onClick={() => setOpenMapKey(null)}
+                    className="absolute top-6 right-6 z-10 p-3 bg-white/10 backdrop-blur-md hover:bg-premium-red hover:text-white text-white rounded-full transition-all border border-white/20"
+                  >
+                    <X size={24} />
+                  </button>
+                  
+                  <div className="absolute top-6 left-6 z-10 p-6 bg-white/90 backdrop-blur-md rounded-2xl shadow-xl max-w-sm hidden md:block">
+                    <h4 className="text-xl font-bold text-foreground mb-2">{activeMap.title}</h4>
+                    <p className="text-sm text-muted-foreground mb-4">{activeMap.address}</p>
+                    <a
+                      href={activeMap.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-premium-red font-bold text-sm hover:underline"
+                    >
+                      <ExternalLink size={16} />
+                      Mở trong Google Maps
+                    </a>
+                  </div>
 
-              <iframe
-                src={activeMap.embedSrc}
-                className="w-full h-full border-0"
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </motion.div>
-          </motion.div>
+                  <iframe
+                    src={activeMap.embedSrc}
+                    className="w-full h-full border-0"
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </motion.div>
+              </motion.div>
+            )}
+          </AnimatePresence>,
+          document.body
         )}
-      </AnimatePresence>
     </>
   );
 }

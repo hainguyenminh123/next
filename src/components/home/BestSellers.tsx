@@ -52,7 +52,7 @@ export default function BestSellers({initialProducts}: BestSellersProps) {
 							
 							<Reveal
 									delay={0.2}
-									className="text-white/80 mb-8 max-w-md text-lg leading-relaxed"
+									className="text-white/80 mb-8 max-w-md text-md font-light leading-relaxed"
 									x={-30}
 									y={0}
 							>
@@ -116,7 +116,7 @@ export default function BestSellers({initialProducts}: BestSellersProps) {
 													<h3 className="font-bold text-white group-hover:text-festive-gold transition-colors line-clamp-1 text-lg">
 														{product.name}
 													</h3>
-													<p className="text-sm text-white/60 line-clamp-1">
+													<p className="text-sm font-light text-white/60 line-clamp-1">
 														{product.shortDescription || product.description.slice(0, 50)}
 													</p>
 												</div>

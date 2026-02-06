@@ -106,7 +106,7 @@ export default function ContactForm() {
       <div className="flex flex-col sm:flex-row items-center justify-between gap-6 pt-4">
         <div className="flex items-center gap-3 text-muted-foreground bg-secondary/20 px-4 py-2 rounded-full border border-border/50 w-full sm:w-auto">
           <div className="w-1.5 h-1.5 rounded-full bg-festive-gold animate-pulse shrink-0" />
-          <p className="text-[10px] sm:text-[11px] font-medium leading-tight">
+          <p className="text-[10px] sm:text-[11px] font-light leading-tight">
             Tiệm Của Bản cam kết bảo mật thông tin của bạn
           </p>
         </div>

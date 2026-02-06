@@ -177,7 +177,7 @@ export default function GalleryPage() {
 								className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-white/70 text-premium-red text-[11px] md:text-xs font-bold uppercase tracking-[0.3em] mb-8 border border-premium-red/20 shadow-sm"
 							>
 								<div className="w-2 h-2 rounded-full bg-festive-gold animate-pulse" />
-								Không khí Tết
+								Feedback từ khách hàng
 								<Sparkles size={14} className="text-festive-gold" />
 							</Reveal>
 
@@ -187,16 +187,15 @@ export default function GalleryPage() {
 								className="text-5xl md:text-7xl font-heading font-black text-foreground leading-[0.95] mb-6 uppercase"
 							>
 								THƯ VIỆN
-								<span className="block text-transparent bg-clip-text bg-gradient-to-r from-premium-red via-accent to-festive-gold">TẾT VÙNG CAO</span>
 							</Reveal>
 
 							<Reveal
 								y={20}
 								delay={0.2}
-								className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed max-w-xl"
+								className="text-sm font-light text-muted-foreground leading-relaxed max-w-xl"
 							>
 								Sắc đỏ, ánh vàng và câu chuyện bản làng được ghi lại qua từng khung hình. Mỗi ảnh, mỗi video là
-								một lát cắt hương vị Tết Tây Bắc.
+								một lát cắt hương vị Tây Bắc.
 							</Reveal>
 
 							<div className="mt-8 flex flex-wrap items-center gap-3">
@@ -258,26 +257,43 @@ export default function GalleryPage() {
 
 			{/* Bottom CTA */}
 			<section className="py-24 bg-secondary/30 relative overflow-hidden">
+				<div className="absolute inset-0 pointer-events-none">
+					<div className="absolute top-0 right-0 w-[55%] h-full bg-[radial-gradient(circle_at_top_right,rgba(185,28,28,0.18)_0%,transparent_65%)]" />
+					<div className="absolute bottom-0 left-0 w-[45%] h-full bg-[radial-gradient(circle_at_bottom_left,rgba(212,175,55,0.18)_0%,transparent_70%)]" />
+				</div>
+				
 				<div className="container-main relative z-10">
 					<Reveal
 						y={40}
-						className="max-w-4xl mx-auto bg-white p-12 md:p-16 rounded-[3rem] shadow-2xl shadow-premium-red/5 border border-premium-red/5 text-center relative overflow-hidden group"
+						className="max-w-4xl mx-auto bg-white p-12 md:p-16 rounded-[3rem] shadow-2xl shadow-premium-red/10 border border-premium-red/10 text-center relative overflow-hidden group"
 					>
-						<div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
-							<Star size={120} className="text-premium-red fill-current" />
+						<div className="absolute inset-0 pointer-events-none">
+							<div className="absolute -top-12 -right-12 w-40 h-40 rounded-full bg-premium-red/10 blur-[40px]" />
+							<div className="absolute -bottom-14 -left-14 w-44 h-44 rounded-full bg-festive-gold/15 blur-[45px]" />
 						</div>
 						
 						<div className="relative z-10">
-							<h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">Bạn yêu thích những gì vừa thấy?</h2>
-							<p className="text-muted-foreground text-lg mb-10">
+							<div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-premium-red/10 text-premium-red text-[11px] font-bold uppercase tracking-[0.3em] mb-6 border border-premium-red/15">
+								Gợi ý
+							</div>
+							<h2 className="text-3xl md:text-5xl font-heading font-bold mb-6">Bạn yêu thích những gì vừa thấy?</h2>
+							<p className="text-muted-foreground font-light text-md mb-10">
 								Tất cả các sản phẩm trong ảnh và video đều có sẵn tại cửa hàng của chúng mình. Hãy mang hương vị Tây Bắc về nhà ngay nhé!
 							</p>
-							<a
-								href="/san-pham"
-								className="inline-flex items-center gap-3 bg-premium-red text-white px-10 py-4 rounded-full font-bold hover:bg-premium-red-light transition-all shadow-xl shadow-premium-red/20 hover:-translate-y-1"
-							>
-								Ghé cửa hàng ngay
-							</a>
+							
+							<div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+								<a
+									href="/san-pham"
+									className="inline-flex items-center gap-3 bg-premium-red text-white px-10 py-4 rounded-full font-bold hover:bg-premium-red-light transition-all uppercase shadow-xl shadow-premium-red/20 hover:-translate-y-1"
+								>
+									Ghé cửa hàng ngay
+								</a>
+								<div className="inline-flex items-center gap-2 px-5 py-4 rounded-full border border-premium-red/15 text-premium-red font-bold text-sm uppercase tracking-widest bg-white shadow-sm">
+									Giao nhanh
+									<span className="w-1.5 h-1.5 rounded-full bg-festive-gold" />
+									Đóng gói sạch
+								</div>
+							</div>
 						</div>
 					</Reveal>
 				</div>

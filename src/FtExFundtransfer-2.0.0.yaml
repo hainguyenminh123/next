@@ -1,0 +1,502 @@
+swagger: '2.0'
+info:
+  title: FtExFundtransfer
+  x-ibm-name: ftexfundtransfer
+  version: 2.0.0
+  description: Nhận lệnh yêu cầu giao dịch chi hộ
+  x-ibm-languages:
+    description:
+      en: Receive an order to request a payment transaction
+      vi: Nhận lệnh yêu cầu giao dịch chi hộ
+      default_language_code: en
+host: sandboxapis.tpb.vn
+schemes:
+  - https
+basePath: /tpb/portal/ftexservice/v1
+produces:
+  - application/json
+consumes:
+  - application/json
+security:
+  - FTExAuth:
+      - payment
+securityDefinitions:
+  FTExAuth:
+    type: oauth2
+    flow: application
+    x-ibm-oauth-provider: apioauth
+    tokenUrl: 'https://sandboxapis.tpb.vn/tpb/portal/api/oauth2/token'
+    scopes:
+      payment: payment scope
+x-ibm-configuration:
+  type: wsdl-to-rest
+  testable: true
+  enforced: true
+  cors:
+    enabled: true
+  phase: realized
+  application-authentication:
+    certificate: false
+  servers:
+    - url: 'https://sandboxapis.tpb.vn/tpb/portal/ftexservice/v1'
+      description: ''
+      type:
+        - Production
+        - Development
+tags: []
+definitions:
+  CommonFault:
+    type: object
+    properties:
+      error:
+        type: string
+      Fault:
+        type: object
+        properties:
+          faultcode:
+            type: string
+          faultstring:
+            type: string
+          faultactor:
+            type: string
+          detail:
+            type: object
+            properties: {}
+  InquiryReq_element_xsd1:
+    allOf:
+      - $ref: '#/definitions/BaseServiceEnvelopeRequestType_type_com-envelope'
+      - type: object
+        properties:
+          BodyReq:
+            $ref: '#/definitions/InquiryReqBodyType_type_xsd1'
+        required:
+          - BodyReq
+  InquiryRes_element_xsd1:
+    allOf:
+      - $ref: '#/definitions/BaseServiceEnvelopeResponseType_type_com-envelope'
+      - type: object
+        properties:
+          BodyRes:
+            $ref: '#/definitions/InquiryResBodyType_type_xsd1'
+        required:
+          - BodyRes
+  FundTransferReq_element_xsd1:
+    allOf:
+      - $ref: '#/definitions/BaseServiceEnvelopeRequestType_type_com-envelope'
+      - type: object
+        properties:
+          BodyReq:
+            $ref: '#/definitions/FundTransferReqBodyType_type_xsd1'
+        required:
+          - BodyReq
+  FundTransferRes_element_xsd1:
+    allOf:
+      - $ref: '#/definitions/BaseServiceEnvelopeResponseType_type_com-envelope'
+      - type: object
+        properties:
+          BodyRes:
+            $ref: '#/definitions/FundTransferResBodyType_type_xsd1'
+        required:
+          - BodyRes
+  InquiryReqBodyType_type_xsd1:
+    type: object
+    properties:
+      SourceAppId:
+        type: string
+      FunctionCode:
+        type: string
+      TransmissionTime:
+        type: string
+      TraceNumber:
+        type: string
+      TransactionId:
+        type: string
+      BatchId:
+        type: string
+      Signature:
+        type: string
+      QueryType:
+        type: string
+      UserId:
+        type: string
+      Description:
+        type: string
+      PmtOtherInfor:
+        $ref: '#/definitions/AdditionalInformationType_type_com-header_xsd1'
+      JsonData:
+        type: string
+    x-xsi-type: InquiryReqBodyType
+    x-xsi-type-xml:
+      namespace: 'http://www.tpb.vn/entity/vn/ftex/ftexservice/1'
+      prefix: xsd1
+    x-xsi-type-uniquename: InquiryReqBodyType_type_xsd1
+  InquiryResBodyType_type_xsd1:
+    type: object
+    properties:
+      BatchId:
+        type: string
+      ExtendId:
+        type: string
+      Ecode:
+        type: string
+      Edesc:
+        type: string
+      Signature:
+        type: string
+      TransactionInfo:
+        type: object
+        properties:
+          Item:
+            type: array
+            items:
+              $ref: '#/definitions/TransactionInfoType_type_com-ftex_xsd1'
+    required:
+      - BatchId
+      - Signature
+    x-xsi-type: InquiryResBodyType
+    x-xsi-type-xml:
+      namespace: 'http://www.tpb.vn/entity/vn/ftex/ftexservice/1'
+      prefix: xsd1
+    x-xsi-type-uniquename: InquiryResBodyType_type_xsd1
+  FundTransferReqBodyType_type_xsd1:
+    type: object
+    properties:
+      SourceAppId:
+        type: string
+      FunctionCode:
+        type: string
+      TransmissionTime:
+        type: string
+      TraceNumber:
+        type: string
+      Signature:
+        type: string
+      BatchId:
+        type: string
+      CustomerNo:
+        type: string
+      CIF:
+        type: string
+      UserId:
+        type: string
+      Description:
+        type: string
+      TransactionInfo:
+        type: object
+        properties:
+          Item:
+            type: array
+            items:
+              $ref: '#/definitions/TransactionInfoType_type_com-ftex_xsd1'
+      PmtOtherInfor:
+        $ref: '#/definitions/AdditionalInformationType_type_com-header_xsd1'
+      JsonData:
+        type: string
+    x-xsi-type: FundTransferReqBodyType
+    x-xsi-type-xml:
+      namespace: 'http://www.tpb.vn/entity/vn/ftex/ftexservice/1'
+      prefix: xsd1
+    x-xsi-type-uniquename: FundTransferReqBodyType_type_xsd1
+  FundTransferResBodyType_type_xsd1:
+    type: object
+    properties:
+      BatchId:
+        type: string
+      ExtendId:
+        type: string
+      Ecode:
+        type: string
+      Edesc:
+        type: string
+      Signature:
+        type: string
+      TransactionInfo:
+        type: object
+        properties:
+          Item:
+            type: array
+            items:
+              $ref: '#/definitions/TransactionInfoType_type_com-ftex_xsd1'
+    required:
+      - BatchId
+    x-xsi-type: FundTransferResBodyType
+    x-xsi-type-xml:
+      namespace: 'http://www.tpb.vn/entity/vn/ftex/ftexservice/1'
+      prefix: xsd1
+    x-xsi-type-uniquename: FundTransferResBodyType_type_xsd1
+  Header_element_com-header:
+    type: object
+    properties:
+      Common:
+        $ref: '#/definitions/Common_element_com-header'
+        description: Common information applicable to all applications
+      Client:
+        $ref: '#/definitions/Client_element_com-header'
+    required:
+      - Common
+      - Client
+    x-xsi-type: HeaderType
+    x-xsi-type-xml:
+      namespace: 'http://www.tpb.vn/common/envelope/commonheader/1'
+      prefix: com-header
+    x-xsi-type-uniquename: HeaderType_type_com-header
+  ResponseStatus_element_com-header:
+    description: Additional response information for Response message
+    type: object
+    properties:
+      Status:
+        type: string
+      GlobalErrorCode:
+        type: string
+      GlobalErrorDescription:
+        type: string
+      ErrorInfo:
+        type: array
+        items:
+          $ref: '#/definitions/ResponseStatusErroInfoType_type_com-header'
+    required:
+      - Status
+    x-xsi-type: ResponseStatusType
+    x-xsi-type-xml:
+      namespace: 'http://www.tpb.vn/common/envelope/commonheader/1'
+      prefix: com-header
+    x-xsi-type-uniquename: ResponseStatusType_type_com-header
+  AdditionalInformationType_type_com-header_xsd1:
+    type: object
+    properties:
+      NameValuePairs:
+        type: array
+        items:
+          $ref: '#/definitions/NameValuePairs_element_com-header'
+      Other:
+        type: string
+    x-xsi-type: AdditionalInformationType
+    x-xsi-type-xml:
+      namespace: 'http://www.tpb.vn/common/envelope/commonheader/1'
+      prefix: com-header
+    x-xsi-type-uniquename: AdditionalInformationType_type_com-header_xsd1
+  TransactionInfoType_type_com-ftex_xsd1:
+    type: object
+    properties:
+      SourceAccount:
+        type: string
+      Amount:
+        type: string
+      Currency:
+        type: string
+      DestAccount:
+        type: string
+      Description:
+        type: string
+      DestName:
+        type: string
+      ProductCode:
+        type: string
+      CreateDate:
+        type: string
+      TransactionId:
+        type: string
+      TypeFastTransfer:
+        type: string
+      BinOtherBank:
+        type: string
+      CitadCode:
+        type: string
+      ChargeIncl:
+        type: string
+      Charge:
+        type: string
+      Ecode:
+        type: string
+      Edesc:
+        type: string
+      StatusCode:
+        type: string
+      TransRefNo:
+        type: string
+      PmtOtherInfor:
+        $ref: '#/definitions/AdditionalInformationType_type_com-header_com-ftex'
+    x-xsi-type: TransactionInfoType
+    x-xsi-type-xml:
+      namespace: 'http://www.tpb.vn/entity/vn/com/ftex/1'
+      prefix: com-ftex
+    x-xsi-type-uniquename: TransactionInfoType_type_com-ftex_xsd1
+  AdditionalInformationType_type_com-header_com-ftex:
+    type: object
+    properties:
+      NameValuePairs:
+        type: array
+        items:
+          $ref: '#/definitions/NameValuePairs_element_com-header'
+      Other:
+        type: string
+    x-xsi-type: AdditionalInformationType
+    x-xsi-type-xml:
+      namespace: 'http://www.tpb.vn/common/envelope/commonheader/1'
+      prefix: com-header
+    x-xsi-type-uniquename: AdditionalInformationType_type_com-header_com-ftex
+  Common_element_com-header:
+    description: Common Detail presence in either request or response message
+    type: object
+    properties:
+      ServiceVersion:
+        $ref: '#/definitions/ServiceVersion_element_com-header'
+      MessageId:
+        type: string
+      TransactionId:
+        $ref: '#/definitions/TransactionId_element_com-header'
+      MessageTimestamp:
+        $ref: '#/definitions/MessageTimestamp_element_com-header'
+      AdditionalInformation:
+        $ref: '#/definitions/AdditionalInformation_element_com-header'
+        description: Additional information that is not  provided by standard header can be extended with Other element
+    required:
+      - ServiceVersion
+      - MessageId
+      - MessageTimestamp
+    x-xsi-type: CommonType
+    x-xsi-type-xml:
+      namespace: 'http://www.tpb.vn/common/envelope/commonheader/1'
+      prefix: com-header
+    x-xsi-type-uniquename: CommonType_type_com-header
+  Client_element_com-header:
+    type: object
+    properties:
+      SourceAppID:
+        $ref: '#/definitions/SourceAppID_element_com-header'
+      TargetAppIDs:
+        $ref: '#/definitions/TargetAppIDs_element_com-header'
+      UserDetail:
+        $ref: '#/definitions/UserDetail_element_com-header'
+    required:
+      - SourceAppID
+    x-xsi-type: ClientType
+    x-xsi-type-xml:
+      namespace: 'http://www.tpb.vn/common/envelope/commonheader/1'
+      prefix: com-header
+    x-xsi-type-uniquename: ClientType_type_com-header
+  NameValuePairs_element_com-header:
+    type: object
+    properties:
+      Name:
+        type: string
+      Value:
+        type: string
+    x-xsi-type: NameValuePairsType
+    x-xsi-type-xml:
+      namespace: 'http://www.tpb.vn/common/envelope/commonheader/1'
+      prefix: com-header
+    x-xsi-type-uniquename: NameValuePairsType_type_com-header
+  ResponseStatusErroInfoType_type_com-header:
+    type: object
+    properties:
+      SourceAppID:
+        $ref: '#/definitions/SourceAppID_element_com-header'
+      ErrorCode:
+        description: Error code returned by "SourceAppID" System.  This Error Code is unique to each System.
+        type: string
+      ErrorDesc:
+        description: Error Message returned by "SourceAppID"  System.  This Message is unique to each System.
+        type: string
+    x-xsi-type: ResponseStatusErroInfoType
+    x-xsi-type-xml:
+      namespace: 'http://www.tpb.vn/common/envelope/commonheader/1'
+      prefix: com-header
+    x-xsi-type-uniquename: ResponseStatusErroInfoType_type_com-header
+  SourceAppID_element_com-header:
+    type: string
+  ServiceVersion_element_com-header:
+    type: string
+  TransactionId_element_com-header:
+    type: string
+  MessageTimestamp_element_com-header:
+    type: string
+    format: date-time
+  AdditionalInformation_element_com-header:
+    type: object
+    properties:
+      NameValuePairs:
+        type: array
+        items:
+          $ref: '#/definitions/NameValuePairs_element_com-header'
+      Other:
+        type: string
+    x-xsi-type: AdditionalInformationType
+    x-xsi-type-xml:
+      namespace: 'http://www.tpb.vn/common/envelope/commonheader/1'
+      prefix: com-header
+    x-xsi-type-uniquename: AdditionalInformationType_type_com-header
+  TargetAppIDs_element_com-header:
+    type: object
+    properties:
+      TargetAppID:
+        type: array
+        items:
+          $ref: '#/definitions/TargetAppID_element_com-header'
+  UserDetail_element_com-header:
+    type: object
+    properties:
+      UserId:
+        $ref: '#/definitions/UserId_element_com-header'
+      UserRole:
+        $ref: '#/definitions/UserRole_element_com-header'
+      UserPassword:
+        $ref: '#/definitions/UserPassword_element_com-header'
+  TargetAppID_element_com-header:
+    type: string
+  UserId_element_com-header:
+    type: string
+  UserRole_element_com-header:
+    type: string
+  UserPassword_element_com-header:
+    type: string
+    format: binary
+  BaseServiceEnvelopeRequestType_type_com-envelope:
+    type: object
+    properties:
+      Header:
+        $ref: '#/definitions/Header_element_com-header'
+    required:
+      - Header
+    x-ibm-discriminator: true
+    x-xsi-type: BaseServiceEnvelopeRequestType
+    x-xsi-type-xml:
+      namespace: 'http://www.tpb.vn/common/envelope/serviceenvelope/1'
+      prefix: com-envelope
+    x-xsi-type-uniquename: BaseServiceEnvelopeRequestType_type_com-envelope
+  BaseServiceEnvelopeResponseType_type_com-envelope:
+    type: object
+    properties:
+      Header:
+        $ref: '#/definitions/Header_element_com-header'
+      ResponseStatus:
+        $ref: '#/definitions/ResponseStatus_element_com-header'
+    required:
+      - Header
+      - ResponseStatus
+    x-ibm-discriminator: true
+    x-xsi-type: BaseServiceEnvelopeResponseType
+    x-xsi-type-xml:
+      namespace: 'http://www.tpb.vn/common/envelope/serviceenvelope/1'
+      prefix: com-envelope
+    x-xsi-type-uniquename: BaseServiceEnvelopeResponseType_type_com-envelope
+paths:
+  /Fundtransfer:
+    post:
+      responses:
+        '200':
+          description: 200 OK
+          schema:
+            $ref: '#/definitions/FundTransferRes_element_xsd1'
+        '500':
+          description: '500'
+          schema:
+            $ref: '#/definitions/CommonFault'
+      parameters:
+        - name: request
+          required: true
+          in: body
+          schema:
+            $ref: '#/definitions/FundTransferReq_element_xsd1'
+      consumes: []
+      produces: []

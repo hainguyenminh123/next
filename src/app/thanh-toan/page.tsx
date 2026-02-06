@@ -91,15 +91,50 @@ export default function CheckoutPage() {
 				},
 			});
 			
-			if (error) throw new Error(error.message || 'Có lỗi xảy ra');
+			if (error) throw new Error(error.message || 'Co loi xay ra');
 			if (data?.error) throw new Error(data.error);
 			
-			toast.success(`Đặt hàng thành công! Mã đơn: ${data.order?.order_number || ''}`);
+			const orderNumber = data.order?.order_number;
+			if (!orderNumber) throw new Error('Khong tao duoc ma don hang');
+			
+			if (paymentMethod === 'bank') {
+				const initRes = await fetch('/api/sepay/init', {
+					method: 'POST',
+					headers: {'Content-Type': 'application/json'},
+					body: JSON.stringify({
+						orderNumber,
+						amount: grandTotal,
+						description: `Thanh toan don hang ${orderNumber}`,
+					}),
+				});
+				
+				const initData = await initRes.json();
+				if (!initRes.ok || !initData?.checkoutUrl || !initData?.fields) {
+					throw new Error(initData?.error || 'Khong tao duoc link thanh toan');
+				}
+				
+				const form = document.createElement('form');
+				form.method = 'POST';
+				form.action = initData.checkoutUrl;
+				Object.entries(initData.fields).forEach(([key, value]) => {
+					const input = document.createElement('input');
+					input.type = 'hidden';
+					input.name = key;
+					input.value = String(value);
+					form.appendChild(input);
+				});
+				document.body.appendChild(form);
+				clearCart();
+				form.submit();
+				return;
+			}
+			
+			toast.success(`Dat hang thanh cong! Ma don: ${orderNumber}`);
 			clearCart();
 			router.push('/');
 		} catch (error) {
 			console.error('Order submission error:', error);
-			toast.error(error instanceof Error ? error.message : 'Có lỗi xảy ra, vui lòng thử lại');
+			toast.error(error instanceof Error ? error.message : 'Co loi xay ra, vui long thu lai');
 		} finally {
 			setIsSubmitting(false);
 		}

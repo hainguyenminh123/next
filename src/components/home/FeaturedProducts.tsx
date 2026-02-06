@@ -32,7 +32,7 @@ export default function FeaturedProducts({initialProducts}: FeaturedProductsProp
 								delay={0.5}
 								duration={0.8}
 								className="h-1.5 bg-gradient-to-r from-premium-red/20 via-festive-gold/30 to-premium-red/20 absolute bottom-0 left-0 rounded-full"
-								style={{ width: '80%' }}
+								style={{ width: '60%' }}
 							>
 								<span className="sr-only">decorative line</span>
 							</Reveal>

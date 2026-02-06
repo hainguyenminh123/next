@@ -137,7 +137,7 @@ export default function PoliciesPage() {
 								</Reveal>
 								
 								<Reveal delay={0.5} duration={0.8} className="mt-12 max-w-lg">
-									<p className="text-xl md:text-3xl text-muted-foreground font-light leading-snug border-l-4 border-premium-red pl-8 italic">
+									<p className="text-md text-muted-foreground font-light leading-snug border-l-4 border-premium-red pl-8 italic">
 										Minh bạch trong <span className="text-foreground font-bold">mọi kết nối</span>, 
 										trọn vẹn trong <span className="text-premium-red font-bold">từng lời hứa</span>.
 									</p>
@@ -218,9 +218,9 @@ export default function PoliciesPage() {
 													<div key={sIndex} className="relative z-10">
 														<div className="flex items-center gap-3 mb-4">
 															<Star size={16} className="text-festive-gold fill-festive-gold" />
-															<h4 className="font-heading font-bold text-foreground text-lg md:text-xl">{section.heading}</h4>
+															<h5 className="font-heading font-bold text-foreground text-md">{section.heading}</h5>
 														</div>
-														<p className="text-sm md:text-md text-muted-foreground leading-relaxed pl-7 border-l-2 border-festive-gold/20">
+														<p className="text-sm font-light text-muted-foreground leading-relaxed pl-7 border-l-2 border-festive-gold/20">
 															{section.text}
 														</p>
 													</div>
@@ -234,7 +234,7 @@ export default function PoliciesPage() {
 						<Reveal y={20} className="text-center pt-12 relative">
 							<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-premium-red/5 blur-[80px] rounded-full -z-10" />
 							
-							<p className="text-muted-foreground mb-8 text-md md:text-lg font-medium">
+							<p className="text-muted-foreground mb-8 text-sm font-light">
 								Bạn vẫn còn thắc mắc về các chính sách của chúng tôi?
 							</p>
 							<Link

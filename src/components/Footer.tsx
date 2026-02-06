@@ -2,16 +2,17 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import {Facebook, Instagram, Mail, MapPin, Phone, Youtube} from 'lucide-react';
+import {Mail, MapPin, Phone} from 'lucide-react';
 import {motion} from 'framer-motion';
 import {TrongDongBand, TrongDongWatermark} from '@/components/TrongDongPattern';
+import {FaFacebook} from 'react-icons/fa';
+import {SiTiktok, SiZalo} from 'react-icons/si';
 
 const footerLinks = {
 	shop: [
 		{label: 'Tất cả sản phẩm', href: '/san-pham'},
-		{label: 'Thịt sấy', href: '/san-pham?danh-muc=Sấy'},
-		{label: 'Đồ khô', href: '/san-pham?danh-muc=Khô'},
-		{label: 'Hạt & Ngũ cốc', href: '/san-pham?danh-muc=Hạt'},
+		{label: 'Thịt gác bếp', href: '/san-pham'},
+		{label: 'Nông sản', href: '/san-pham'},
 	],
 	info: [
 		{label: 'Về chúng tôi', href: '/gioi-thieu'},
@@ -22,9 +23,9 @@ const footerLinks = {
 };
 
 const socialLinks = [
-	{icon: Facebook, href: '#', label: 'Facebook'},
-	{icon: Instagram, href: '#', label: 'Instagram'},
-	{icon: Youtube, href: '#', label: 'Youtube'},
+	{icon: FaFacebook, href: '#', label: 'Facebook'},
+	{icon: SiZalo, href: '#', label: 'Zalo'},
+	{icon: SiTiktok, href: '#', label: 'TikTok'},
 ];
 
 export default function Footer() {
@@ -60,7 +61,7 @@ export default function Footer() {
 											className="h-16 sm:h-20 md:h-24 w-auto max-w-full object-contain transition-transform duration-500 group-hover:scale-105"
 									/>
 								</Link>
-								<p className="text-white/80 text-md leading-relaxed mb-8 max-w-sm">
+								<p className="text-white/80 font-light text-sm leading-relaxed mb-8 max-w-sm">
 									Đặc sản Tây Bắc chuẩn vị, chọn lọc từ hộ dân và HTX vùng cao.
 									Mang tinh hoa núi rừng đến bàn ăn mọi gia đình Việt trong dịp Tết đoàn viên.
 								</p>
@@ -101,10 +102,10 @@ export default function Footer() {
 										>
 											<Link
 													href={link.href}
-													className="text-white/70 hover:text-festive-gold hover:pl-2 transition-all duration-300 flex items-center group font-medium"
+													className="text-white/70 text-sm font-light hover:text-festive-gold hover:pl-2 transition-all duration-300 flex items-center group"
 											>
 												<span
-														className="w-0 h-0.5 bg-festive-gold mr-0 group-hover:w-3 group-hover:mr-2 transition-all duration-300"></span>
+														className="w-0 h-0.5 bg-festive-gold mr-0 group-hover:w-3 font-light group-hover:mr-2 transition-all duration-300"></span>
 												{link.label}
 											</Link>
 										</motion.li>
@@ -133,10 +134,10 @@ export default function Footer() {
 										>
 											<Link
 													href={link.href}
-													className="text-white/70 hover:text-festive-gold hover:pl-2 transition-all duration-300 flex items-center group font-medium"
+													className="text-white/70 text-sm hover:text-festive-gold hover:pl-2 transition-all duration-300 flex items-center group font-light"
 											>
 												<span
-														className="w-0 h-0.5 bg-festive-gold mr-0 group-hover:w-3 group-hover:mr-2 transition-all duration-300"></span>
+														className="w-0 h-0.5 bg-festive-gold mr-0 font-light group-hover:w-3 group-hover:mr-2 transition-all duration-300"></span>
 												{link.label}
 											</Link>
 										</motion.li>
@@ -167,7 +168,7 @@ export default function Footer() {
 									</div>
 									<div>
 										<p className="text-xs text-white/50 uppercase tracking-widest font-bold mb-1">Hotline</p>
-										<a href="tel:0339 420 806" className="text-md font-bold hover:text-festive-gold transition-colors">
+										<a href="tel:0339 420 806" className="text-sm font-bold hover:text-festive-gold transition-colors">
 											0339 420 806
 										</a>
 									</div>
@@ -186,7 +187,7 @@ export default function Footer() {
 									<div>
 										<p className="text-xs text-white/50 uppercase tracking-widest font-bold mb-1">Email</p>
 										<a href="mailto:nhai3056@gmail.com"
-										   className="text-md font-bold hover:text-festive-gold transition-colors">
+										   className="text-sm font-bold hover:text-festive-gold transition-colors">
 											nhai3056@gmail.com
 										</a>
 									</div>
@@ -221,19 +222,19 @@ export default function Footer() {
 					{/* Bottom */}
 					<div className="pt-8 border-t border-white/10">
 						<div className="flex flex-col md:flex-row justify-between items-center gap-6">
-							<p className="text-sm text-primary-foreground/40 font-medium">
+							<p className="text-sm font-light text-primary-foreground/40">
 								© 2025 <span className="text-festive-gold">Tiệm của bản</span>. Tất cả quyền được bảo lưu.
 							</p>
 							<div className="flex items-center gap-8">
 								<Link
 										href="/chinh-sach"
-										className="text-sm text-primary-foreground/40 hover:text-festive-gold transition-colors font-medium"
+										className="text-sm text-primary-foreground/40 hover:text-festive-gold transition-colors font-light"
 								>
 									Chính sách bảo mật
 								</Link>
 								<Link
 										href="/chinh-sach"
-										className="text-sm text-primary-foreground/40 hover:text-festive-gold transition-colors font-medium"
+										className="text-sm text-primary-foreground/40 hover:text-festive-gold transition-colors font-light"
 								>
 									Điều khoản dịch vụ
 								</Link>
@@ -245,8 +246,7 @@ export default function Footer() {
 				{/* Festive Sparkles (Decorative) */}
 				<div className="absolute bottom-10 right-10 w-2 h-2 bg-festive-gold rounded-full animate-pulse blur-[1px]"/>
 				<div className="absolute top-20 left-1/4 w-1 h-1 bg-white rounded-full animate-pulse delay-700 blur-[1px]"/>
-				<div
-						className="absolute top-40 right-1/3 w-1.5 h-1.5 bg-festive-gold/50 rounded-full animate-pulse delay-1000 blur-[1px]"/>
+				<div className="absolute top-40 right-1/3 w-1.5 h-1.5 bg-festive-gold/50 rounded-full animate-pulse delay-1000 blur-[1px]"/>
 			</footer>
 	);
 }

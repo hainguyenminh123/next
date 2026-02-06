@@ -3,7 +3,7 @@
 import {useEffect, useMemo, useState} from "react";
 import Link from "next/link";
 import Image from "next/image";
-import {motion, AnimatePresence} from 'framer-motion';
+import {AnimatePresence, motion} from 'framer-motion';
 import Reveal from "@/components/Reveal";
 import {
 	BookOpen,
@@ -11,7 +11,6 @@ import {
 	ChefHat,
 	ChevronLeft,
 	ChevronRight,
-	LayoutGrid,
 	MapPin,
 	Minus,
 	Play,
@@ -190,8 +189,9 @@ export default function ProductDetailClient({
 				{/* Breadcrumb - Festive Style */}
 				<section className="pt-28 pb-6 bg-secondary/30 relative overflow-hidden">
 					{/* Decorative background */}
-					<div className="absolute inset-0 bg-gradient-to-br from-premium-red/5 via-transparent to-festive-gold/5 pointer-events-none" />
-					<TrongDongWatermark opacity={0.03} className="text-premium-red" />
+					<div
+							className="absolute inset-0 bg-gradient-to-br from-premium-red/5 via-transparent to-festive-gold/5 pointer-events-none"/>
+					<TrongDongWatermark opacity={0.03} className="text-premium-red"/>
 					
 					<div className="container-main relative z-10">
 						<nav className="flex items-center gap-2 text-xs md:text-sm">
@@ -199,7 +199,8 @@ export default function ProductDetailClient({
 								Trang chủ
 							</Link>
 							<ChevronRight className="w-3.5 h-3.5 text-muted-foreground/50"/>
-							<Link href="/san-pham" className="text-muted-foreground hover:text-premium-red transition-colors font-medium">
+							<Link href="/san-pham"
+							      className="text-muted-foreground hover:text-premium-red transition-colors font-medium">
 								Sản phẩm
 							</Link>
 							<ChevronRight className="w-3.5 h-3.5 text-muted-foreground/50"/>
@@ -218,7 +219,8 @@ export default function ProductDetailClient({
 									className="space-y-4 w-full"
 							>
 								{/* Main Media */}
-								<div className="relative aspect-square sm:aspect-[4/3] md:aspect-square lg:aspect-square rounded-xl md:rounded-[2rem] overflow-hidden bg-muted shadow-lift group/media border border-premium-red/5">
+								<div
+										className="relative aspect-square sm:aspect-[4/3] md:aspect-square lg:aspect-square rounded-xl md:rounded-[2rem] overflow-hidden bg-muted shadow-lift group/media border border-premium-red/5">
 									{isVideo(productImages[currentImageIndex]) ? (
 											<video
 													src={productImages[currentImageIndex]}
@@ -287,11 +289,6 @@ export default function ProductDetailClient({
 												/>
 										))}
 									</div>
-
-									{/* Decorative Trống Đồng in corner */}
-									<div className="absolute top-2 right-2 md:top-4 md:right-4 z-10 pointer-events-none">
-										<TrongDongBadge className="w-8 h-8 md:w-12 md:h-12 text-festive-gold drop-shadow-lg opacity-70" />
-									</div>
 								</div>
 								
 								{/* Thumbnails */}
@@ -316,7 +313,8 @@ export default function ProductDetailClient({
 																	className="object-cover"
 															/>
 															<div className="absolute inset-0 flex items-center justify-center bg-black/30">
-																<div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/40">
+																<div
+																		className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/40">
 																	<Play className="w-4 h-4 text-white fill-white"/>
 																</div>
 															</div>
@@ -341,18 +339,15 @@ export default function ProductDetailClient({
 									delay={0.1}
 									className="flex flex-col relative"
 							>
-								{/* Decorative Background Pattern */}
-								<div className="absolute top-0 right-0 w-48 h-48 opacity-[0.03] pointer-events-none -z-10 rotate-12 overflow-hidden">
-									<TrongDongBadge className="w-full h-full text-premium-red" />
-								</div>
-
 								{/* Tag & Category */}
 								<div className="flex flex-wrap items-center gap-1.5 md:gap-3 mb-4">
-									<span className="tag-product text-[9px] xs:text-[10px] md:text-xs uppercase tracking-wider bg-premium-red/10 border-premium-red/20 !text-premium-red !shadow-none py-1 px-2 md:px-3">
+									<span
+											className="tag-product text-[9px] xs:text-[10px] md:text-xs uppercase tracking-wider bg-premium-red/10 border-premium-red/20 !text-premium-red !shadow-none py-1 px-2 md:px-3">
 										{product.category}
 									</span>
 									{product.isBestSeller && (
-										<span className="tag-product text-[9px] xs:text-[10px] md:text-xs uppercase tracking-wider bg-festive-gold/10 border-festive-gold/30 !text-premium-red !shadow-none font-bold py-1 px-2 md:px-3">
+											<span
+													className="tag-product text-[9px] xs:text-[10px] md:text-xs uppercase tracking-wider bg-festive-gold/10 border-festive-gold/30 !text-premium-red !shadow-none font-bold py-1 px-2 md:px-3">
 											✨ Bán chạy
 										</span>
 									)}
@@ -368,14 +363,14 @@ export default function ProductDetailClient({
 										{formatPrice(selectedPrice)}
 									</p>
 									{product.basePrice > selectedPrice && (
-										<p className="text-sm md:text-lg lg:text-xl text-muted-foreground line-through opacity-60">
-											{formatPrice(product.basePrice)}
-										</p>
+											<p className="text-sm md:text-lg lg:text-xl text-muted-foreground line-through opacity-60">
+												{formatPrice(product.basePrice)}
+											</p>
 									)}
 								</div>
 								
 								{/* Short Description */}
-								<div className="text-md prose prose-md max-w-none text-muted-foreground mb-8 leading-relaxed">
+								<div className="text-sm font-light prose prose-md max-w-none text-muted-foreground mb-8 leading-relaxed">
 									<ReactMarkdown remarkPlugins={[remarkGfm, remarkBreaks]} rehypePlugins={[rehypeRaw]}>
 										{product.shortDescription || product.description.slice(0, 160)}
 									</ReactMarkdown>
@@ -400,7 +395,8 @@ export default function ProductDetailClient({
 																}`}
 														>
 															<span className="text-xs md:text-sm">{option.weight}</span>
-															<span className={`text-[10px] md:text-xs ${selectedWeight === option.weight ? 'text-premium-red/70' : 'text-muted-foreground/60'}`}>
+															<span
+																	className={`text-[10px] md:text-xs ${selectedWeight === option.weight ? 'text-premium-red/70' : 'text-muted-foreground/60'}`}>
 																{formatPrice(option.price)}
 															</span>
 														</button>
@@ -412,13 +408,14 @@ export default function ProductDetailClient({
 								{/* Actions: Quantity & Add to Cart */}
 								<div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 md:gap-4 mb-10">
 									{/* Quantity Selector */}
-									<div className="flex items-center justify-between border-2 border-border rounded-xl md:rounded-2xl p-1.5 bg-white/50 backdrop-blur-sm sm:min-w-[140px] h-[52px] md:h-[58px]">
+									<div
+											className="flex items-center justify-between border-2 border-border rounded-xl md:rounded-2xl p-1.5 bg-white/50 backdrop-blur-sm sm:min-w-[140px] h-[52px] md:h-[58px]">
 										<button
 												onClick={() => setQuantity(Math.max(1, quantity - 1))}
 												className="w-10 h-10 flex items-center justify-center hover:bg-premium-red/10 rounded-lg md:rounded-xl transition-colors text-premium-red"
 												aria-label="Giảm"
 										>
-											<Minus className="w-4 h-4 md:w-5 h-5"/>
+											<Minus className="w-4 h-4 md:w-5"/>
 										</button>
 										<span className="flex-1 text-center font-bold  text-md">{quantity}</span>
 										<button
@@ -426,10 +423,10 @@ export default function ProductDetailClient({
 												className="w-10 h-10 flex items-center justify-center hover:bg-premium-red/10 rounded-lg md:rounded-xl transition-colors text-premium-red"
 												aria-label="Tăng"
 										>
-											<Plus className="w-4 h-4 md:w-5 h-5"/>
+											<Plus className="w-4 h-4 md:w-5"/>
 										</button>
 									</div>
-
+									
 									{/* Add to Cart Button */}
 									<button
 											onClick={handleAddToCart}
@@ -445,30 +442,39 @@ export default function ProductDetailClient({
 									<div className="grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-6">
 										<div className="flex flex-col gap-2 group/badge">
 											<div className="flex items-center gap-2.5">
-												<div className="w-9 h-9 md:w-10 md:h-10 rounded-xl bg-premium-red/5 flex items-center justify-center group-hover/badge:bg-premium-red group-hover/badge:text-white transition-all">
+												<div
+														className="w-9 h-9 md:w-10 md:h-10 rounded-xl bg-premium-red/5 flex items-center justify-center group-hover/badge:bg-premium-red group-hover/badge:text-white transition-all">
 													<Shield className="w-4 h-4 md:w-5 md:h-5 text-premium-red group-hover/badge:text-white"/>
 												</div>
-												<span className="text-[10px] md:text-xs font-bold text-foreground uppercase tracking-tight leading-none">An toàn <br/> thực phẩm</span>
+												<span
+														className="text-[10px] md:text-xs font-bold text-foreground uppercase tracking-tight leading-none">An toàn <br/> thực phẩm</span>
 											</div>
-											<p className="text-[10px] md:text-[11px] text-muted-foreground leading-relaxed">Chính gốc Điện Biên, nguyên liệu tự nhiên.</p>
+											<p className="text-[10px] font-light md:text-[11px] text-muted-foreground leading-relaxed">Chính gốc Điện
+												Biên, nguyên liệu tự nhiên.</p>
 										</div>
 										<div className="flex flex-col gap-2 group/badge">
 											<div className="flex items-center gap-2.5">
-												<div className="w-9 h-9 md:w-10 md:h-10 rounded-xl bg-premium-red/5 flex items-center justify-center group-hover/badge:bg-premium-red group-hover/badge:text-white transition-all">
+												<div
+														className="w-9 h-9 md:w-10 md:h-10 rounded-xl bg-premium-red/5 flex items-center justify-center group-hover/badge:bg-premium-red group-hover/badge:text-white transition-all">
 													<RefreshCw className="w-4 h-4 md:w-5 md:h-5 text-premium-red group-hover/badge:text-white"/>
 												</div>
-												<span className="text-[10px] md:text-xs font-bold text-foreground uppercase tracking-tight leading-none">Hoàn trả <br/> miễn phí</span>
+												<span
+														className="text-[10px] md:text-xs font-bold text-foreground uppercase tracking-tight leading-none">Hoàn trả <br/> miễn phí</span>
 											</div>
-											<p className="text-[10px] md:text-[11px] text-muted-foreground leading-relaxed">Đổi SP mới không phí nếu lỗi vận chuyển.</p>
+											<p className="text-[10px] font-light md:text-[11px] text-muted-foreground leading-relaxed">Đổi SP mới không
+												phí nếu lỗi vận chuyển.</p>
 										</div>
 										<div className="flex flex-col gap-2 group/badge col-span-2 sm:col-span-1">
 											<div className="flex items-center gap-2.5">
-												<div className="w-9 h-9 md:w-10 md:h-10 rounded-xl bg-premium-red/5 flex items-center justify-center group-hover/badge:bg-premium-red group-hover/badge:text-white transition-all">
+												<div
+														className="w-9 h-9 md:w-10 md:h-10 rounded-xl bg-premium-red/5 flex items-center justify-center group-hover/badge:bg-premium-red group-hover/badge:text-white transition-all">
 													<Truck className="w-4 h-4 md:w-5 md:h-5 text-premium-red group-hover/badge:text-white"/>
 												</div>
-												<span className="text-[10px] md:text-xs font-bold text-foreground uppercase tracking-tight leading-none">Giao nhận <br/> toàn quốc</span>
+												<span
+														className="text-[10px] md:text-xs font-bold text-foreground uppercase tracking-tight leading-none">Giao nhận <br/> toàn quốc</span>
 											</div>
-											<p className="text-[10px] md:text-[11px] text-muted-foreground leading-relaxed">Giao tận tay toàn quốc – Hỏa tốc tại HN.</p>
+											<p className="text-[10px] font-light md:text-[11px] text-muted-foreground leading-relaxed">Giao tận tay toàn
+												quốc – Hỏa tốc tại HN.</p>
 										</div>
 									</div>
 								</div>
@@ -485,16 +491,18 @@ export default function ProductDetailClient({
 												delay={0.1}
 												className="card-premium p-6 md:p-8 bg-card/50 backdrop-blur-sm border-premium-red/10 hover:border-premium-red/30 transition-all duration-500 relative overflow-hidden group/info"
 										>
-											<div className="absolute -bottom-6 -right-6 w-24 h-24 opacity-[0.03] group-hover/info:opacity-[0.08] transition-opacity duration-500">
-												<TrongDongBadge className="w-full h-full text-premium-red" />
+											<div
+													className="absolute -bottom-6 -right-6 w-24 h-24 opacity-[0.03] group-hover/info:opacity-[0.08] transition-opacity duration-500">
+												<TrongDongBadge className="w-full h-full text-premium-red"/>
 											</div>
 											<div className="flex items-center gap-3 md:gap-4 mb-4">
-												<div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-premium-red/10 flex items-center justify-center text-premium-red group-hover/info:bg-premium-red group-hover/info:text-white transition-all">
+												<div
+														className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-premium-red/10 flex items-center justify-center text-premium-red group-hover/info:bg-premium-red group-hover/info:text-white transition-all">
 													<MapPin className="w-5 h-5 md:w-6 md:h-6"/>
 												</div>
 												<h4 className="font-heading font-bold text-foreground text-lg md:text-xl">Nguồn gốc</h4>
 											</div>
-											<div className="text-sm prose prose-md max-w-none text-muted-foreground leading-relaxed">
+											<div className="text-sm font-light prose prose-md max-w-none text-muted-foreground leading-relaxed">
 												<ReactMarkdown remarkPlugins={[remarkGfm, remarkBreaks]} rehypePlugins={[rehypeRaw]}>
 													{product.origin || ''}
 												</ReactMarkdown>
@@ -509,16 +517,18 @@ export default function ProductDetailClient({
 												delay={0.2}
 												className="card-premium p-6 md:p-8 bg-card/50 backdrop-blur-sm border-premium-red/10 hover:border-premium-red/30 transition-all duration-500 relative overflow-hidden group/info"
 										>
-											<div className="absolute -bottom-6 -right-6 w-24 h-24 opacity-[0.03] group-hover/info:opacity-[0.08] transition-opacity duration-500">
-												<TrongDongBadge className="w-full h-full text-premium-red" />
+											<div
+													className="absolute -bottom-6 -right-6 w-24 h-24 opacity-[0.03] group-hover/info:opacity-[0.08] transition-opacity duration-500">
+												<TrongDongBadge className="w-full h-full text-premium-red"/>
 											</div>
 											<div className="flex items-center gap-3 md:gap-4 mb-4">
-												<div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-premium-red/10 flex items-center justify-center text-premium-red group-hover/info:bg-premium-red group-hover/info:text-white transition-all">
+												<div
+														className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-premium-red/10 flex items-center justify-center text-premium-red group-hover/info:bg-premium-red group-hover/info:text-white transition-all">
 													<ShieldCheck className="w-5 h-5 md:w-6 md:h-6"/>
 												</div>
 												<h4 className="font-heading font-bold text-foreground text-lg md:text-xl">Bảo quản</h4>
 											</div>
-											<div className="text-sm prose prose-md max-w-none text-muted-foreground leading-relaxed">
+											<div className="text-sm font-light prose prose-md max-w-none text-muted-foreground leading-relaxed">
 												<ReactMarkdown remarkPlugins={[remarkGfm, remarkBreaks]} rehypePlugins={[rehypeRaw]}>
 													{product.storageInfo || ''}
 												</ReactMarkdown>
@@ -533,16 +543,18 @@ export default function ProductDetailClient({
 												delay={0.3}
 												className="card-premium p-6 md:p-8 bg-card/50 backdrop-blur-sm border-premium-red/10 hover:border-premium-red/30 transition-all duration-500 relative overflow-hidden group/info"
 										>
-											<div className="absolute -bottom-6 -right-6 w-24 h-24 opacity-[0.03] group-hover/info:opacity-[0.08] transition-opacity duration-500">
-												<TrongDongBadge className="w-full h-full text-premium-red" />
+											<div
+													className="absolute -bottom-6 -right-6 w-24 h-24 opacity-[0.03] group-hover/info:opacity-[0.08] transition-opacity duration-500">
+												<TrongDongBadge className="w-full h-full text-premium-red"/>
 											</div>
 											<div className="flex items-center gap-3 md:gap-4 mb-4">
-												<div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-premium-red/10 flex items-center justify-center text-premium-red group-hover/info:bg-premium-red group-hover/info:text-white transition-all">
+												<div
+														className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-premium-red/10 flex items-center justify-center text-premium-red group-hover/info:bg-premium-red group-hover/info:text-white transition-all">
 													<ChefHat className="w-5 h-5 md:w-6 md:h-6"/>
 												</div>
 												<h4 className="font-heading font-bold text-foreground text-lg md:text-xl">Chế biến</h4>
 											</div>
-											<div className="text-sm prose prose-md max-w-none text-muted-foreground leading-relaxed">
+											<div className="text-sm font-light prose prose-md max-w-none text-muted-foreground leading-relaxed">
 												<ReactMarkdown remarkPlugins={[remarkGfm, remarkBreaks]} rehypePlugins={[rehypeRaw]}>
 													{product.cookingTips || ''}
 												</ReactMarkdown>
@@ -556,18 +568,23 @@ export default function ProductDetailClient({
 						{product.blogIntro && product.blogSections.length > 0 && (
 								<Reveal
 										y={30}
-								className="mt-16 md:mt-24 relative pt-16 pb-16 overflow-hidden px-4 md:px-6"
+										className="mt-16 md:mt-24 relative pt-16 pb-16 overflow-hidden px-4 md:px-6"
 								>
 									{/* Background Decorations for Blog Section */}
-									<div className="absolute inset-0 bg-gradient-to-b from-premium-red/5 via-transparent to-festive-gold/5 pointer-events-none rounded-3xl" />
-									<div className="absolute top-1/4 -left-20 w-80 h-80 bg-premium-red/5 blur-[120px] rounded-full pointer-events-none" />
-									<div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-festive-gold/10 blur-[120px] rounded-full pointer-events-none" />
+									<div
+											className="absolute inset-0 bg-gradient-to-b from-premium-red/5 via-transparent to-festive-gold/5 pointer-events-none rounded-3xl"/>
+									<div
+											className="absolute top-1/4 -left-20 w-80 h-80 bg-premium-red/5 blur-[120px] rounded-full pointer-events-none"/>
+									<div
+											className="absolute bottom-1/4 -right-20 w-80 h-80 bg-festive-gold/10 blur-[120px] rounded-full pointer-events-none"/>
 									
 									<div className="relative z-10">
 										<div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
 											<div className="flex items-center gap-5">
-												<div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br from-premium-red/10 to-festive-gold/10 flex items-center justify-center border border-premium-red/20 shadow-sm relative group">
-													<div className="absolute inset-0 bg-festive-gold/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+												<div
+														className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br from-premium-red/10 to-festive-gold/10 flex items-center justify-center border border-premium-red/20 shadow-sm relative group">
+													<div
+															className="absolute inset-0 bg-festive-gold/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 													<BookOpen className="w-6 h-6 md:w-7 md:h-7 text-premium-red relative z-10"/>
 												</div>
 												<div>
@@ -580,29 +597,33 @@ export default function ProductDetailClient({
 													<h2 className="text-2xl md:text-5xl font-heading font-bold text-foreground relative pb-4">
 														Tinh hoa <span className="text-premium-red">ẩm thực</span> Tây Bắc
 														<Reveal
-															width="80%"
-															delay={0.5}
-															duration={0.8}
-															className="h-1.5 bg-gradient-to-r from-premium-red/20 via-festive-gold/30 to-premium-red/20 absolute bottom-0 left-0 rounded-full"
+																width="80%"
+																delay={0.5}
+																duration={0.8}
+																className="h-1.5 bg-gradient-to-r from-premium-red/20 via-festive-gold/30 to-premium-red/20 absolute bottom-0 left-0 rounded-full"
 														>
 															<span className="sr-only">decorative line</span>
 														</Reveal>
 													</h2>
 												</div>
 											</div>
-											<p className="text-muted-foreground text-md max-w-md italic border-l-2 border-premium-red/20 pl-4">
-												Tìm hiểu về quy trình tâm huyết để tạo ra món <b className="text-premium-red uppercase">{product.name}</b> chuẩn vị nhất.
+											<p className="text-muted-foreground text-sm max-w-md italic border-l-2 border-premium-red/20 pl-4">
+												Tìm hiểu về quy trình tâm huyết để tạo ra món <br/> <b className="text-premium-red uppercase">{product.name}</b> chuẩn vị nhất.
 											</p>
 										</div>
 										
 										{/* Intro Paragraph */}
-										<div className="card-premium p-8 md:p-12 mb-16 bg-white/60 backdrop-blur-md border-premium-red/10 relative overflow-hidden group/intro shadow-xl rounded-3xl">
-											<div className="absolute top-0 right-0 w-80 h-80 opacity-[0.03] pointer-events-none group-hover/intro:opacity-[0.08] group-hover/intro:scale-110 group-hover/intro:text-festive-gold transition-all duration-700">
-												<TrongDongBadge className="w-full h-full text-premium-red" />
+										<div
+												className="card-premium p-8 md:p-12 mb-16 bg-white/60 backdrop-blur-md border-premium-red/10 relative overflow-hidden group/intro shadow-xl rounded-3xl">
+											<div
+													className="absolute top-0 right-0 w-80 h-80 opacity-[0.03] pointer-events-none group-hover/intro:opacity-[0.08] group-hover/intro:scale-110 group-hover/intro:text-festive-gold transition-all duration-700">
+												<TrongDongBadge className="w-full h-full text-premium-red"/>
 											</div>
-											<div className="absolute -bottom-10 -left-10 w-40 h-40 bg-festive-gold/5 blur-3xl rounded-full pointer-events-none" />
+											<div
+													className="absolute -bottom-10 -left-10 w-40 h-40 bg-festive-gold/5 blur-3xl rounded-full pointer-events-none"/>
 											
-											<div className="prose prose-sm md:prose-lg max-w-none text-muted-foreground leading-relaxed relative z-10">
+											<div
+													className="text-sm font-light prose prose-sm md:prose-lg max-w-none text-muted-foreground leading-relaxed relative z-10">
 												<ReactMarkdown remarkPlugins={[remarkGfm, remarkBreaks]} rehypePlugins={[rehypeRaw]}>
 													{product.blogIntro || ''}
 												</ReactMarkdown>
@@ -623,7 +644,8 @@ export default function ProductDetailClient({
 													>
 														{/* Image or Video with Premium Styling */}
 														<div className={`${index % 2 === 1 ? 'md:order-2' : ''}`}>
-															<div className="relative aspect-[4/3] rounded-3xl md:rounded-[2.5rem] overflow-hidden shadow-2xl border-4 md:border-8 border-white group/section-media ring-1 ring-premium-red/5">
+															<div
+																	className="relative aspect-[4/3] rounded-3xl md:rounded-[2.5rem] overflow-hidden shadow-2xl border-4 md:border-8 border-white group/section-media ring-1 ring-premium-red/5">
 																{section.image && isVideoUrl(section.image) ? (
 																		<video
 																				src={section.image}
@@ -640,13 +662,15 @@ export default function ProductDetailClient({
 																				className="object-cover transition-transform duration-1000 group-hover/section-media:scale-110"
 																		/>
 																)}
-																<div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover/section-media:opacity-100 transition-opacity duration-500 pointer-events-none" />
+																<div
+																		className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover/section-media:opacity-100 transition-opacity duration-500 pointer-events-none"/>
 																
 																{/* Step Number Badge - Festive Update */}
 																<div
 																		className="absolute top-4 left-4 md:top-6 md:left-6 w-10 h-10 md:w-14 md:h-14 bg-gradient-to-br from-premium-red to-premium-red-light text-white rounded-xl md:rounded-2xl flex items-center justify-center font-heading font-bold text-lg md:text-2xl shadow-2xl border-2 border-white/30 z-10 group-hover/section-media:scale-110 group-hover/section-media:rotate-6 transition-all duration-500">
 																	{index + 1}
-																	<div className="absolute -top-1 -right-1 w-2 h-2 md:w-3 md:h-3 bg-festive-gold rounded-full animate-pulse shadow-[0_0_10px_rgba(212,175,55,0.8)]" />
+																	<div
+																			className="absolute -top-1 -right-1 w-2 h-2 md:w-3 md:h-3 bg-festive-gold rounded-full animate-pulse shadow-[0_0_10px_rgba(212,175,55,0.8)]"/>
 																</div>
 															</div>
 														</div>
@@ -654,20 +678,23 @@ export default function ProductDetailClient({
 														{/* Content */}
 														<div className={`space-y-6 ${index % 2 === 1 ? 'md:order-1' : ''}`}>
 															<div className="flex items-center gap-4">
-																<div className="h-[2px] w-8 md:w-12 bg-gradient-to-r from-premium-red to-transparent" />
-																<span className="text-premium-red font-bold text-xs md:text-sm uppercase tracking-[0.3em]">Giai đoạn {index + 1}</span>
+																<div className="h-[2px] w-8 md:w-12 bg-gradient-to-r from-premium-red to-transparent"/>
+																<span
+																		className="text-premium-red font-bold text-xs md:text-sm uppercase tracking-[0.3em]">Giai đoạn {index + 1}</span>
 															</div>
 															<h3 className="text-2xl md:text-4xl font-heading font-bold text-foreground group-hover:text-premium-red transition-colors duration-300">
 																{section.title}
 															</h3>
-															<div className="prose prose-sm md:prose-lg max-w-none text-muted-foreground leading-relaxed">
+															<div
+																	className="text-sm font-light prose prose-sm md:prose-lg max-w-none text-muted-foreground leading-relaxed">
 																<ReactMarkdown remarkPlugins={[remarkGfm, remarkBreaks]} rehypePlugins={[rehypeRaw]}>
 																	{section.content}
 																</ReactMarkdown>
 															</div>
 															
 															{/* Festive Decorative Line */}
-															<div className="h-0.5 w-16 bg-premium-red/10 group-hover:w-32 group-hover:bg-festive-gold/40 transition-all duration-500" />
+															<div
+																	className="h-0.5 w-16 bg-premium-red/10 group-hover:w-32 group-hover:bg-festive-gold/40 transition-all duration-500"/>
 														</div>
 													</Reveal>
 											))}
@@ -679,9 +706,12 @@ export default function ProductDetailClient({
 						{/* Customer Reviews Section with Pagination */}
 						<div className="mt-16 md:mt-24 pb-16 relative overflow-hidden px-4 md:px-6">
 							{/* Decorative background for a reviews section */}
-							<div className="absolute inset-0 bg-gradient-to-b from-premium-red/5 via-transparent to-transparent pointer-events-none rounded-3xl" />
-							<div className="absolute top-1/4 -right-20 w-80 h-80 bg-premium-red/5 blur-[120px] rounded-full pointer-events-none" />
-							<div className="absolute bottom-1/4 -left-20 w-80 h-80 bg-festive-gold/10 blur-[120px] rounded-full pointer-events-none" />
+							<div
+									className="absolute inset-0 bg-gradient-to-b from-premium-red/5 via-transparent to-transparent pointer-events-none rounded-3xl"/>
+							<div
+									className="absolute top-1/4 -right-20 w-80 h-80 bg-premium-red/5 blur-[120px] rounded-full pointer-events-none"/>
+							<div
+									className="absolute bottom-1/4 -left-20 w-80 h-80 bg-festive-gold/10 blur-[120px] rounded-full pointer-events-none"/>
 							
 							<div className="relative z-10">
 								<div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12 pt-16">
@@ -696,22 +726,22 @@ export default function ProductDetailClient({
 											{isWritingReview ? 'Chia sẻ cảm nhận' : `Đánh giá sản phẩm (${allReviews.length})`}
 										</h2>
 									</div>
-									<button 
+									<button
 											className={`inline-flex w-full sm:w-auto items-center justify-center gap-2 px-6 py-3 rounded-xl font-bold transition-all duration-300 shadow-sm border ${
-													isWritingReview 
-															? 'bg-white text-premium-red border-premium-red/20 hover:bg-premium-red/5' 
+													isWritingReview
+															? 'bg-white text-premium-red border-premium-red/20 hover:bg-premium-red/5'
 															: 'bg-premium-red text-white border-premium-red/10 hover:bg-premium-red-light hover:-translate-y-1'
 											}`}
 											onClick={() => setIsWritingReview((v) => !v)}
 									>
 										{isWritingReview ? (
 												<>
-													<ChevronLeft className="w-4 h-4" />
+													<ChevronLeft className="w-4 h-4"/>
 													Quay lại
 												</>
 										) : (
 												<>
-													<Star className="w-4 h-4 fill-white" />
+													<Star className="w-4 h-4 fill-white"/>
 													Viết đánh giá
 												</>
 										)}
@@ -726,16 +756,19 @@ export default function ProductDetailClient({
 												className="card-premium p-8 md:p-10 space-y-8 bg-white/80 backdrop-blur-md border-premium-red/20 relative overflow-hidden group/form shadow-2xl rounded-[2rem]"
 										>
 											{/* Decorative background for form */}
-											<div className="absolute -top-10 -right-10 w-40 h-40 opacity-[0.03] pointer-events-none group-hover/form:opacity-[0.08] transition-opacity duration-700">
-												<TrongDongBadge className="w-full h-full text-premium-red" />
+											<div
+													className="absolute -top-10 -right-10 w-40 h-40 opacity-[0.03] pointer-events-none group-hover/form:opacity-[0.08] transition-opacity duration-700">
+												<TrongDongBadge className="w-full h-full text-premium-red"/>
 											</div>
-											<div className="absolute -bottom-10 -left-10 w-40 h-40 bg-festive-gold/5 blur-3xl rounded-full pointer-events-none" />
+											<div
+													className="absolute -bottom-10 -left-10 w-40 h-40 bg-festive-gold/5 blur-3xl rounded-full pointer-events-none"/>
 											
 											<div className="relative z-10 grid md:grid-cols-2 gap-8">
 												<div className="space-y-6">
 													<div className="flex flex-col gap-2.5">
-														<label className="text-sm font-bold text-foreground uppercase tracking-widest flex items-center gap-2">
-															<span className="w-1.5 h-1.5 rounded-full bg-premium-red" />
+														<label
+																className="text-sm font-bold text-foreground uppercase tracking-widest flex items-center gap-2">
+															<span className="w-1.5 h-1.5 rounded-full bg-premium-red"/>
 															Họ và tên
 														</label>
 														<input type="text" value={reviewName}
@@ -744,8 +777,9 @@ export default function ProductDetailClient({
 														       placeholder="Nhập họ tên của bạn" required/>
 													</div>
 													<div className="flex flex-col gap-2.5">
-														<label className="text-sm font-bold text-foreground uppercase tracking-widest flex items-center gap-2">
-															<span className="w-1.5 h-1.5 rounded-full bg-premium-red" />
+														<label
+																className="text-sm font-bold text-foreground uppercase tracking-widest flex items-center gap-2">
+															<span className="w-1.5 h-1.5 rounded-full bg-premium-red"/>
 															Khu vực
 														</label>
 														<input
@@ -756,8 +790,9 @@ export default function ProductDetailClient({
 														/>
 													</div>
 													<div className="flex flex-col gap-2.5">
-														<label className="text-sm font-bold text-foreground uppercase tracking-widest flex items-center gap-2">
-															<span className="w-1.5 h-1.5 rounded-full bg-premium-red" />
+														<label
+																className="text-sm font-bold text-foreground uppercase tracking-widest flex items-center gap-2">
+															<span className="w-1.5 h-1.5 rounded-full bg-premium-red"/>
 															Mức độ hài lòng
 														</label>
 														<div className="flex items-center gap-3">
@@ -767,16 +802,16 @@ export default function ProductDetailClient({
 																			key={r}
 																			onClick={() => setReviewRating(r)}
 																			className={`w-12 h-12 rounded-xl border flex items-center justify-center transition-all duration-300 ${
-																					r <= reviewRating 
-																							? 'bg-premium-red/5 border-premium-red/30 shadow-sm' 
+																					r <= reviewRating
+																							? 'bg-premium-red/5 border-premium-red/30 shadow-sm'
 																							: 'bg-white/50 border-border hover:border-premium-red/20'
 																			}`}
 																			aria-label={`Chọn ${r} sao`}
 																	>
 																		<Star
 																				className={`w-6 h-6 transition-all duration-300 ${
-																						r <= reviewRating 
-																								? 'text-festive-gold fill-festive-gold scale-110 drop-shadow-[0_0_8px_rgba(212,175,55,0.6)]' 
+																						r <= reviewRating
+																								? 'text-festive-gold fill-festive-gold scale-110 drop-shadow-[0_0_8px_rgba(212,175,55,0.6)]'
 																								: 'text-muted-foreground/30'
 																				}`}/>
 																	</button>
@@ -784,10 +819,11 @@ export default function ProductDetailClient({
 														</div>
 													</div>
 												</div>
-
+												
 												<div className="flex flex-col gap-2.5">
-													<label className="text-sm font-bold text-foreground uppercase tracking-widest flex items-center gap-2">
-														<span className="w-1.5 h-1.5 rounded-full bg-premium-red" />
+													<label
+															className="text-sm font-bold text-foreground uppercase tracking-widest flex items-center gap-2">
+														<span className="w-1.5 h-1.5 rounded-full bg-premium-red"/>
 														Nội dung đánh giá
 													</label>
 													<textarea
@@ -799,8 +835,9 @@ export default function ProductDetailClient({
 													/>
 												</div>
 											</div>
-
-											<div className="flex flex-col sm:flex-row items-center gap-4 pt-6 border-t border-premium-red/5 relative z-10">
+											
+											<div
+													className="flex flex-col sm:flex-row items-center gap-4 pt-6 border-t border-premium-red/5 relative z-10">
 												<button
 														type="submit"
 														className="w-full sm:w-auto px-10 py-4 bg-premium-red text-white rounded-xl font-bold hover:bg-premium-red-light transition-all duration-300 shadow-xl hover:-translate-y-1 flex items-center justify-center gap-2"
@@ -812,14 +849,14 @@ export default function ProductDetailClient({
 															</>
 													) : (
 															<>
-																<Sparkles className="w-5 h-5 text-festive-gold" />
+																<Sparkles className="w-5 h-5 text-festive-gold"/>
 																Gửi đánh giá ngay
 															</>
 													)}
 												</button>
-												<button 
-														type="button" 
-														className="w-full sm:w-auto px-8 py-4 bg-white text-foreground border border-border rounded-xl font-bold hover:bg-secondary transition-all" 
+												<button
+														type="button"
+														className="w-full sm:w-auto px-8 py-4 bg-white text-foreground border border-border rounded-xl font-bold hover:bg-secondary transition-all"
 														onClick={() => setIsWritingReview(false)}
 												>
 													Quay lại
@@ -843,41 +880,48 @@ export default function ProductDetailClient({
 																>
 																	{/* Quote Icon */}
 																	<div className="relative z-10">
-																		<Quote className="w-8 h-8 text-premium-red/10 group-hover:text-premium-red/20 transition-colors duration-500 mb-4"/>
+																		<Quote
+																				className="w-8 h-8 text-premium-red/10 group-hover:text-premium-red/20 transition-colors duration-500 mb-4"/>
 																	</div>
 																	
 																	{/* Stars */}
 																	<div className="flex gap-1 mb-4 relative z-10">
 																		{[...Array(review.rating)].map((_, i) => (
-																				<Star key={i} className="w-3.5 h-3.5 fill-festive-gold text-festive-gold drop-shadow-[0_0_5px_rgba(212,175,55,0.3)]"/>
+																				<Star key={i}
+																				      className="w-3.5 h-3.5 fill-festive-gold text-festive-gold drop-shadow-[0_0_5px_rgba(212,175,55,0.3)]"/>
 																		))}
 																	</div>
 																	
 																	{/* Content */}
-																	<div className="text-foreground leading-relaxed mb-6 text-sm md:text-[15px] italic relative z-10 line-clamp-4 flex-1">
-																		<ReactMarkdown remarkPlugins={[remarkGfm, remarkBreaks]} rehypePlugins={[rehypeRaw]}>
+																	<div
+																			className="text-foreground leading-relaxed mb-6 text-sm md:text-[15px] italic relative z-10 line-clamp-4 flex-1">
+																		<ReactMarkdown remarkPlugins={[remarkGfm, remarkBreaks]}
+																		               rehypePlugins={[rehypeRaw]}>
 																			{review.content}
 																		</ReactMarkdown>
 																	</div>
 																	
 																	{/* Author */}
-																	<div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between pt-5 border-t border-premium-red/5 relative z-10 mt-auto">
+																	<div
+																			className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between pt-5 border-t border-premium-red/5 relative z-10 mt-auto">
 																		<div>
 																			<p className="font-bold text-sm text-foreground group-hover:text-premium-red transition-colors duration-300">{review.name}</p>
 																			<p className="text-[10px] text-muted-foreground uppercase tracking-widest mt-0.5">{review.location}</p>
 																		</div>
 																		<div className="flex items-center gap-2 self-start sm:self-auto">
 																			{review.createdAt && (
-																					<span className="text-[10px] font-bold text-premium-red/60 bg-premium-red/5 px-3 py-1 rounded-full inline-flex items-center border border-premium-red/10">
+																					<span
+																							className="text-[10px] font-bold text-premium-red/60 bg-premium-red/5 px-3 py-1 rounded-full inline-flex items-center border border-premium-red/10">
 																						<Calendar className="w-3 h-3 mr-1.5"/>
 																						{new Date(review.createdAt).toLocaleDateString('vi-VN')}
 																					</span>
 																			)}
 																		</div>
 																	</div>
-
+																	
 																	{/* Festive Decoration Line */}
-																	<div className="h-0.5 w-8 bg-premium-red/20 absolute bottom-0 left-0 group-hover:w-full group-hover:bg-festive-gold/40 transition-all duration-700" />
+																	<div
+																			className="h-0.5 w-8 bg-premium-red/20 absolute bottom-0 left-0 group-hover:w-full group-hover:bg-festive-gold/40 transition-all duration-700"/>
 																</Reveal>
 														))}
 													</div>
@@ -886,11 +930,13 @@ export default function ProductDetailClient({
 															y={0}
 															className="text-center py-20 bg-card/40 backdrop-blur-sm rounded-3xl border border-dashed border-premium-red/20"
 													>
-														<div className="w-20 h-20 bg-premium-red/5 rounded-full flex items-center justify-center mx-auto mb-6">
-															<Star className="w-10 h-10 text-premium-red/20" />
+														<div
+																className="w-20 h-20 bg-premium-red/5 rounded-full flex items-center justify-center mx-auto mb-6">
+															<Star className="w-10 h-10 text-premium-red/20"/>
 														</div>
 														<h3 className="text-xl font-bold text-foreground mb-2">Chưa có đánh giá nào</h3>
-														<p className="text-muted-foreground mb-8">Hãy là người đầu tiên chia sẻ cảm nhận về sản phẩm này!</p>
+														<p className="text-muted-foreground mb-8">Hãy là người đầu tiên chia sẻ cảm nhận về sản phẩm
+															này!</p>
 														<button
 																onClick={() => setIsWritingReview(true)}
 																className="btn-primary"
@@ -963,13 +1009,16 @@ export default function ProductDetailClient({
 				{relatedProducts.length > 0 && (
 						<section className="section-spacing bg-secondary/30 relative overflow-hidden">
 							{/* Decorative Festive Background */}
-							<div className="absolute inset-0 bg-gradient-to-b from-transparent via-premium-red/5 to-transparent pointer-events-none" />
-							<div className="absolute top-0 right-0 w-80 h-80 bg-festive-gold/5 blur-[120px] rounded-full translate-x-1/3 -translate-y-1/2 pointer-events-none" />
-							<div className="absolute bottom-0 left-0 w-72 h-72 bg-premium-red/5 blur-[100px] rounded-full -translate-x-1/3 translate-y-1/3 pointer-events-none" />
-
+							<div
+									className="absolute inset-0 bg-gradient-to-b from-transparent via-premium-red/5 to-transparent pointer-events-none"/>
+							<div
+									className="absolute top-0 right-0 w-80 h-80 bg-festive-gold/5 blur-[120px] rounded-full translate-x-1/3 -translate-y-1/2 pointer-events-none"/>
+							<div
+									className="absolute bottom-0 left-0 w-72 h-72 bg-premium-red/5 blur-[100px] rounded-full -translate-x-1/3 translate-y-1/3 pointer-events-none"/>
+							
 							{/* Cultural Watermark */}
-							<TrongDongWatermark opacity={0.03} className="text-premium-red" />
-
+							<TrongDongWatermark opacity={0.03} className="text-premium-red"/>
+							
 							<div className="container-main relative z-10">
 								{/* Header */}
 								<div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
@@ -992,15 +1041,15 @@ export default function ProductDetailClient({
 											</Reveal>
 										</h2>
 									</div>
-											<Link
-													href="/san-pham"
-													className="text-md inline-flex items-center gap-2 text-premium-red font-bold hover:gap-4 transition-all group py-2 px-4 rounded-xl hover:bg-premium-red/5"
-											>
-												XEM TẤT CẢ
-												<ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform"/>
-											</Link>
-										</div>
-
+									<Link
+											href="/san-pham"
+											className="text-md inline-flex items-center gap-2 text-premium-red font-bold hover:gap-4 transition-all group py-2 px-4 rounded-xl hover:bg-premium-red/5"
+									>
+										XEM TẤT CẢ
+										<ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform"/>
+									</Link>
+								</div>
+								
 								<div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
 									{relatedProducts.map((relatedProduct, index) => (
 											<ProductCard key={relatedProduct.id} product={relatedProduct} index={index}/>

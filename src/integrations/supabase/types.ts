@@ -103,6 +103,7 @@ export type Database = {
 					customer_name: string
 					customer_phone: string
 					id: string
+					is_paid: boolean
 					note: string | null
 					order_number: string
 					shipping_address: string
@@ -119,6 +120,7 @@ export type Database = {
 					customer_name: string
 					customer_phone: string
 					id?: string
+					is_paid?: boolean
 					note?: string | null
 					order_number: string
 					shipping_address: string
@@ -135,6 +137,7 @@ export type Database = {
 					customer_name?: string
 					customer_phone?: string
 					id?: string
+					is_paid?: boolean
 					note?: string | null
 					order_number?: string
 					shipping_address?: string
