@@ -240,7 +240,7 @@ export default function PoliciesPage() {
 							<Link
 									href="/lien-he"
 									className="inline-flex items-center gap-3 bg-premium-red text-white px-8 py-4 md:px-10 md:py-5 rounded-2xl font-bold
-                       transition-all duration-300 hover:shadow-[0_10px_30px_-5px_rgba(185,28,28,0.4)] hover:-translate-y-1 text-sm md:text-lg group shadow-lg shadow-premium-red/20"
+                       transition-all duration-300 hover:shadow-[0_10px_30px_-5px_rgba(185,28,28,0.4)] hover:-translate-y-1 text-sm md:text-lg group shadow-lg shadow-premium-red/20 uppercase"
 							>
 								Liên hệ hỗ trợ ngay
 								<ChevronRight className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform"/>

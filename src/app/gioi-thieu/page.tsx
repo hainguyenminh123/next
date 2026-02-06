@@ -1,4 +1,4 @@
-import {Award, Heart, Leaf, Sparkles, Star, Users} from 'lucide-react';
+import {Award, ChevronRight, Heart, Leaf, Sparkles, Star, Users} from 'lucide-react';
 import Layout from "@/components/Layout";
 import {TrongDongBadge, TrongDongWatermark} from '@/components/TrongDongPattern';
 import Counter from '@/components/about/Counter';
@@ -107,11 +107,11 @@ export default function AboutPage() {
 							
 							<div className="mt-8 flex flex-wrap items-center gap-3">
 								<span
-										className="px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest bg-white/10 border border-white/30 text-white/90">Nguồn gốc rõ ràng</span>
+										className="px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest bg-white/10 border border-white/30 text-muted-foreground">Nguồn gốc rõ ràng</span>
 								<span
-										className="px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest bg-white/10 border border-white/30 text-white/90">Chuẩn vị vùng cao</span>
+										className="px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest bg-white/10 border border-white/30 text-muted-foreground">Chuẩn vị vùng cao</span>
 								<span
-										className="px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest bg-white/10 border border-white/30 text-white/90">Trọn vẹn niềm tin</span>
+										className="px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest bg-white/10 border border-white/30 text-muted-foreground">Trọn vẹn niềm tin</span>
 							</div>
 						</div>
 						
@@ -262,43 +262,40 @@ export default function AboutPage() {
 				
 				{/* CTA */}
 				<section
-						className="section-spacing relative overflow-hidden bg-premium-red py-24 border-t-4 border-festive-gold/20">
+						className="section-spacing relative overflow-hidden bg-white py-24">
 					<TrongDongWatermark opacity={0.08} className="text-white"/>
-					<div
-							className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,rgba(255,215,0,0.15)_0%,transparent_70%)] opacity-50"/>
+					<div className="absolute -top-40 -left-40 h-[480px] w-[480px] rounded-full bg-premium-red/25 blur-[120px] opacity-70"/>
+					<div className="absolute -bottom-40 -right-40 h-[520px] w-[520px] rounded-full bg-festive-gold/25 blur-[140px] opacity-70"/>
+					<div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(185,28,28,0.08)_0%,transparent_55%)] pointer-events-none"/>
 					
-					<div className="container-main text-center relative z-10">
-						<Reveal
-								y={20}
-						>
-							<h2 className="text-4xl md:text-6xl font-heading font-bold text-white mb-8 leading-tight">
-								Mang hương vị Tây Bắc <br className="hidden md:block"/> vào không gian bếp Việt
-							</h2>
-						</Reveal>
-						<Reveal
-								y={20}
-								delay={0.1}
-						>
-							<p className="text-white/90 mb-12 max-w-2xl mx-auto text-md font-light">
-								Khám phá ngay bộ sưu tập đặc sản Điện Biên chuẩn vị, được chọn lọc kỹ lưỡng từ đôi bàn tay của bà con
-								vùng cao.
-							</p>
-						</Reveal>
-						<Reveal
-								y={20}
-								delay={0.2}
-						>
-							<a
-									href="/san-pham"
-									className="inline-flex items-center gap-3 bg-white text-premium-red px-10 py-5 rounded-2xl font-bold
-                      transition-all duration-300 hover:shadow-[0_10px_40px_-10px_rgba(255,255,255,0.6)] hover:-translate-y-1 text-lg group border-2 border-transparent hover:border-festive-gold/30"
-							>
-								Khám phá sản phẩm
-								<Sparkles className="w-5 h-5 animate-pulse group-hover:rotate-12 transition-transform"/>
-							</a>
-						</Reveal>
+					<div className="container-main relative z-10 text-center">
+						<div className="mx-auto max-w-3xl rounded-[2.5rem] border border-premium-red/10 bg-white/80 px-6 py-12 md:px-12 md:py-14 shadow-[0_30px_70px_-45px_rgba(185,28,28,0.35)] backdrop-blur-xl">
+							<Reveal y={20}>
+								<h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6 leading-tight">
+									Mang hương vị Tây Bắc <br className="hidden md:block"/> vào không gian bếp Việt
+								</h2>
+							</Reveal>
+							<Reveal y={20} delay={0.1}>
+								<p className="text-muted-foreground mb-10 max-w-2xl mx-auto text-md font-light leading-relaxed">
+									Khám phá ngay bộ sưu tập đặc sản Điện Biên chuẩn vị, được chọn lọc kỹ lưỡng từ đôi bàn tay của bà con
+									vùng cao.
+								</p>
+							</Reveal>
+							<Reveal y={20} delay={0.2}>
+								<a
+										href="/san-pham"
+										className="inline-flex items-center gap-3 bg-premium-red text-white px-10 py-5 rounded-2xl font-bold uppercase text-md
+                          transition-all duration-300 shadow-[0_18px_40px_-18px_rgba(185,28,28,0.6)] hover:shadow-[0_24px_60px_-24px_rgba(185,28,28,0.65)] hover:-translate-y-1 group border-2 border-premium-red/60 hover:border-festive-gold/40 hover:bg-premium-red-light"
+								>
+									Khám phá sản phẩm
+									<Sparkles className="w-5 h-5 animate-pulse group-hover:rotate-12 transition-transform"/>
+								</a>
+							</Reveal>
+						</div>
 					</div>
 				</section>
 			</Layout>
 	);
 }
+
+

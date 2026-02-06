@@ -154,7 +154,7 @@ export default function ProductCard({product, index = 0}: ProductCardProps) {
 								</p>
 							</div>
 							
-							<div className="mt-4 pt-4 border-t border-border/40 flex items-center justify-between relative z-10">
+							<div className="mt-4 pt-4 border-t border-border/40 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between relative z-10">
 								<div className="flex flex-col">
 									<span
 											className="text-[10px] uppercase tracking-widest text-premium-red/60 font-bold">Giá từ</span>
@@ -164,10 +164,10 @@ export default function ProductCard({product, index = 0}: ProductCardProps) {
 									</span>
 								</div>
 								
-								<Link
-									href={`/san-pham/${product.slug}`}
-									className="inline-flex items-center gap-2 px-3 py-2 rounded-full border border-premium-red/20 text-premium-red text-xs font-bold uppercase tracking-widest group-hover:bg-premium-red group-hover:text-white group-hover:border-premium-red transition-all duration-300"
-								>
+							<Link
+								href={`/san-pham/${product.slug}`}
+								className="inline-flex items-center gap-2 px-3 py-2 rounded-full border border-premium-red/20 text-premium-red text-xs font-bold uppercase tracking-widest group-hover:bg-premium-red group-hover:text-white group-hover:border-premium-red transition-all duration-300 self-start"
+							>
 									Xem
 									<ArrowRight className="w-4 h-4"/>
 								</Link>

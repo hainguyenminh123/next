@@ -44,8 +44,8 @@ export default function PaymentResultPage({
 			<main className="min-h-[70vh] flex items-center justify-center bg-secondary/20">
 				<div className="w-full max-w-2xl mx-auto bg-white rounded-[2rem] p-10 shadow-xl border border-premium-red/10 text-center">
 					<Icon className={`w-16 h-16 mx-auto ${config.accent}`}/>
-					<h1 className="text-3xl md:text-4xl font-heading font-bold mt-6">{config.title}</h1>
-					<p className="text-muted-foreground mt-3">{config.description}</p>
+					<h1 className="text-2xl md:text-3xl font-heading font-bold mt-6">{config.title}</h1>
+					<p className="text-muted-foreground mt-3 font-light text-sm">{config.description}</p>
 					{orderNumber && (
 							<div className="mt-4 text-sm font-bold text-premium-red">
 								Mã đơn: {orderNumber}
@@ -55,13 +55,13 @@ export default function PaymentResultPage({
 					<div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
 						<Link
 								href="/san-pham"
-								className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-premium-red text-white font-bold hover:bg-premium-red-light transition-all"
+								className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-premium-red  uppercase text-white font-bold hover:bg-premium-red-light transition-all"
 						>
 							Tiếp tục mua hàng
 						</Link>
 						<Link
 								href="/"
-								className="inline-flex items-center justify-center px-6 py-3 rounded-full border border-premium-red/20 text-premium-red font-bold hover:border-premium-red/40 transition-all"
+								className="inline-flex items-center justify-center px-6 py-3 rounded-full border border-premium-red/20 uppercase text-premium-red font-bold hover:border-premium-red/40 transition-all"
 						>
 							Về trang chủ
 						</Link>

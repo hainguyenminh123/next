@@ -87,7 +87,7 @@ export default function Footer() {
 									initial={{opacity: 0, y: 10}}
 									whileInView={{opacity: 1, y: 0}}
 									viewport={{once: true}}
-									className="font-heading font-bold text-lg mb-6 text-festive-gold"
+									className="font-heading uppercase font-bold text-lg mb-6 text-festive-gold"
 							>
 								Sản phẩm
 							</motion.h4>
@@ -119,7 +119,7 @@ export default function Footer() {
 									initial={{opacity: 0, y: 10}}
 									whileInView={{opacity: 1, y: 0}}
 									viewport={{once: true}}
-									className="font-heading font-bold text-lg mb-6 text-festive-gold"
+									className="font-heading font-bold text-lg mb-6 text-festive-gold uppercase"
 							>
 								Thông tin
 							</motion.h4>
@@ -151,7 +151,7 @@ export default function Footer() {
 									initial={{opacity: 0, y: 10}}
 									whileInView={{opacity: 1, y: 0}}
 									viewport={{once: true}}
-									className="font-heading font-bold text-lg mb-6 text-festive-gold"
+									className="font-heading uppercase font-bold text-lg mb-6 text-festive-gold"
 							>
 								Liên hệ
 							</motion.h4>

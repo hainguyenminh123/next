@@ -1,11 +1,12 @@
 "use client";
 
-import {useState} from 'react';
+import {useEffect, useMemo, useRef, useState} from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import {useRouter} from 'next/navigation';
 import {motion} from 'framer-motion';
 import {
+	ChevronDown,
 	ChevronRight,
 	CreditCard,
 	MapPin,
@@ -23,6 +24,7 @@ import {formatPrice} from '@/hooks/useProducts';
 import {toast} from 'sonner';
 import {supabase} from '@/integrations/supabase/client';
 import {TrongDongBadge, TrongDongWatermark} from '@/components/TrongDongPattern';
+import {VIETNAM_PROVINCES} from '@/data/vietnamProvinces';
 
 export default function CheckoutPage() {
 	const router = useRouter();
@@ -37,6 +39,28 @@ export default function CheckoutPage() {
 		city: '',
 		note: '',
 	});
+	const [isCityOpen, setIsCityOpen] = useState(false);
+	const cityRef = useRef<HTMLDivElement | null>(null);
+	
+	const normalizeText = (value: string) =>
+		value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+	
+	const filteredProvinces = useMemo(() => {
+		const query = normalizeText(formData.city.trim());
+		if (!query) return VIETNAM_PROVINCES;
+		return VIETNAM_PROVINCES.filter((province) => normalizeText(province).includes(query));
+	}, [formData.city]);
+	
+	useEffect(() => {
+		const handleClickOutside = (event: MouseEvent) => {
+			if (!cityRef.current) return;
+			if (!cityRef.current.contains(event.target as Node)) {
+				setIsCityOpen(false);
+			}
+		};
+		document.addEventListener('mousedown', handleClickOutside);
+		return () => document.removeEventListener('mousedown', handleClickOutside);
+	}, []);
 	
 	const totalPrice = getTotalPrice();
 	const grandTotal = totalPrice;
@@ -44,6 +68,16 @@ export default function CheckoutPage() {
 	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
 		const {name, value} = e.target;
 		setFormData((prev) => ({...prev, [name]: value}));
+	};
+	
+	const handleCityChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		setFormData((prev) => ({...prev, city: e.target.value}));
+		setIsCityOpen(true);
+	};
+	
+	const handleCitySelect = (province: string) => {
+		setFormData((prev) => ({...prev, city: province}));
+		setIsCityOpen(false);
 	};
 	
 	const handleSubmit = async (e: React.FormEvent) => {
@@ -67,6 +101,11 @@ export default function CheckoutPage() {
 		
 		if (items.length === 0) {
 			toast.error('Giỏ hàng trống');
+			return;
+		}
+		
+		if (!VIETNAM_PROVINCES.includes(formData.city)) {
+			toast.error('Vui lòng chọn tỉnh/thành phố trong danh sách.');
 			return;
 		}
 		
@@ -129,12 +168,12 @@ export default function CheckoutPage() {
 				return;
 			}
 			
-			toast.success(`Dat hang thanh cong! Ma don: ${orderNumber}`);
+			toast.success(`Đặt hàng thành công! Mã đơn: ${orderNumber}`);
 			clearCart();
 			router.push('/');
 		} catch (error) {
 			console.error('Order submission error:', error);
-			toast.error(error instanceof Error ? error.message : 'Co loi xay ra, vui long thu lai');
+			toast.error(error instanceof Error ? error.message : 'Có lỗi xảy ra! Vui lòng thử lại.');
 		} finally {
 			setIsSubmitting(false);
 		}
@@ -220,7 +259,7 @@ export default function CheckoutPage() {
 					<form onSubmit={handleSubmit}>
 						<div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
 							<div className="lg:col-span-2 space-y-10">
-								<motion.div initial={{opacity: 0, y: 20}} whileInView={{opacity: 1, y: 0}} viewport={{once: true}} className="card-premium p-8 relative overflow-hidden bg-white shadow-[0_4px_25px_-5px_rgba(0,0,0,0.05)] border-none">
+								<motion.div initial={{opacity: 0, y: 20}} whileInView={{opacity: 1, y: 0}} viewport={{once: true}} className="card-premium p-8 relative overflow-visible bg-white shadow-[0_4px_25px_-5px_rgba(0,0,0,0.05)] border-none">
 									<div className="absolute top-0 right-0 w-32 h-32 opacity-[0.02] -mr-8 -mt-8 rotate-12">
 										<TrongDongBadge className="w-full h-full text-premium-red"/>
 									</div>
@@ -232,24 +271,70 @@ export default function CheckoutPage() {
 									</div>
 									<div className="grid md:grid-cols-2 gap-6">
 										<div className="space-y-2">
-											<label className="text-xs font-bold text-foreground/60 uppercase tracking-[0.1em] ml-1">Họ tên <span className="text-premium-red">*</span></label>
-											<input type="text" name="name" value={formData.name} onChange={handleInputChange} className="w-full bg-secondary/30 border-2 border-transparent focus:border-premium-red/20 focus:bg-white rounded-2xl px-6 py-4 outline-none transition-all duration-300 placeholder:text-muted-foreground/50 font-medium" placeholder="Nguyễn Văn A" required />
+											<label className="text-xs font-bold text-foreground/60 uppercase tracking-[0.1em] ml-1">Họ tên<span className="text-premium-red">*</span></label>
+											<input type="text" name="name" value={formData.name} onChange={handleInputChange} className="w-full bg-secondary/30 border-2 border-transparent focus:border-premium-red/20 focus:bg-white rounded-2xl px-6 py-4 outline-none transition-all duration-300 placeholder:text-muted-foreground/50 font-light text-sm" placeholder="Nguyễn Văn A" required />
 										</div>
 										<div className="space-y-2">
 											<label className="text-xs font-bold text-foreground/60 uppercase tracking-[0.1em] ml-1">Số điện thoại <span className="text-premium-red">*</span></label>
-											<input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} className="w-full bg-secondary/30 border-2 border-transparent focus:border-premium-red/20 focus:bg-white rounded-2xl px-6 py-4 outline-none transition-all duration-300 placeholder:text-muted-foreground/50 font-medium" placeholder="09xx xxx xxx" required />
+											<input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} className="w-full bg-secondary/30 border-2 border-transparent focus:border-premium-red/20 focus:bg-white rounded-2xl px-6 py-4 outline-none transition-all duration-300 placeholder:text-muted-foreground/50 font-light text-sm" placeholder="09xx xxx xxx" required />
 										</div>
 										<div className="md:col-span-2 space-y-2">
 											<label className="text-xs font-bold text-foreground/60 uppercase tracking-[0.1em] ml-1">Email (Điền hoặc bỏ qua)</label>
-											<input type="email" name="email" value={formData.email} onChange={handleInputChange} className="w-full bg-secondary/30 border-2 border-transparent focus:border-premium-red/20 focus:bg-white rounded-2xl px-6 py-4 outline-none transition-all duration-300 placeholder:text-muted-foreground/50 font-medium" placeholder="email@example.com" />
+											<input type="email" name="email" value={formData.email} onChange={handleInputChange} className="w-full bg-secondary/30 border-2 border-transparent focus:border-premium-red/20 focus:bg-white rounded-2xl px-6 py-4 outline-none transition-all duration-300 placeholder:text-muted-foreground/50 font-light text-sm" placeholder="email@example.com" />
 										</div>
 										<div className="md:col-span-2 space-y-2">
 											<label className="text-xs font-bold text-foreground/60 uppercase tracking-[0.1em] ml-1">Địa chỉ chi tiết <span className="text-premium-red">*</span></label>
-											<input type="text" name="address" value={formData.address} onChange={handleInputChange} className="w-full bg-secondary/30 border-2 border-transparent focus:border-premium-red/20 focus:bg-white rounded-2xl px-6 py-4 outline-none transition-all duration-300 placeholder:text-muted-foreground/50 font-medium" placeholder="Số nhà, tên đường, phường/xã..." required />
+											<input type="text" name="address" value={formData.address} onChange={handleInputChange} className="w-full bg-secondary/30 border-2 border-transparent focus:border-premium-red/20 focus:bg-white rounded-2xl px-6 py-4 outline-none transition-all duration-300 placeholder:text-muted-foreground/50 font-light text-sm" placeholder="Số nhà, tên đường, phường/xã..." required />
 										</div>
 										<div className="md:col-span-2 space-y-2">
-											<label className="text-xs font-bold text-foreground/60 uppercase tracking-[0.1em] ml-1">Tỉnh/Thành phố <span className="text-premium-red">*</span></label>
-											<input type="text" name="city" value={formData.city} onChange={handleInputChange} className="w-full bg-secondary/30 border-2 border-transparent focus:border-premium-red/20 focus:bg-white rounded-2xl px-6 py-4 outline-none transition-all duration-300 placeholder:text-muted-foreground/50 font-medium" placeholder="Hà Nội, Điện Biên..." required />
+											
+											<label className="text-xs font-bold text-foreground/60 uppercase tracking-[0.1em] ml-1">{'T\u1ec9nh/Th\u00e0nh ph\u1ed1 '}<span className="text-premium-red">*</span></label>
+											<div ref={cityRef} className="relative">
+												<input
+													name="city"
+													value={formData.city}
+													onChange={handleCityChange}
+													onFocus={() => setIsCityOpen(true)}
+													onKeyDown={(e) => {
+														if (e.key === 'Escape') setIsCityOpen(false);
+													}}
+													className="w-full bg-secondary/30 border-2 border-transparent focus:border-premium-red/20 focus:bg-white rounded-2xl px-6 py-4 pr-12 outline-none transition-all duration-300 text-foreground placeholder:text-muted-foreground/60 font-light text-sm shadow-[0_12px_24px_-18px_rgba(185,28,28,0.25)]"
+													placeholder={'Ch\u1ecdn t\u1ec9nh/th\u00e0nh ph\u1ed1'}
+													required
+												/>
+												<button
+													type="button"
+													onClick={() => setIsCityOpen((prev) => !prev)}
+													className="absolute right-4 top-1/2 -translate-y-1/2 text-muted-foreground/70 hover:text-premium-red transition-colors"
+													aria-label={'M\u1edf danh s\u00e1ch t\u1ec9nh th\u00e0nh'}
+												>
+													<ChevronDown className={`w-5 h-5 transition-transform ${isCityOpen ? 'rotate-180' : ''}`} />
+												</button>
+												{isCityOpen && (
+													<div className="absolute z-20 mt-2 w-full rounded-2xl border border-premium-red/10 bg-white shadow-[0_18px_40px_-24px_rgba(185,28,28,0.35)] overflow-hidden">
+														<div className="max-h-56 overflow-auto py-2">
+															{filteredProvinces.length > 0 ? (
+																<ul>
+																	{filteredProvinces.map((province) => (
+																		<li key={province}>
+																			<button
+																				type="button"
+																				onClick={() => handleCitySelect(province)}
+																				className="w-full text-left px-5 py-2.5 text-sm text-foreground hover:bg-premium-red/10 hover:text-premium-red transition-colors"
+																			>
+																				{province}
+																			</button>
+																		</li>
+																	))}
+																</ul>
+															) : (
+																<div className="px-5 py-3 text-sm text-muted-foreground">{'Kh\u00f4ng t\u00ecm th\u1ea5y t\u1ec9nh/th\u00e0nh.'}</div>
+															)}
+														</div>
+													</div>
+												)}
+											</div>
+
 										</div>
 									</div>
 								</motion.div>
@@ -270,7 +355,7 @@ export default function CheckoutPage() {
 											<div className={`w-12 h-12 rounded-xl flex items-center justify-center transition-colors ${paymentMethod === 'cod' ? 'bg-premium-red text-white' : 'bg-secondary text-muted-foreground group-hover:text-premium-red'}`}><Truck size={24}/></div>
 											<div className="flex-1">
 												<p className={`font-bold transition-colors ${paymentMethod === 'cod' ? 'text-premium-red' : 'text-foreground'}`}>Thanh toán khi nhận (COD)</p>
-												<p className="text-xs text-muted-foreground mt-0.5">Tiền mặt khi nhận hàng</p>
+												<p className="text-xs font-light text-muted-foreground mt-0.5">Tiền mặt khi nhận hàng</p>
 											</div>
 										</label>
 										<label className={`flex items-center gap-4 p-5 rounded-[1.5rem] border-2 cursor-pointer transition-all duration-300 relative group ${paymentMethod === 'bank' ? 'border-premium-red bg-premium-red/5' : 'border-secondary hover:border-premium-red/30 bg-white'}`}>
@@ -278,7 +363,7 @@ export default function CheckoutPage() {
 											<div className={`w-12 h-12 rounded-xl flex items-center justify-center transition-colors ${paymentMethod === 'bank' ? 'bg-premium-red text-white' : 'bg-secondary text-muted-foreground group-hover:text-premium-red'}`}><CreditCard size={24}/></div>
 											<div className="flex-1">
 												<p className={`font-bold transition-colors ${paymentMethod === 'bank' ? 'text-premium-red' : 'text-foreground'}`}>Chuyển khoản Ngân hàng</p>
-												<p className="text-xs text-muted-foreground mt-0.5">Thanh toán qua STK shop</p>
+												<p className="text-xs font-light text-muted-foreground mt-0.5">Thanh toán qua STK shop</p>
 											</div>
 										</label>
 									</div>
@@ -293,7 +378,7 @@ export default function CheckoutPage() {
 									</div>
 									<div className="space-y-2">
 										<label className="text-xs font-bold text-foreground/60 uppercase tracking-[0.1em] ml-1">Yêu cầu đặc biệt</label>
-										<textarea name="note" value={formData.note} onChange={handleInputChange} rows={4} className="w-full bg-secondary/30 border-2 border-transparent focus:border-premium-red/20 focus:bg-white rounded-2xl px-6 py-4 outline-none transition-all duration-300 placeholder:text-muted-foreground/50 font-medium resize-none" placeholder="Ghi chú về thời gian nhận, số điện thoại phụ, hoặc lời nhắn tặng quà..." />
+										<textarea name="note" value={formData.note} onChange={handleInputChange} rows={4} className="w-full bg-secondary/30 border-2 border-transparent focus:border-premium-red/20 focus:bg-white rounded-2xl px-6 py-4 outline-none transition-all duration-300 placeholder:text-muted-foreground/50 resize-none text-sm font-light" placeholder="Ghi chú về thời gian nhận, số điện thoại phụ, hoặc lời nhắn tặng quà..." />
 									</div>
 								</motion.div>
 							</div>
@@ -386,3 +471,6 @@ export default function CheckoutPage() {
 		</>
 	);
 }
+
+
+

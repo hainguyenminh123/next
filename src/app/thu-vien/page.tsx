@@ -276,19 +276,19 @@ export default function GalleryPage() {
 							<div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-premium-red/10 text-premium-red text-[11px] font-bold uppercase tracking-[0.3em] mb-6 border border-premium-red/15">
 								Gợi ý
 							</div>
-							<h2 className="text-3xl md:text-5xl font-heading font-bold mb-6">Bạn yêu thích những gì vừa thấy?</h2>
-							<p className="text-muted-foreground font-light text-md mb-10">
+							<h2 className="text-2xl md:text-3xl font-heading font-bold mb-6">Bạn yêu thích những gì vừa thấy?</h2>
+							<p className="text-muted-foreground font-light text-sm mb-10">
 								Tất cả các sản phẩm trong ảnh và video đều có sẵn tại cửa hàng của chúng mình. Hãy mang hương vị Tây Bắc về nhà ngay nhé!
 							</p>
 							
 							<div className="flex flex-col sm:flex-row items-center justify-center gap-4">
 								<a
 									href="/san-pham"
-									className="inline-flex items-center gap-3 bg-premium-red text-white px-10 py-4 rounded-full font-bold hover:bg-premium-red-light transition-all uppercase shadow-xl shadow-premium-red/20 hover:-translate-y-1"
+									className="inline-flex items-center gap-3 bg-premium-red text-white px-10 py-4 rounded-full font-bold hover:bg-premium-red-light transition-all text-md uppercase shadow-xl shadow-premium-red/20 hover:-translate-y-1"
 								>
 									Ghé cửa hàng ngay
 								</a>
-								<div className="inline-flex items-center gap-2 px-5 py-4 rounded-full border border-premium-red/15 text-premium-red font-bold text-sm uppercase tracking-widest bg-white shadow-sm">
+								<div className="inline-flex items-center gap-2 px-5 py-4 rounded-full border border-premium-red/15 text-premium-red font-bold text-md uppercase tracking-widest bg-white shadow-sm">
 									Giao nhanh
 									<span className="w-1.5 h-1.5 rounded-full bg-festive-gold" />
 									Đóng gói sạch

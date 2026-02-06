@@ -597,7 +597,7 @@ export default function ProductDetailClient({
 													<h2 className="text-2xl md:text-5xl font-heading font-bold text-foreground relative pb-4">
 														Tinh hoa <span className="text-premium-red">ẩm thực</span> Tây Bắc
 														<Reveal
-																width="80%"
+																width="60%"
 																delay={0.5}
 																duration={0.8}
 																className="h-1.5 bg-gradient-to-r from-premium-red/20 via-festive-gold/30 to-premium-red/20 absolute bottom-0 left-0 rounded-full"

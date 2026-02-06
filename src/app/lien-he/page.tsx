@@ -1,6 +1,6 @@
 import {Mail, MapPin, MessageCircle, Phone, Sparkles, Star} from 'lucide-react';
 import Layout from '@/components/Layout';
-import {TrongDongBadge, TrongDongWatermark} from '@/components/TrongDongPattern';
+import {TrongDongWatermark} from '@/components/TrongDongPattern';
 import Reveal from '@/components/Reveal';
 import ContactForm from '@/components/contact/ContactForm';
 import ContactMaps from '@/components/contact/ContactMaps';
