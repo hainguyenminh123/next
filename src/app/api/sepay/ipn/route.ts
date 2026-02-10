@@ -37,13 +37,21 @@ export async function POST(request: Request) {
 		}
 		console.log(orderInvoice);
 		const supabase = createSupabaseInvokeClient();
+		console.log("Calling RPC update_order_paid with order_number:", orderInvoice);
 		const {data, error} = await supabase.rpc("update_order_paid", {
 			order_number: orderInvoice,
 		});
 		
-		if (error || data?.error) {
-			console.error("SePay IPN update error:", error || data?.error);
-			return NextResponse.json({error: "Failed to update order"}, {status: 500});
+		if (error || (data && data.error)) {
+			console.error("SePay IPN update error details:", {
+				rpcError: error,
+				dataError: data?.error,
+				orderNumber: orderInvoice
+			});
+			return NextResponse.json({
+				error: "Failed to update order", 
+				details: error?.message || data?.error 
+			}, {status: 500});
 		}
 		
 		return NextResponse.json({ok: true});
