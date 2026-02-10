@@ -1,5 +1,17 @@
 import {NextResponse} from "next/server";
-import {createSupabaseServerClient} from "@/lib/supabase/server";
+import {createClient} from "@supabase/supabase-js";
+
+const createSupabaseInvokeClient = () => {
+	const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+	const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+	if (!url || !anonKey) {
+		throw new Error("Missing Supabase client configuration");
+	}
+	
+	return createClient(url, anonKey, {
+		auth: {persistSession: false},
+	});
+};
 
 export async function POST(request: Request) {
 	try {
@@ -21,15 +33,14 @@ export async function POST(request: Request) {
 		if (!shouldMarkPaid) {
 			return NextResponse.json({ok: true, ignored: true});
 		}
+		console.log(orderInvoice);
+		const supabase = createSupabaseInvokeClient();
+		const {data, error} = await supabase.functions.invoke("update-order-paid", {
+			body: {orderNumber: orderInvoice},
+		});
 		
-		const supabase = createSupabaseServerClient();
-		const {error} = await supabase
-				.from("orders")
-				.update({is_paid: true})
-				.eq("order_number", orderInvoice);
-		
-		if (error) {
-			console.error("SePay IPN update error:", error);
+		if (error || data?.error) {
+			console.error("SePay IPN update error:", error || data?.error);
 			return NextResponse.json({error: "Failed to update order"}, {status: 500});
 		}
 		

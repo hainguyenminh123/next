@@ -50,7 +50,7 @@ export default async function Page() {
 								"@context": "https://schema.org",
 								"@type": "Store",
 								"name": "Tiệm Của Bản",
-								"image": "https://tiemcuaban.vn/og-image.jpg",
+								"image": "https://tiemcuaban.vn/og-image.png",
 								"@id": "https://tiemcuaban.vn",
 								"url": "https://tiemcuaban.vn",
 								"telephone": "0339420806",

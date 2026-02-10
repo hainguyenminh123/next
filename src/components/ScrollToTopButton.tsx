@@ -38,7 +38,7 @@ export default function ScrollToTopButton() {
 								whileHover={{scale: 1.1, y: -5}}
 								whileTap={{scale: 0.9}}
 								onClick={scrollToTop}
-								className="fixed bottom-8 right-8 z-50 p-4 bg-premium-red text-white rounded-full shadow-2xl
+								className="fixed bottom-8 left-8 z-50 p-4 bg-premium-red text-white rounded-full shadow-2xl
                  border border-festive-gold/30 hover:border-festive-gold transition-all duration-300
                  focus:outline-none focus:ring-2 focus:ring-festive-gold group overflow-hidden"
 								aria-label="Scroll to top"
