@@ -14,8 +14,10 @@ const createSupabaseInvokeClient = () => {
 };
 
 export async function POST(request: Request) {
+	console.log("SePay IPN received a POST request");
 	try {
 		const payload = await request.json();
+		console.log("SePay IPN payload:", JSON.stringify(payload, null, 2));
 		const orderInvoice = payload?.order?.order_invoice_number as string | undefined;
 		const notificationType = payload?.notification_type as string | undefined;
 		const transactionStatus = payload?.transaction?.transaction_status as string | undefined;
