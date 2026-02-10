@@ -388,9 +388,9 @@ export default function CheckoutPage() {
 										<div className="absolute top-0 right-0 w-24 h-24 opacity-[0.03] -mr-6 -mt-6">
 											<TrongDongBadge className="w-full h-full text-premium-red"/>
 										</div>
-										<h3 className="text-xl font-heading font-bold text-foreground mb-8 flex items-center gap-3 pb-4 border-b border-secondary">
+										<h3 className="text-lg sm:text-xl font-heading font-bold text-foreground mb-8 flex items-center flex-wrap gap-2 sm:gap-3 pb-4 border-b border-secondary">
 											Đơn hàng của bạn
-											<span className="bg-premium-red text-white text-[10px] px-2.5 py-1 rounded-full">{items.reduce((acc, item) => acc + item.quantity, 0)} sản phẩm</span>
+											<span className="bg-premium-red text-white text-[10px] px-2.5 py-1 rounded-full whitespace-nowrap">{items.reduce((acc, item) => acc + item.quantity, 0)} sản phẩm</span>
 										</h3>
 										<div className="space-y-6 mb-8 max-h-[400px] overflow-y-auto pr-2 scrollbar-hide">
 											{items.map((item) => (
