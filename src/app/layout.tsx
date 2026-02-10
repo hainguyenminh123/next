@@ -21,11 +21,11 @@ export const metadata = {
 	description:
 			"Mua đặc sản Tây Bắc Điện Biên chính gốc: Thịt trâu gác bếp, thịt lợn gác bếp, lạp xưởng, măng khô, ngô sấy giòn. Giao nhanh toàn quốc.",
 	keywords: ["đặc sản Tây Bắc", "đặc sản Điện Biên", "thịt trâu gác bếp", "lạp xưởng", "măng khô", "Tiệm Của Bản"],
-	metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'https://tiemcuaban.vn'),
+	metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'https://tiemcuaban.com'),
 	openGraph: {
 		type: 'website',
 		locale: 'vi_VN',
-		url: 'https://tiemcuaban.vn',
+		url: 'https://tiemcuaban.com',
 		siteName: 'Tiệm Của Bản',
 		images: [
 			{

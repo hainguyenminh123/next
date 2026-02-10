@@ -168,8 +168,8 @@ export default function Footer() {
 									</div>
 									<div>
 										<p className="text-xs text-white/50 uppercase tracking-widest font-bold mb-1">Hotline</p>
-										<a href="tel:0339 420 806" className="text-sm font-bold hover:text-festive-gold transition-colors">
-											0339 420 806
+										<a href="tel:0877 309 894" className="text-sm font-bold hover:text-festive-gold transition-colors">
+											0877 309 894
 										</a>
 									</div>
 								</motion.li>

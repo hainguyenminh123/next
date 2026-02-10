@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 	openGraph: {
 		title: "Chính sách mua hàng & Bảo mật | Tiệm Của Bản",
 		description: "Minh bạch trong mọi kết nối, trọn vẹn trong từng lời hứa.",
-		url: 'https://tiemcuaban.vn/chinh-sach',
+		url: 'https://tiemcuaban.com/chinh-sach',
 	}
 };
 

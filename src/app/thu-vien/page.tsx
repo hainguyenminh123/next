@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 	openGraph: {
 		title: "Thư viện hình ảnh & Video | Tiệm Của Bản",
 		description: "Xem những hình ảnh và video chân thực nhất về bản làng và đặc sản Tây Bắc.",
-		url: 'https://tiemcuaban.vn/thu-vien',
+		url: 'https://tiemcuaban.com/thu-vien',
 	}
 };
 

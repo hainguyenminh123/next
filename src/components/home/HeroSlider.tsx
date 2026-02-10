@@ -4,7 +4,7 @@ import {ArrowRight, Sparkles} from 'lucide-react';
 import {TrongDongBadge, TrongDongWatermark} from "@/components/TrongDongPattern";
 
 const banner = {
-	image: 'https://iqerjqnjzhatvbpwiwoy.supabase.co/storage/v1/object/public/hero-bg/0339%20420%20806.png',
+	image: 'https://iqerjqnjzhatvbpwiwoy.supabase.co/storage/v1/object/public/hero-bg/0339%20420%20806%20(2).png',
 	badge: '✨ ĐẶC SẢN ĐIỆN BIÊN CHUẨN VỊ ✨',
 	title: 'Hương vị núi rừng',
 	subtitle: 'tận tay bạn',

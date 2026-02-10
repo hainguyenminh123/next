@@ -3,6 +3,7 @@
 import {useEffect, useState} from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import {useRouter} from 'next/navigation';
 import {motion} from 'framer-motion';
 import {useCart} from '@/store/cart';
 import {ArrowRight, ShoppingBag} from 'lucide-react';
@@ -17,6 +18,7 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({product, index = 0}: ProductCardProps) {
+	const router = useRouter();
 	const {addItem, openCart} = useCart();
 	const [videoThumbnail, setVideoThumbnail] = useState<string | null>(null);
 	
@@ -30,6 +32,10 @@ export default function ProductCard({product, index = 0}: ProductCardProps) {
 					.catch(console.warn);
 		}
 	}, [productThumbnail, isVideo]);
+	
+	const handleCardClick = () => {
+		router.push(`/san-pham/${product.slug}`);
+	};
 	
 	const handleAddToCart = (e: React.MouseEvent) => {
 		e.preventDefault();
@@ -51,8 +57,6 @@ export default function ProductCard({product, index = 0}: ProductCardProps) {
 		openCart();
 	};
 	
-	// Use short description or truncate description
-	const shortDesc = product.shortDescription || product.description.slice(0, 80);
 	const displayPrice = product.weightOptions[0]?.price || product.basePrice;
 	const tag = product.category;
 	
@@ -62,7 +66,8 @@ export default function ProductCard({product, index = 0}: ProductCardProps) {
 					whileInView={{opacity: 1, y: 0}}
 					viewport={{once: true}}
 					transition={{duration: 0.5, delay: index * 0.1}}
-					className="h-full"
+					className="h-full cursor-pointer"
+					onClick={handleCardClick}
 			>
 				<div className="relative h-full group">
 					<div
@@ -72,7 +77,7 @@ export default function ProductCard({product, index = 0}: ProductCardProps) {
 							<div className="absolute -top-24 -right-24 h-56 w-56 rounded-full bg-festive-gold/20 blur-[80px]"/>
 							<div className="absolute -bottom-24 -left-24 h-56 w-56 rounded-full bg-premium-red/10 blur-[90px]"/>
 						</div>
-						{/* Image container */}
+							{/* Image container */}
 						<div className="relative aspect-square overflow-hidden bg-muted border-2 border-premium-red/70 rounded-[1rem] m-3">
 							{isVideo ? (
 									<video
@@ -99,12 +104,6 @@ export default function ProductCard({product, index = 0}: ProductCardProps) {
 							
 							<div
 									className="absolute inset-0 bg-gradient-to-t from-premium-red/15 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none"/>
-							
-							<Link
-									href={`/san-pham/${product.slug}`}
-									className="absolute inset-0 z-10"
-									aria-label={`Xem ${product.name}`}
-							/>
 							
 							<div
 									className="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0 pointer-events-none group-hover:pointer-events-auto">
@@ -149,9 +148,6 @@ export default function ProductCard({product, index = 0}: ProductCardProps) {
 								<h3 className="text-lg font-bold text-foreground group-hover:text-premium-red transition-colors duration-300 line-clamp-2 leading-tight">
 									{product.name}
 								</h3>
-								<p className="text-sm font-light text-muted-foreground line-clamp-2 leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
-									{shortDesc}
-								</p>
 							</div>
 							
 							<div className="mt-4 pt-4 border-t border-border/40 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between relative z-10">
@@ -164,13 +160,17 @@ export default function ProductCard({product, index = 0}: ProductCardProps) {
 									</span>
 								</div>
 								
-							<Link
-								href={`/san-pham/${product.slug}`}
+							<button
+								onClick={(e) => {
+									e.preventDefault();
+									e.stopPropagation();
+									handleCardClick();
+								}}
 								className="inline-flex items-center gap-2 px-3 py-2 rounded-full border border-premium-red/20 text-premium-red text-xs font-bold uppercase tracking-widest group-hover:bg-premium-red group-hover:text-white group-hover:border-premium-red transition-all duration-300 self-start"
 							>
 									Xem
 									<ArrowRight className="w-4 h-4"/>
-								</Link>
+								</button>
 							</div>
 						</div>
 					</div>

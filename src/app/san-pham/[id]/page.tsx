@@ -23,7 +23,7 @@ export async function generateMetadata({
 			title: product.name,
 			description,
 			type: 'article',
-			url: `https://tiemcuaban.vn/san-pham/${product.slug}`,
+			url: `https://tiemcuaban.com/san-pham/${product.slug}`,
 			images: product.images?.length ? [
 				{
 					url: product.images[0],
@@ -76,7 +76,7 @@ export default async function ProductDetailPage({
 							},
 							"offers": {
 								"@type": "Offer",
-								"url": `https://tiemcuaban.vn/san-pham/${product.slug}`,
+								"url": `https://tiemcuaban.com/san-pham/${product.slug}`,
 								"priceCurrency": "VND",
 								"price": product.basePrice,
 								"availability": product.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",

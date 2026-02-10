@@ -23,7 +23,7 @@ export default function FloatingContact() {
 									className="mb-3 flex w-12 flex-col items-center gap-3"
 							>
 								<a
-										href="https://zalo.me/0339420806"
+										href="https://zalo.me/0877309894"
 										target="_blank"
 										rel="noopener noreferrer"
 										aria-label="Chat Zalo"
@@ -32,7 +32,7 @@ export default function FloatingContact() {
 									<SiZalo className="h-5 w-5"/>
 								</a>
 								<a
-										href="https://m.me/1017044824819432"
+										href="https://m.me/986426274552766"
 										target="_blank"
 										rel="noopener noreferrer"
 										aria-label="Open Messenger chat"
@@ -43,7 +43,7 @@ export default function FloatingContact() {
 									</svg>
 								</a>
 								<a
-										href="tel:0339420806"
+										href="tel:0877309894"
 										aria-label="Call hotline"
 										className="flex h-11 w-11 items-center justify-center rounded-full bg-[#16a34a] text-white shadow-lg transition hover:brightness-110"
 								>

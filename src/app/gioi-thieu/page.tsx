@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 	openGraph: {
 		title: "Về Tiệm Của Bản | Câu chuyện đặc sản vùng cao",
 		description: "Kết nối hương vị Tây Bắc với mọi nhà. Câu chuyện về sự tận tâm và bản sắc.",
-		url: 'https://tiemcuaban.vn/gioi-thieu',
+		url: 'https://tiemcuaban.com/gioi-thieu',
 	}
 };
 

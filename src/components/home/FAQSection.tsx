@@ -69,7 +69,7 @@ export default function FAQSection() {
 									</div>
 									<div>
 										<h4 className="font-bold text-foreground">Zalo / Hotline</h4>
-										<p className="text-sm font-light text-muted-foreground">0339 420 806</p>
+										<p className="text-sm font-light text-muted-foreground">0877 309 894</p>
 									</div>
 								</Reveal>
 							</div>

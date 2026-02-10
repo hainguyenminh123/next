@@ -16,4 +16,4 @@ Allow: /*.css$
 Allow: /*.js$
 
 # Sitemap location
-Sitemap: https://tiemcuaban.vn/sitemap.xml
+Sitemap: https://tiemcuaban.com/sitemap.xml

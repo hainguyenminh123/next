@@ -215,8 +215,8 @@ export default function ShopClient({initialProducts}: { initialProducts: Product
 											<div className="p-4 rounded-2xl bg-premium-red/5 border border-premium-red/10">
 												<p className="text-[10px] font-bold text-premium-red/60 uppercase tracking-widest mb-2">Hỗ trợ khách hàng</p>
 												<p className="text-xs font-light text-foreground/80 leading-relaxed mb-3">Cần tư vấn chọn quà Tết chuẩn vị?</p>
-												<a href="tel:0339 420 806" className="text-sm font-bold text-premium-red hover:text-premium-red-light transition-colors flex items-center gap-2">
-													0339 420 806
+												<a href="tel:0877 309 894" className="text-sm font-bold text-premium-red hover:text-premium-red-light transition-colors flex items-center gap-2">
+													0877 309 894
 												</a>
 											</div>
 										</div>

@@ -939,7 +939,7 @@ export default function ProductDetailClient({
 															này!</p>
 														<button
 																onClick={() => setIsWritingReview(true)}
-																className="btn-primary"
+																className="btn-primary bg-premium-red text-white py-4 rounded-2xl font-bold shadow-lg shadow-premium-red/20 hover:shadow-premium-red/30 justify-center gap-2 group"
 														>
 															Viết đánh giá đầu tiên
 														</button>

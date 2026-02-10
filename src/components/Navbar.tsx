@@ -82,7 +82,7 @@ export default function Navbar() {
 							<div
 									className="container-fluid-main mb-2 hidden lg:flex justify-end items-center gap-6 text-[10px] font-bold tracking-widest text-premium-red/60 uppercase"
 							>
-								<span className="flex items-center gap-1.5"><Phone className="w-3 h-3"/> Hotline: 0339 420 806</span>
+								<span className="flex items-center gap-1.5"><Phone className="w-3 h-3"/> Hotline: 0877 309 894</span>
 								<span className="w-1 h-1 rounded-full bg-premium-red/20"/>
 								<span className="flex items-center gap-1.5">✨ Quà Tết Tây Bắc Chính Gốc ✨</span>
 							</div>
@@ -250,7 +250,7 @@ export default function Navbar() {
 										<div className="mt-6 pt-6 border-t border-border flex flex-col gap-3">
 											<div className="flex items-center gap-3 text-xs font-bold text-premium-red/60 px-4">
 												<Phone className="w-4 h-4"/>
-												0339 420 806
+												0877 309 894
 											</div>
 											<div className="text-[10px] font-medium text-muted-foreground px-4 italic">
 												✨ Quà Tết Tây Bắc Chính Gốc ✨

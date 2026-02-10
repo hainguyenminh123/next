@@ -10,6 +10,8 @@ interface ReviewsSectionProps {
 export default function ReviewsSection({initialReviews}: ReviewsSectionProps) {
 	const allReviews = initialReviews || [];
 	
+	if (allReviews.length === 0) return null;
+	
 	return (
 		<section className="pt-24 pb-12 bg-secondary/30 relative overflow-hidden">
 			{/* Decorative Festive Overlay */}
@@ -47,13 +49,7 @@ export default function ReviewsSection({initialReviews}: ReviewsSectionProps) {
 					</Reveal>
 				</div>
 				
-				{allReviews.length === 0 ? (
-					<div className="text-center py-16">
-						<p className="text-muted-foreground">Chưa có đánh giá nào</p>
-					</div>
-				) : (
-					<ReviewsSectionClient allReviews={allReviews} />
-				)}
+				<ReviewsSectionClient allReviews={allReviews} />
 			</div>
 		</section>
 	);

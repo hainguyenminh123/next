@@ -34,10 +34,10 @@ export default async function Page() {
 								"@context": "https://schema.org",
 								"@type": "WebSite",
 								"name": "Tiệm Của Bản",
-								"url": "https://tiemcuaban.vn",
+								"url": "https://tiemcuaban.com",
 								"potentialAction": {
 									"@type": "SearchAction",
-									"target": "https://tiemcuaban.vn/san-pham?q={search_term_string}",
+									"target": "https://tiemcuaban.com/san-pham?q={search_term_string}",
 									"query-input": "required name=search_term_string"
 								}
 							})
@@ -50,10 +50,10 @@ export default async function Page() {
 								"@context": "https://schema.org",
 								"@type": "Store",
 								"name": "Tiệm Của Bản",
-								"image": "https://tiemcuaban.vn/og-image.png",
-								"@id": "https://tiemcuaban.vn",
-								"url": "https://tiemcuaban.vn",
-								"telephone": "0339420806",
+								"image": "https://tiemcuaban.com/og-image.png",
+								"@id": "https://tiemcuaban.com",
+								"url": "https://tiemcuaban.com",
+								"telephone": "0877309894",
 								"priceRange": "$$",
 								"address": {
 									"@type": "PostalAddress",

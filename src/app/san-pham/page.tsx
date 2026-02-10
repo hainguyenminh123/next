@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 	openGraph: {
 		title: "Cửa hàng Đặc sản Tây Bắc | Tiệm Của Bản",
 		description: "Khám phá thế giới đặc sản Tây Bắc chuẩn vị Điện Biên. Giao hàng toàn quốc.",
-		url: 'https://tiemcuaban.vn/san-pham',
+		url: 'https://tiemcuaban.com/san-pham',
 		type: 'website',
 	}
 };

@@ -9,13 +9,13 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
 	title: "Liên hệ Tiệm Của Bản | Tư vấn đặc sản Tây Bắc 24/7",
-	description: "Liên hệ với Tiệm Của Bản qua Hotline/Zalo: 0339 420 806. Chúng mình luôn sẵn sàng tư vấn về thịt trâu gác bếp, lạp xưởng và các đặc sản Điện Biên khác.",
+	description: "Liên hệ với Tiệm Của Bản qua Hotline/Zalo: 0877 309 894. Chúng mình luôn sẵn sàng tư vấn về thịt trâu gác bếp, lạp xưởng và các đặc sản Điện Biên khác.",
 	keywords: ["liên hệ", "hotline đặc sản", "zalo đặt hàng", "địa chỉ mua đặc sản"],
 	alternates: {canonical: "/lien-he"},
 	openGraph: {
 		title: "Liên hệ Tiệm Của Bản | Tư vấn 24/7",
 		description: "Chúng mình luôn sẵn lòng lắng nghe và tư vấn những thức quà tinh tế nhất từ vùng cao Tây Bắc.",
-		url: 'https://tiemcuaban.vn/lien-he',
+		url: 'https://tiemcuaban.com/lien-he',
 	}
 };
 
@@ -149,8 +149,8 @@ export default function ContactPage() {
 											{
 												icon: Phone,
 												label: 'Hotline',
-												value: '0339 420 806',
-												href: 'tel:0339420806',
+												value: '0877 309 894',
+												href: 'tel:0877309894',
 												color: 'text-premium-red',
 												bgColor: 'bg-premium-red/10',
 												hoverBorder: 'hover:border-premium-red/30'
@@ -159,7 +159,7 @@ export default function ContactPage() {
 												icon: MessageCircle,
 												label: 'Zalo',
 												value: 'Chat ngay với shop',
-												href: 'https://zalo.me/0339420806',
+												href: 'https://zalo.me/0877309894',
 												color: 'text-accent',
 												bgColor: 'bg-accent/10',
 												hoverBorder: 'hover:border-accent/30'
@@ -167,8 +167,8 @@ export default function ContactPage() {
 											{
 												icon: Mail,
 												label: 'Email',
-												value: 'tiemcuaban.vn@gmail.com',
-												href: 'mailto:tiemcuaban.vn@gmail.com',
+												value: 'tiemcuaban@gmail.com',
+												href: 'mailto:tiemcuaban@gmail.com',
 												color: 'text-festive-gold',
 												bgColor: 'bg-festive-gold/10',
 												hoverBorder: 'hover:border-festive-gold/30'
