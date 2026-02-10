@@ -37,9 +37,9 @@ export async function POST(request: Request) {
 		}
 		console.log(orderInvoice);
 		const supabase = createSupabaseInvokeClient();
-		console.log("Calling RPC update_order_paid with order_number:", orderInvoice);
+		console.log("Calling RPC update_order_paid with p_order_number:", orderInvoice);
 		const {data, error} = await supabase.rpc("update_order_paid", {
-			order_number: orderInvoice,
+			p_order_number: orderInvoice,
 		});
 		
 		if (error || (data && data.error)) {
